@@ -1,0 +1,495 @@
+
+
+
+
+
+h1, h2, h3, h4, h5, p{
+    
+    /*font-family: myFont;*/
+    
+}
+
+/*@font-face {
+    font-family: myFont;
+    src: url("../fonts/fselliotpro_family/font/FS%20Elliot%20Pro-Light.otf");
+}*/
+
+body{
+    
+    background-color:  rgba(255,255,255,0.6);
+    /*background-image: url("../images/bg-blue.png");*/
+}
+
+
+/*RECENTLY ADDED*/
+
+
+.row-margined{
+    margin-top: -500px;
+}
+
+.img-margin{
+    margin-top: 0px;
+}
+
+.toggle-pic{
+    display: none;
+}
+
+/*END OF RECENTLY ADDED*/
+
+.img-body{
+/*    UPDATED*/
+/*    background-image: url("../images/barnoneFinal2.png");*/
+    /*background-color: #21469e;*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    /*background-image: url("../images/bg-blue.png");*/
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    float: none;
+}
+
+OPTION{
+    color: black;
+}
+
+
+.row.scroll{
+    max-height: 700px;
+    overflow-y: auto;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+/*REMOVED*/
+/*
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+*/
+
+/*RECENTLY UPDATED*/
+
+@font-face {
+    font-family: nlgFont;
+    src: url("../fonts/fselliotpro_family/font/FS%20Elliot%20Pro-Thin.otf");
+}
+
+/*END*/
+
+.nmd{
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+.nmd-unbold{
+    font-size: 20px;
+    color: white;
+}
+
+.nmd.padded{
+    margin-top: 150px;
+}
+
+
+.effect{
+    -webkit-animation: cardEnter 0.75s ease-in-out 0.5s;
+  animation: cardEnter 0.75s ease-in-out 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.tpad{
+    position: inherit;
+    padding-bottom: 20px;
+}
+
+u:hover{
+    cursor: pointer;
+}
+
+nav{
+    box-shadow: 0px 10px 30px #888888;
+}
+
+
+.navbar-default .navbar-nav>.dropdown>a .caret {
+    border-top-color: #fff;
+}
+
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
+    border-top-color: #fff;
+}
+
+.navbar-collapse.collapse{
+    background-color: rgb(0, 76, 148);
+}
+
+.navbar-default {
+    background-color: rgb(0, 76, 148);
+    border-color: #3276B1;
+}
+
+.navbar-default .navbar-brand{
+    color: #fff;
+}
+
+.navbar-brand{
+    padding-top: 30px;
+    font-size: 36px;
+    font-family: "Calibri";
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    color: #fff;
+    background-color: rgba(6,6,6,0.2);
+    font-weight: bold;
+
+}
+.navbar-header > a{
+    background-color: rgb(0, 76, 148);
+}
+
+.dropdown-menu {
+    background-color: #3276B1;
+}
+
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a{
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: rgba(6,6,6,0.2);
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a{
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.navbar-default .navbar-brand:hover, 
+.navbar-default .navbar-brand:focus {
+    color: #fff;
+    background-color: transparent;
+
+}
+
+.navbar-header{
+    background-color: rgb(0, 76, 148);
+}
+
+.navbar-default .navbar-collapse, 
+.navbar-default .navbar-form {
+    border-color: #3276B1;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: rgb(50, 118, 177);
+    font-weight: bold;
+
+}
+
+.navbar-default .navbar-nav > .active > a:hover{
+    color: #fff;
+    background-color: rgba(6, 6, 6,0.2);
+}
+
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+    background-color: rgba(6,6,6,0.2);
+}
+
+.navbar-toggle {
+    position: relative;
+    float: left;
+    padding: 9px 10px;
+    background-color: transparent;
+    border: 0px solid transparent;
+    border-radius: 4px;
+    margin: 8px 15px 8px 10px;
+}
+
+/*For Font*/
+@media screen and (min-width: 200px) {
+    .nlg{
+        font-size: 60px;
+    }
+    .intro-block.pad{
+        margin-top: 100px;
+    }
+    .contain{
+        margin-top: 85px;
+        margin-bottom: 20px;
+    }
+    .nmd-unbold{
+        font-size: 18px;
+    }
+/*    RECENTLY ADDED*/
+    .img-margin{
+        display: none;
+    }
+    .toggle-pic{
+        display: block;
+    }
+    
+}
+
+
+@media screen and (min-width: 320px) {
+    .nlg{
+        font-size: 60px;
+    }
+    .intro-block.pad{
+        margin-top: 100px;
+    }
+    .contain{
+        margin-top: 85px;
+        margin-bottom: 20px;
+    }
+    .nmd-unbold{
+        font-size: 18px;
+    }
+/*    RECENTLY ADDED*/
+    .img-margin{
+        display: none;
+    }
+    .toggle-pic{
+        display: block;
+    }
+    
+}
+
+@media screen and (min-width: 360px) {
+    .nlg{
+        font-size: 60px;
+    }
+    .intro-block.pad{
+        margin-top: 200px;
+    }
+    .contain{
+        margin-top: 160px;
+
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+    .container.well{
+       margin-left: 10px;
+       margin-right: 10px;
+    }
+    
+     .nlg{
+       font-size: 60px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    .container.well{
+       margin-left: 10px;
+       margin-right: 10px;
+    }
+    .nlg{
+        font-size: 60px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .nlg{
+        font-size: 65px;
+    }
+    .contain{
+        margin-top: 160px;
+    }
+/*    RECENTLY ADDED*/
+    .img-margin{
+        display: block;
+        margin-top: 200px;
+    }
+    .toggle-pic{
+        display: none;
+    }
+/*    END OF RECENTLY ADDED*/
+}
+
+@media screen and (min-width: 1280px) {
+    .nlg{
+      /**  margin-top: -60px; */
+/*        UPDATED*/
+        font-size: 65px;
+    }
+    .intro-block.pad{
+        margin-top: 200px;
+    }
+    .contain{
+        margin-top: 160px;
+    }
+/*    RECENTLY ADDED*/
+    
+}
+
+@media screen and (min-width: 1280px) {
+    .msg{
+        max-width: 768px;
+    }
+    .intro-block.pad{
+        margin-top: 200px;
+    }
+     .img-margin{
+        display: block;
+        margin-top: 200px;
+    }
+}
+
+
+/*FOR MODAL*/
+@media screen and (min-width: 768px) {
+  .modal-dialog {
+    right: auto;
+    left: 50%;
+    width: 600px;
+    /*RECENTLY REMOVED*/
+    /*padding-top: 150px !important;*/
+    padding-bottom: 30px;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+
+
+
+/*apc*/
+
+
+
+
+/** START country code select option **/
+.ui-autocomplete {
+   /* max-height: 100px;
+    overflow-y: auto;*/
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+/* IE 6 doesn't support max-height
+* we use height instead, but this forces the menu to always be this tall
+*/
+* html .ui-autocomplete {
+    height: 100px;
+}
+
+.jspTrack{
+    background: #f0eef3;
+    /*width:16px;*/
+    border-radius: 4px;
+}
+
+.jspVerticalBar{
+    background: #f0eef3;
+    width:13px;
+    border-radius: 4px;
+}
+.jspDrag{
+    background: #26469b;
+    border-radius: 10px;
+}
+.jspPane, .jspContainer,  .ui-menu, .ui-widget, .ui-widget-content, .ui-autocomplete, .ui-front{
+    background: white;
+    border-radius: 8px;
+    border: 0px;
+     
+    /*font-size: 13px;*/
+}
+
+.ui-menu-item:hover{
+    /*background-color: #DEF3FA !important;*/
+  background: #9dcfe8;
+  font-weight: 700;
+
+  /*color: #888888;*/
+}
+
+.ui-menu-item-wrapper:hover{
+    background: transparent;
+    font-weight: 700;
+  /*color: #888888;*/
+}
+
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+    border: 0px solid #aaaaaa;
+    background: #9dcfe8;
+    font-weight: 700;
+}
+
+#countrycode{
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    background: white url("../images/arrow-down.png") no-repeat 90px center;
+    padding-left: 10px;
+}
+
+/** END country code dropdown **/
+
+.sign-in-text-color{
+    color: black;
+}
+
+#getotp{
+
+    background-color: #f39431;
+    color: #fff;
+    border-color: #f39431;
+}
+
+.input-signin-color{
+    border-color: #f47c1f;
+    color: black;
+}
+
+.text-xs-center{
+    text-align: center;
+}
+
+.margin-top-1{
+  margin-top:100px;
+}
+.margin-top-2{
+  margin-top:85px;
+}
+.margin-top-3{
+  margin-top:40px;
+}
+.margin-top-4{
+  margin-top:25px;
+}
+.margin-top-5{
+  margin-top:10px;
+}
