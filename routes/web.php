@@ -27,25 +27,10 @@ Route::post('/resetPassword', 'AccountController@resetPassword');
 
 
 
-Route::get('/create-survey', 'SurveyController@createView');
-Route::post('/createSurvey', 'SurveyController@createSurvey');
-Route::post('/updateSurvey', 'SurveyController@updateSurvey');
-Route::get('/survey/{surveyId}', 'SurveyController@surveyDetailView');
-Route::post('/sendSurvey', 'SurveyController@sendSurvey');
-Route::post('/addRecipient', 'SurveyController@addRecipient');
-Route::get('/survey/deleteRecipient/{id}', 'SurveyController@deleteRecipient');
+Route::get('/courses', 'CoursesController@index');
+Route::get('/students', 'StudentController@index');
+Route::get('/gallery', 'GalleryController@index');
+Route::get('/events', 'EventController@index');
+Route::get('/promo-code', 'PromoCodeController@index');
 
 
-Route::get('/surveys', 'SurveyController@surveysView');
-
-
-
-
-Route::get('/answer/survey/{surveyId}/{token}', 'CustomerController@surveySheetView');
-Route::post('/submitSurvey', 'CustomerController@submitSurvey');
-
-
-
-Route::get('/getIsSentId', 'TestSurveyController@getIsSentId');
-Route::get('/getIsDeletedId', 'TestSurveyController@getIsDeletedId');
-Route::get('/getIsAnsweredId', 'TestSurveyController@getIsAnsweredId');
