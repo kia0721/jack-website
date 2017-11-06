@@ -32,7 +32,39 @@ class CoursesController extends Controller
 
     public function index()
     {
-        return view('course.index');
+        $courses = DB::table('jack_courses as jcs')
+            ->leftJoin('jack_classes as jc', 'jc.id', '=', 'jcs.course_type')
+            ->get(['jcs.id as course_id', 'jcs.course_title', 'jcs.course_description', 'jc.class as course_type', 'jcs.is_hidden', 'jcs.created_at']);
+
+
+        return view('course.index')
+                ->with('courses', $courses);
+    }
+
+    public function detailView($courseId)
+    {
+        $course = DB::table('jack_courses as jcs')
+            ->leftJoin('jack_classes as jc', 'jc.id', '=', 'jcs.course_type')
+            ->where('jcs.id', '=', $courseId)
+            ->first(['jcs.id as course_id', 'jcs.course_title', 'jcs.course_description', 'jcs.course_type as course_type_id','jc.class as course_type', 'jcs.is_hidden', 'jcs.created_at']);
+
+        $schedules = DB::table('jack_courseschedules as jcsched')
+        ->leftJoin('jack_studentcourses as jstudent', 'jstudent.course_schedule', '=', 'jcsched.id')
+        ->leftJoin('jack_courselevels as jcl', 'jcl.id', '=', 'jcsched.level_id')
+        ->select(
+                'jcsched.id','jcsched.course_id', 'jcsched.level_id', 'jcsched.start_date', 'jcsched.end_date', 'jcsched.created_at', 'jcsched.coder_date', 'jcl.course_level'
+                ,DB::raw("count(jcsched.id) as students"))
+        ->where('jcsched.course_id', '=', $courseId)
+        ->groupBy('jcsched.id')
+        ->get();
+
+        $courseLevels = DB::table('jack_courselevels as jcl')
+        ->get();
+
+        return view('course.detail')
+                ->with('course', $course)
+                ->with('schedules', $schedules)
+                ->with('courseLevels', $courseLevels);
     }
 
 }

@@ -80,8 +80,7 @@ class AccountController extends Controller
 
         Log::info($validator->errors()->first());
         return redirect()->back()
-            ->withErrors( $validator
-                );
+            ->withErrors( $validator );
     }
 
     public function getUsers($userType){

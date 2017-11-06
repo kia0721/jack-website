@@ -14,10 +14,12 @@
 
 Auth::routes();
 
-Route::get('/', 'DashboardController@index');
+Route::get('/', function () {
+    return redirect('admin/dashboard');
+});
 
 
-Route::get('/dashboard', 'DashboardController@index');
+
 
 
 Route::get('/accounts', 'AccountController@index');
@@ -26,11 +28,15 @@ Route::get('/account/{userId}', 'AccountController@userDetailDisplay');
 Route::post('/resetPassword', 'AccountController@resetPassword');
 
 
+Route::prefix('admin')->group(function () {
+	Route::get('/dashboard', 'DashboardController@index');
+	Route::get('/courses', 'CoursesController@index');
+	Route::get('/courses/detail/{id}', 'CoursesController@detailView');
 
-Route::get('/courses', 'CoursesController@index');
-Route::get('/students', 'StudentController@index');
-Route::get('/gallery', 'GalleryController@index');
-Route::get('/events', 'EventController@index');
-Route::get('/promo-code', 'PromoCodeController@index');
 
+	Route::get('/students', 'StudentController@index');
+	Route::get('/gallery', 'GalleryController@index');
+	Route::get('/events', 'EventController@index');
+	Route::get('/promo-code', 'PromoCodeController@index');
+});
 

@@ -10,7 +10,8 @@
     <div class="row">
  
     	<div class="col-md-12">
-    	Promo Code
+    		<h1> PROMO CODE </h1>
+    		<h1> UNDER CONSTRUCTION .... </h1>
         </div>
     </div>
 
