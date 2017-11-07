@@ -32,6 +32,7 @@ Route::prefix('admin')->group(function () {
 	Route::get('/dashboard', 'DashboardController@index');
 	Route::get('/courses', 'CoursesController@index');
 	Route::get('/courses/detail/{id}', 'CoursesController@detailView');
+	Route::post('/addSchedule', 'CoursesController@addSchedule');
 
 
 	Route::get('/students', 'StudentController@index');

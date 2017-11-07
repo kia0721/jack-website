@@ -67,4 +67,16 @@ class CoursesController extends Controller
                 ->with('courseLevels', $courseLevels);
     }
 
+    public function addSchedule(Request $request)
+    {
+        $data = $request->only('course_id', 'course_level', 'coder_date');
+
+        $courseSchedule = new \App\Models\JackCourseSchedule;
+        $courseSchedule->course_id = $data['course_id'];
+        $courseSchedule->level_id = $data['course_level'];
+        $courseSchedule->coder_date = $data['coder_date'];
+        $courseSchedule->save();
+
+        return $this->helperUtil->resultToJSON("Schedule successfully added.", Config::get('constants.SC_SUCESS'), $courseSchedule->id, true); 
+    }
 }

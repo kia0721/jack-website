@@ -316,3 +316,18 @@ padding-right: 0px !important;
   padding-right: 15px;
     padding-left: 9px;
 }
+
+.modal-header-default{
+  background-color: #e08c08;
+  color: white;
+
+}
+.modal-header-success{
+  background-color: #04730d;
+  color: white;
+}
+
+.modal-header-danger{
+  background-color: #b91919;
+  color: white;
+}
