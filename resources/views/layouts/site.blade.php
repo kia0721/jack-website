@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>Jack Website</title>
+
+    @yield('css_link')
+    <!-- Styles -->
+    <!-- <link href="{{ asset('/css/app.css') }}" rel="stylesheet"> -->
+    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+    <style type="text/css">
+      .left, .right {
+        float:left;
+        height:100vh;
+    }
+    
+    .left {
+        background: #337ab7;
+        display: inline-block;
+        white-space: nowrap;
+        width: 50px;
+        transition: width 1s ;
+    }
+
+    .right {
+        background: #fff;
+        width: 350px;
+        transition: width 1s;
+        border-style:solid;
+        border-color:#ccc;
+        border-width:1px;
+    }    
+
+    .left:hover {
+        width: 250px;
+    }    
+        
+    
+            
+    .left .glyphicon {
+        margin:15px;
+        width:20px;
+        color:#fff;
+    }
+        
+    .right .glyphicon {
+        color:#a9a9a9;
+    }
+    
+    .item {
+        height:50px;
+        overflow:hidden;
+        color:#fff;
+    }
+
+    nav ul, nav ol, li{
+        list-style: none;
+        list-style-image: none;
+    }
+
+    .navigation:before {
+        background: url(../images/nav.png) no-repeat 0 -2px;
+        bottom: 100%;
+        content: '';
+        display: block;
+        height: 90px;
+        margin-bottom: -5px;
+        position: absolute;
+        left: 70%;
+        width: 90px;
+        top: -80px;
+    }
+
+    .navigation .Welcome {
+        background-position: 0 -88px;
+        height: 40px !important;
+        /*width: 84px;*/
+    }
+    .icon.Welcome .label{
+        color: #eca220 !important;
+    }
+
+    .navigation .About-us {
+        background-position: 0 -135px;
+        height: 40px !important;
+        width: 84px !important;
+        
+    }
+
+    .icon.About-us .label{
+        color: #0b52a4 !important;
+    }
+
+    .navigation .Courses {
+        background-position: 0 -175px;
+        
+    }
+
+    .icon.Courses .label{
+        top: 15px;
+        color: #357625 !important;
+    }
+
+
+    .navigation .Gallery {
+        background-position: 0 -229px;
+        /*height: 46px;
+        width: 84px;*/
+    }
+    .icon.Gallery .label{
+       color: #b50a06 !important;
+    }
+    .navigation .Contact-us {
+        background-position: 0 -280px;
+       /* height: 50px;
+        width: 84px;*/
+    }
+    .icon.Contact-us .label{
+       color: #7d40a8 !important;
+    }
+    .navigation li {
+        position: relative;
+        margin-bottom: 3px;
+    }
+   
+    .navigation .icon {
+        display: block;
+        background-image: url(../images/nav.png);
+        cursor: pointer;
+        height: 51px;
+        width: 84px;
+    }
+
+    .navigation .label {
+        display: none;
+        background-color: #fff;
+        margin-right: 15px;
+        left: 115%;
+        top: 10px;
+        padding: 7px 5px 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+        -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+        box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+        color:black;
+        width:80px;
+        height: 24px;
+        
+    }
+ 
+    .navigation .label, .navigation .label:after {
+        position: absolute;
+    }
+
+    .navigation .label:after {
+        content: '';
+        height: 0;
+        right: 100%;
+        margin-top: -5px;
+        top: 2px;
+        top: 50%;
+        width: 0;
+        border-top: 5px solid #ce0c0c00;
+        border-right: 10px solid #fff;
+        border-bottom: 5px solid transparent;
+    }
+    
+    .navigation .label, .navigation .label:after {
+        position: absolute;
+    }
+
+    .navigation{
+        margin-top: -105px;position: fixed;    left: 0px;    top: 50%;    z-index: 20;
+    }
+
+
+    .bg1 {
+        background-image: url(../images/01_BG.png);
+        background-color: #d3cac1;
+    }
+
+    .bg2 {
+        background-image: url(../images/02_BG.png);
+        background-color: #d6f2e7;
+    }
+    .bg3 {
+        background-image: url(../images/03_BG.png);
+        background-color: #fff0f1;
+    }
+
+    .bg4 {
+        background-image: url(../images/04_BG.png);
+        background-color: #a9bec7;
+    }
+    .bg5 {
+        background-image: url(../images/05_BG.png);
+        background-color: #fff0f0;
+    }
+
+    
+    .layer-holder {
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100%;
+        min-height: 100%;
+        overflow: hidden;
+    }
+
+    .sub-con{
+        height: 768px;
+        margin-top: -396px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        margin-left: -15px;
+        
+    }
+
+
+    .container{
+        height: 100%;
+        margin: 0 auto;
+        max-width: 1024px;
+        position: relative;
+    }
+
+    .characters {
+        height: 768px;
+        left: 50%;
+        margin-left: -512px;
+        margin-top: -354px;
+        min-height: 768px;
+        position: fixed;
+        top: 50%;
+        width: 1024px;
+        z-index: 10;
+        
+    }
+
+    .char-pos{
+        -webkit-transition-property: top, bottom;
+        /* -webkit-transition-duration: 5s; */
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+
+        position: absolute;
+    /*bottom: 17px;*/
+    }
+
+    .sub-con > div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 45px;
+    }
+
+    .top-img{
+        z-index: 12;
+    }
+    .top-description{
+        z-index: 14;
+        
+    }
+
+    .top-description > div{
+        position: absolute;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    </style>
+    <!-- Scripts -->
+    <script>
+        window.Jack_Website = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
+</head>
+<body>
+    
+    <div id="wrapper" class="active">
+        
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div  class="navbar-brand">
+                        <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <a href="#" >Jack Portal</a>
+                    </div>
+                </div>
+                <div id="navbar" class="collapse navbar-right navbar-collapse" >
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url('/courses') }}"><img src="{{ asset('/images/courses.png') }}" class="icon-menu-top"> Courses</a></li>
+                        <li><a href="{{ url('/calendar') }}"><img src="{{ asset('/images/calendar.png') }}" class="icon-menu-top"> Calendar</a></li>
+                        <li><a href="{{ url('/e-magazine') }}"><img src="{{ asset('/images/e-magazine.png') }}" class="icon-menu-top"> E-Magazine</a></li>
+                        <li><a href="{{ url('/about-us') }}"><img src="{{ asset('/images/faqs-icon.png') }}" class="icon-menu-top"> FAQ's</a></li>
+                        <li><a href="{{ url('/contact-us') }}"><img src="{{ asset('/images/contact us.png') }}" class="icon-menu-top"> Contact us</a></li>
+
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        
+        <div class="navigation" >
+            <ul >
+                    
+                <li >
+                    <p class="icon Welcome"><span class="label">Welcome</span></p>
+                </li>
+                <li >
+                    <p class="icon About-us"><span class="label">About Us</span></p>
+                </li>
+                <li >
+                    <p class="icon Courses"><span class="label">Courses</span></p>
+                </li>
+                <li >
+                    <p class="icon Gallery"><span class="label">Gallery</span></p>
+                </li>
+                <li >
+                    <p class="icon Contact-us"><span class="label">Contact us</span></p>
+                </li>
+            </ul>
+        </div>
+        <div class="main-wrapper">
+
+            <div class="characters charpos2">
+                <div class="char-pos">
+                    <img src="../images/CHARACTERS.png" />
+                </div>
+                 <div class="mouse-scroll"></div>
+            </div>
+            <!-- Page content -->
+
+            <section data-name="Welcome" class="layer pos1" >
+                <div class="layer-holder layer-bg bg1"  id="Welcome">
+                    <div class="container">
+                        <div class="sub-con" >
+                            <div class="top-img" >
+                                <img src="../images/01_TOP.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-name="About-us"  class="layer  pos2" >
+                <div class="layer-holder layer-bg bg2" id="About-us">
+                    <div class="container">
+                        <div class="sub-con" >
+                            <div class="top-description" >
+                                <div style="top: 176px; left: 243px;" >
+                                    <h1>ABOUT THE ACADEMY</h1>
+                                </div>
+                                <div  style="top: 239px; left: 44px; max-width: 800px;" >
+                                    <p>In today's digital world, coding has become a fundamental skill that is best taught at an early age. When kids learn how to create using the latest hardware trends and innovations, they also learn how to be more creative, at the same time, using logic, to solve problems.
+                                    </p>
+                                    <p style="max-width: 700px;">
+                                    JACK's mission is to provide kids with the highest quality learning experience by celebrating and encouraging their creativity through dynamic and project-based learning all in a fun and engaging environment.</p>
+                                </div>
+                                <div style="top: 135px; left: 653px;" >
+                                    <IMG SRC="../images/play-btn.gif"/>
+                                </div>
+                            </div>
+                            <div class="top-img" >
+                                <img src="../images/02_TOP.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-name="Courses" class="layer  pos3" >
+                <div class="layer-holder layer-bg bg3"  id="Courses">
+                    <div class="container">
+                        <div class="sub-con" >
+                            <div class="top-description" >
+                                <div style="top: 145px; left: 380px;" >
+                                    <h1>COURSES OFFERED</h1>
+                                </div>
+                                <div  style="top: 239px; left: 200px; max-width: 800px;" >
+                                    <p>In today's digital world, coding has become a fundamental skill that is best taught at an early age. When kids learn how to create using the latest hardware trends and innovations, they also learn how to be more creative, at the same time, using logic, to solve problems.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="top-img" >
+                                <img src="../images/03_TOP.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-name="Gallery" class="layer pos4" >
+                <div class="layer-holder layer-bg bg4"  id="Gallery">
+                    <div class="container">
+                        <div class="sub-con" >
+                            <div class="top-img" >
+                                <img src="../images/04_TOP.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-name="Contact-us"  class="layer pos5" >
+                <div class="layer-holder layer-bg bg5" id="Contact-us">
+                    <div class="container">
+                        <div class="sub-con" >
+                            <div class="top-img" >
+                                <img src="../images/05_TOP.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+    </div>
+
+   <!--  <footer class="footer" >
+    
+        <div class="container">
+            <p class="text-xs-center">Copyright © JACK | 2016</p>
+        </div>
+    </footer> -->
+
+   
+    <script src="{{ asset('/js/jquery-3.1.1.min.js') }}"></script>
+    <script src="{{ asset('/js/dialog.js') }}"></script>
+    
+    <script type="text/javascript" >
+
+        resizeLayerBg();
+    
+      
+        var divPos = getDivPos(window.location.hash);
+
+        var lastScrollTop = 1, delta = 5;
+        var currentHash = getDivId(divPos);
+        history.pushState(null, null, '#'+getDivId(divPos));
+        window.location.hash = ('#'+getDivId(divPos));
+        var blocksArr = $('.layer-bg');
+          
+       
+
+        console.log("cBlock: "+currentHash +" lastScrollTop: "+lastScrollTop);
+    
+        var isClicked = true;
+       
+        $('p.icon').bind('mouseover', function() {
+            
+            var classN = $(this).attr('class');  
+            var divId = classN.split(' ')[1];
+            $("."+divId+" .label").show();
+
+        }).on('mouseleave', function() { 
+            $(".icon .label").hide();
+        });
+        $('p.icon').bind('click', function() {
+            $(".icon .label").hide();
+            var classN = $(this).attr('class');  
+            var divId = classN.split(' ')[1];
+            $("."+divId+" .label").show();
+            isClicked = false;
+            $('html, body').animate({
+                scrollTop: $("#"+divId).offset().top
+            }, 500, function () {
+                isClicked = true;
+
+            });
+
+            
+
+            // currentBlock = getDivPos("#"+divId);
+              window.location.hash = (divId);
+              history.pushState(null, null, '#'+divId);
+              currentHash = divId;
+
+            // window.location.hash = divId;
+           //  var st = $(this).scrollTop();
+           // if(Math.abs(lastScrollTop - st) <= delta)
+           //      return;
+           //  lastScrollTop = st;
+            // lastScrollTop = getDivPos(divId);
+        });
+
+    
+
+
+        function getDivId(divPosP){
+            if(divPosP == 1)
+                return "Welcome";
+            else if(divPosP == 2)
+                return "About-us";
+            else if(divPosP == 3)
+                return "Courses";
+            else if(divPosP == 4)
+                return "Gallery";
+            else if(divPosP == 5)
+                return "Contact-us";
+            else 
+                return "Welcome";
+        }
+
+        function getDivPos(divPosN){
+            if(divPosN == "#Welcome")
+                return 1;
+            else if(divPosN == "#About-us")
+                return 2;
+            else if(divPosN == "#Courses")
+                return 3;
+            else if(divPosN == "#Gallery")
+                return 4;
+            else if(divPosN == "#Contact-us")
+                return 5;
+            else
+                return 1;
+        }
+
+        function resizeLayerBg(){
+            var height = $( window ).height();
+            console.log(height);
+
+            $('.layer-bg').css( "height", height );
+
+            $('.char-pos').css( "bottom" ,"-3px");
+
+            console.log(height+ " 42");
+
+            $('html, body').animate({
+                scrollTop: $(window.location.hash).offset().top
+            }, 500, function () {
+                // isClicked = true;
+
+            });
+            
+        }
+    </script>
+     
+    <script src="{{ asset('/js/ba-debug.js') }}" ></script>
+    <script src="{{ asset('/js/jquery.ba-throttle-debounce.js') }}"></script>
+    <script type="text/javascript">
+        
+
+       
+            $(window).scroll($.debounce( 250, true, function(){
+                $('#scrollMsg').html('SCROLLING!');
+                console.log('SCROLLING!');
+            } ) );
+            var x=1;
+            $(window).scroll($.debounce( 250, function(){
+                console.log('DONE! '+x);
+                x++;
+                var st = $(this).scrollTop();
+                var currentTop = window.pageYOffset/1;
+                var isSettle = false;
+                 for (var i=0; i < blocksArr.length; i++){
+                    
+                     var currentElementTop = $(blocksArr[i]).offset().top;
+                     var hash = $(blocksArr[i]).attr('id');
+
+                     
+                     if (currentElementTop < currentTop && currentTop < currentElementTop + $(blocksArr[i]).height() && currentHash!=hash){
+                        if(history.pushState) {
+                            history.pushState(null, null, '#'+hash);
+                            console.log("pushState "+hash);
+                            isClicked = false;
+                            $('html, body').animate({
+                                scrollTop: $("#"+hash).offset().top
+                            }, 500, function () {
+                                isClicked = true;
+                            });
+                        }
+                        else {
+                            location.hash = '#'+hash;
+                            console.log("location.hash");
+                        }
+                        currentHash = hash;
+                        i = blocksArr.length;
+                        isSettle = true;
+                        break;
+
+                     } 
+                    } 
+
+                    for (var i=0; i < blocksArr.length; i++){
+                    
+                         var currentElementTop = $(blocksArr[i]).offset().top;
+                         var hash = $(blocksArr[i]).attr('id');
+                        if(st > lastScrollTop && isSettle == false){
+                        // var ctr = i+1;
+                        if(currentHash==hash){
+                            console.log("currentElementTop: "+currentElementTop +" currentTop: " + currentTop +" height: "+$(blocksArr[i]).height() + " currentHash: "+currentHash);
+                            console.log("downscroll");
+
+                            // if((currentElementTop > currentTop && currentTop > currentElementTop + $(blocksArr[i]).height() && currentHash!=hash)){
+                            if(currentTop > $(blocksArr[i]).height() * i+1){
+                                if(history.pushState) {
+                                    if(i >= blocksArr.length-1){
+                                        i = blocksArr.length - 2;
+                                    }
+                                    console.log(i);
+                                    var hash = $(blocksArr[i+1]).attr('id');
+                                    history.pushState(null, null, '#'+hash);
+                                    console.log("downscroll pushState "+hash);
+                                    isClicked = false;
+                                    $('html, body').animate({
+                                        scrollTop: $("#"+hash).offset().top
+                                    }, 500, function () {
+                                        isClicked = true;
+                                    });
+
+                                    currentHash = hash;
+                                    i = blocksArr.length;
+                                    break;
+                                }
+                            }
+                        }
+                     }
+
+                 }
+            } ) );
+
+       
+            $(window)
+            .resize( $.debounce( 250, true, function(e){
+                 resizeLayerBg();
+                 console.log('resize');
+            }))
+            .resize( $.debounce( 250, false, function(e){
+                 resizeLayerBg();
+        }));
+    </script>
+    @yield('script_link')
+</body>
+</html>

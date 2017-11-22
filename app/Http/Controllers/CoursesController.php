@@ -51,9 +51,7 @@ class CoursesController extends Controller
         $schedules = DB::table('jack_courseschedules as jcsched')
         ->leftJoin('jack_studentcourses as jstudent', 'jstudent.course_schedule', '=', 'jcsched.id')
         ->leftJoin('jack_courselevels as jcl', 'jcl.id', '=', 'jcsched.level_id')
-        ->select(
-                'jcsched.id','jcsched.course_id', 'jcsched.level_id', 'jcsched.start_date', 'jcsched.end_date', 'jcsched.created_at', 'jcsched.coder_date', 'jcl.course_level'
-                ,DB::raw("count(jcsched.id) as students"))
+        ->select('jcsched.id','jcsched.course_id', 'jcsched.level_id', 'jcsched.start_date', 'jcsched.end_date', 'jcsched.created_at', 'jcsched.coder_date', 'jcl.course_level',DB::raw("count(jcsched.id) as students"))
         ->where('jcsched.course_id', '=', $courseId)
         ->groupBy('jcsched.id')
         ->get();

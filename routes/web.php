@@ -15,9 +15,8 @@
 Auth::routes();
 
 Route::get('/', function () {
-    return redirect('admin/dashboard');
+    return redirect('/home');
 });
-
 
 
 
@@ -41,3 +40,4 @@ Route::prefix('admin')->group(function () {
 	Route::get('/promo-code', 'PromoCodeController@index');
 });
 
+Route::get('/home', 'HomeController@index');

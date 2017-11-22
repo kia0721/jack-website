@@ -30,6 +30,7 @@
                         <th width="20%">Level</th>
                         <th width="30%">Schedule</th>
                         <th width="10%">No. of students</th>
+                        <th width="10%">Status</th>
                         <th width="15%">Created Date</th>
                         <th class="10%">Action</th>
                     </tr>
@@ -42,6 +43,7 @@
                                  
                             </td>
                             <td> {{ $sched->coder_date }} </td>
+                            <td> {{ $sched->is_hidden }}</td>
                             <td> {{ $sched->students }}</td>
                             <td> {{ $sched->created_at }} </td>
                             <td> </td>
@@ -140,13 +142,12 @@
                             '<td>'+$('#coder_date').val()+'</td>'+
                             '<td>0</td>'+
                             '<td>'+'date'+'</td>'+
-                        '<td class="action_td"> <button class="btn btn-danger btn-xs row-recipient-delete" data-toggle="confirmation" '+
+                            '<td class="action_td"> <button class="btn btn-danger btn-xs row-recipient-delete" data-toggle="confirmation" '+
+                            'data-recipient-index="'+res.id+'" >'+
+                            '<i class="glyphicon glyphicon-trash"></i></button></td></tr>';
 
-                        'data-recipient-index="'+res.id+'" >'+
-                        '<i class="glyphicon glyphicon-trash"></i></button></td></tr>';
-
-                        // $('#recipient_temp_table tr:last').after(newRow);
-                        scheduleTable.row.add( $(newRow)[0] ).draw();
+                            // $('#recipient_temp_table tr:last').after(newRow);
+                            scheduleTable.row.add( $(newRow)[0] ).draw();
                    
                         }
                     });   
