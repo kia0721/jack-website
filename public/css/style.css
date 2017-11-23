@@ -18,6 +18,13 @@ body {
   src: url("../fonts/GothamRnd-Medium.otf") format("opentype");
   font-weight: normal;
 }
+
+@font-face {
+  font-family: "CapitalisTypOasis";
+  /*src: local(Roboto Light), url("../fonts/GothamRnd-Medium.otf");*/
+  src: url("../fonts/CapitalisTypOasis.ttf") format("truetype");
+  font-weight: normal;
+}
 h1,h2{
    font-family: 'GothamRnd-Medium';
 }

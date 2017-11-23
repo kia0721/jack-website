@@ -281,6 +281,21 @@
         height: auto;
     }
 
+    .zoomInout_1 {
+        -webkit-animation: zoomInout_1 3s infinite;
+    }
+    @-webkit-keyframes zoomInout_1{
+        50% {font-size: 14px}
+    }
+
+
+    .zoomInout_2 {
+        -webkit-animation: css 3s infinite;
+    }
+    @-webkit-keyframes css{
+        50% {font-size: 32px}
+    }
+
     </style>
     <!-- Scripts -->
     <script>
@@ -306,7 +321,7 @@
                         <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
                             <i class="fa fa-bars"></i>
                         </a>
-                        <a href="#" >Jack Portal</a>
+                        <a href="{{ url('/') }}" >Jack Portal</a>
                     </div>
                 </div>
                 <div id="navbar" class="collapse navbar-right navbar-collapse" >
@@ -378,7 +393,7 @@
                                     <p style="max-width: 700px;">
                                     JACK's mission is to provide kids with the highest quality learning experience by celebrating and encouraging their creativity through dynamic and project-based learning all in a fun and engaging environment.</p>
                                 </div>
-                                <div style="top: 135px; left: 653px;" >
+                                <div style="top: 135px; left: 653px; cursor: pointer;" >
                                     <IMG SRC="../images/play-btn.gif"/>
                                 </div>
                             </div>
@@ -415,6 +430,11 @@
                 <div class="layer-holder layer-bg bg4"  id="Gallery">
                     <div class="container">
                         <div class="sub-con" >
+                            <div class="top-description" >
+                                <div  style="top: 377px; left: 89px; text-align: center; width: 180px; cursor: pointer;" >
+                                    <IMG SRC="../images/gallery.gif"/>
+                                </div>
+                            </div>
                             <div class="top-img" >
                                 <img src="../images/04_TOP.png" />
                             </div>
@@ -427,6 +447,18 @@
                 <div class="layer-holder layer-bg bg5" id="Contact-us">
                     <div class="container">
                         <div class="sub-con" >
+                            <div class="top-description" >
+                                <div style="top: 165px; left: 380px;" >
+                                    <h1>CONTACT US!</h1>
+                                </div>
+                                <div  style="top: 239px; left: 200px; max-width: 800px;" >
+                                    <p>We like to create things with fun, open-minded people. Feel fress to say hello!
+                                    </p>
+                                </div>
+                                <div style="top: 130px; left: 653px; cursor: pointer;" >
+                                    <IMG SRC="../images/mail-btn.gif"/>
+                                </div>
+                            </div>
                             <div class="top-img" >
                                 <img src="../images/05_TOP.png" />
                             </div>
@@ -548,8 +580,12 @@
 
             console.log(height+ " 42");
 
+            var curHashDiv = window.location.hash;
+            if(window.location.hash == "")
+                curHashDiv = "#Welcome";
+
             $('html, body').animate({
-                scrollTop: $(window.location.hash).offset().top
+                scrollTop: $(curHashDiv).offset().top
             }, 500, function () {
                 // isClicked = true;
 
