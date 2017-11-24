@@ -41,3 +41,7 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::get('/home', 'HomeController@index');
+Route::get('/courses', 'HomeController@courses');
+Route::get('/calendar', 'HomeController@calendar');
+Route::get('/e-magazine', 'HomeController@emagazine');
+Route::get('/faqs', 'HomeController@faqs');
