@@ -15,6 +15,14 @@
     <!-- <link href="{{ asset('/css/app.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+    <style type="text/css">
+        
+
+        #main-container {
+            height: auto!important;
+            min-height: 100%;
+        }
+    </style>
     @yield('css_link_2')
     <!-- Scripts -->
     <script>
@@ -25,7 +33,7 @@
 </head>
 <body>
     
-    <div id="wrapper" class="active">
+    <div id="wrapper main-container" class="active">
         
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container-fluid">
@@ -41,7 +49,7 @@
                             <i class="fa fa-bars"></i>
                         </a>
 
-                        <a href="{{ url('/') }}" ><img src="../images/jack_logo.png" /></a>
+                        <a href="{{ url('/') }}" ><img src="{{ asset('/images/jack_logo.png') }}" /></a>
                     </div>
                 </div>
                 <div id="navbar" class="collapse navbar-right navbar-collapse" >
@@ -73,7 +81,20 @@
     <script src="{{ asset('/js/jquery-3.1.1.min.js') }}"></script>
     <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('/js/dialog.js') }}"></script>
-    
+    <script src="{{ asset('/js/ba-debug.js') }}" ></script>
+    <script src="{{ asset('/js/jquery.ba-throttle-debounce.js') }}"></script>
+    <script type="text/javascript">
+        resizeLayerBg();
+        function resizeLayerBg(){
+            var height = $( window ).height();
+            console.log(height);
+
+            $('.layer-bg').css( "height", height );
+            
+            
+        }
+        
+    </script>
     
     @yield('script_link')
 </body>

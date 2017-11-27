@@ -28,7 +28,11 @@ class HomeController extends Controller
 
     public function courses()
     {
-        return view('site.courses');
+        return view('site.courses_home');
+    }
+    public function courseCoder()
+    {
+        return view('site.course_coder');
     }
 
     public function calendar()

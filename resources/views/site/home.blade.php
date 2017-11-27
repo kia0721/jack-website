@@ -242,6 +242,7 @@
         transition: all 1s ease;
 
         position: absolute;
+        bottom: 28px;
     /*bottom: 17px;*/
     }
 
@@ -253,7 +254,7 @@
     }
 
     .top-img{
-        z-index: 12;
+        z-index: 14;
     }
     .top-description{
         z-index: 14;
@@ -477,9 +478,7 @@
 @endsection
 @section('script_link')
   <script type="text/javascript" >
-
-        resizeLayerBg();
-    
+   
       
         var divPos = getDivPos(window.location.hash);
 
@@ -533,18 +532,9 @@
             });
 
             
-
-            // currentBlock = getDivPos("#"+divId);
               window.location.hash = (divId);
               history.pushState(null, null, '#'+divId);
               currentHash = divId;
-
-            // window.location.hash = divId;
-           //  var st = $(this).scrollTop();
-           // if(Math.abs(lastScrollTop - st) <= delta)
-           //      return;
-           //  lastScrollTop = st;
-            // lastScrollTop = getDivPos(divId);
         });
 
     
@@ -580,14 +570,7 @@
                 return 1;
         }
 
-        function resizeLayerBg(){
-            var height = $( window ).height();
-            console.log(height);
-
-            $('.layer-bg').css( "height", height );
-
-            $('.char-pos').css( "bottom" ,"28px");
-
+        function resizeLayerBg2(){
 
             var curHashDiv = window.location.hash;
             if(window.location.hash == "")
@@ -599,9 +582,6 @@
                 // isClicked = true;
 
             });
-
-            
-            
         }
     </script>
      
@@ -629,7 +609,7 @@
                      var hash = $(blocksArr[i]).attr('id');
                      console.log("111 currentElementTop: "+currentElementTop +" currentTop: " + currentTop +" height: "+$(blocksArr[i]).height() + " currentHash: "+currentHash);
 
-                     if ((currentElementTop-100 < currentTop || currentElementTop == currentTop ) && currentTop < (currentElementTop + $(blocksArr[i]).height() - 100 )&& currentHash!=hash){
+                     if ((currentElementTop-100 <= currentTop || currentElementTop == currentTop ) && currentTop <= (currentElementTop + $(blocksArr[i]).height() - 100 ) && currentHash!=hash){
                         if(history.pushState) {
                             history.pushState(null, null, '#'+hash);
                             console.log("pushState "+hash);
@@ -693,11 +673,13 @@
        
             $(window)
             .resize( $.debounce( 250, true, function(e){
-                 resizeLayerBg();
+                 // resizeLayerBg();
+                 // resizeLayerBg2();
                  console.log('resize');
             }))
             .resize( $.debounce( 250, false, function(e){
                  resizeLayerBg();
+                 resizeLayerBg2();
         }));
     </script>
 @endsection

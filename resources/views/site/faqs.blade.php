@@ -3,7 +3,7 @@
 @section('css_link_2')
 <style type="text/css">
     body{
-        background-color: #ffe6bb;
+        background-color: #d3cac1;
     }
     .bg1 {
         background-image: url(../images/faqs_bg.png);
@@ -33,10 +33,6 @@
         width: 100%;
         height: 100%;
         top: 202px;
-        max-width: 550px;
-        left:250px;
-        max-height: 350px;
-        overflow-y: overlay;
     }
 
     .top-img{
@@ -50,9 +46,13 @@
         position: relative;
     }
 
-    .top-description::-webkit-scrollbar {
+    .faqs_div::-webkit-scrollbar {
       width: 10px;
       background-color: #e1e2e8;
+    }
+
+    .top-description > div{
+        position: absolute;
     }
 
 </style>
@@ -64,12 +64,12 @@
    
     <div class="main-wrapper">
 
-        <section data-name="Welcome" class="layer pos1" >
+        <section data-name="Faqs" class="layer pos1" >
             <div class="layer-holder layer-bg bg1"  id="Welcome">
                 <div class="container">
                     <div class="sub-con" >
                         <div class="top-description" >
-                            <div  style="padding-right: 15px; color:#f8f9ff; " >
+                            <div class="faqs_div" style="padding-right: 15px; color:#f8f9ff; left: 250px; max-width: 550px; max-height: 350px;     overflow-y: overlay;" >
                                 
                                 <h1>What is JACK?</h1>
                                 <p>Junior Academy for Coding Knowledge, Inc. (JACK) is a learning center that aims to equip kids with fundamental coding knowledge and develop their skills to create using the latest hardware trends and innovations. JACK’s mission is to provide them the highest quality learning experience by celebrating and encouraging their creativity through dynamic and project-based learning - all in a fun and engaging environment.
@@ -130,38 +130,18 @@
 
 @endsection
 @section('script_link')
-<script src="{{ asset('/js/ba-debug.js') }}" ></script>
-<script src="{{ asset('/js/jquery.ba-throttle-debounce.js') }}"></script>
 <script type="text/javascript">
-    resizeLayerBg();
-    function resizeLayerBg(){
-        var height = $( window ).height();
-        console.log(height);
-
-        $('.layer-bg').css( "height", height );
-
-        $('.char-pos').css( "bottom" ,"28px");
-
-
-        var curHashDiv = window.location.hash;
-        if(window.location.hash == "")
-            curHashDiv = "#Welcome";
-
-        $('html, body').animate({
-            scrollTop: $(curHashDiv).offset().top
-        }, 500, function () {
-            // isClicked = true;
-
-        });
-
-        
-        
-    }
-    $(window).resize( $.debounce( 250, true, function(e){
-                 resizeLayerBg();
+    
+    $(window)
+            .resize( $.debounce( 250, true, function(e){
+                 // resizeLayerBg();
+                
                  console.log('resize');
-            })).resize( $.debounce( 250, false, function(e){
+            }))
+            .resize( $.debounce( 250, false, function(e){
                  resizeLayerBg();
+               
         }));
 </script>
+
 @endsection
