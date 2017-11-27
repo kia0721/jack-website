@@ -58,7 +58,7 @@
         bottom: 400px;
       }
       50% {
-        bottom: 500px;
+        bottom: 470px;
       }
       100% {
         bottom: 400px;
@@ -78,7 +78,7 @@
         bottom: 420px;
       }
       50% {
-        bottom: 520px;
+        bottom: 490px;
       }
       100% {
         bottom: 420px;
@@ -105,7 +105,7 @@
     }
 
     .green.ball {
-        animation: MoveUpDown_green 3s cubic-bezier(0, 0, 0.24, 0.43) infinite;
+        animation: MoveUpDown_green 4.6s cubic-bezier(0, 0, 0.24, 0.43) infinite;
         position: absolute;
         left: 801px;
         bottom: 370px;
@@ -116,7 +116,7 @@
         bottom: 370px;
       }
       50% {
-        bottom: 480px;
+        bottom: 440px;
       }
       100% {
         bottom: 370px;

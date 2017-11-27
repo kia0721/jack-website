@@ -74,21 +74,32 @@
 {
     font-size: 65px;
 }
-.banner .btn {
+.btn-orange {
     padding: 6px 25px;
     margin-top: 30px;
     margin-right: 5px;
     color: black;
 }
 
-.banner .btn-orange {
+.btn-orange {
     background-color: #f8c91b;
 }
 
-.banner .btn-orange:hover {
+.btn-orange:hover {
     background-color: #e8be20;
+    color: #020101;
 }
 
+p.course-detail{
+    font-size: 12px;
+}
+
+.course-sec{
+    background-color: #efefef; 
+    padding: 20px 0px !important; 
+    border-radius: 5px;
+
+}
     </style>
 @endsection
 
@@ -116,46 +127,163 @@
 
         <section>
           <div class="wrapper">
-                <div class="entry-content">
-              <h3 style="text-align: center;">CUSTOM WEB ELEMENTS</h3>
-        <p style="text-align: center;">Our starter website package effortlessly activates a powerful branding solution for your business. These elements are carefully selected to stimulate rapid online exposure through striking designs, excellent usability, and tools with pinpoint accuracy to turn client prospects into loyal customers.</p>
+            <div class="entry-content">
+                <h3 style="text-align: center;"> <br></h3>
+                
             </div>
-                <div class="packages-default">
-                  <ul>
-                      <li class="post-111 shop-products type-shop-products status-publish has-post-thumbnail hentry">
-          <img width="105" height="99" src="http://maverickheroes.com/wp-content/uploads/homepage.jpg" class="attachment-products-thumb size-products-thumb wp-post-image" alt="homepage">  <h4>Home Page</h4>
-          <p>We create custom designed homepages with the ... <a data-id="111" class="detail">(More)</a></p>
-        </li>
-                <li class="post-112 shop-products type-shop-products status-publish has-post-thumbnail hentry">
-          <img width="105" height="105" src="http://maverickheroes.com/wp-content/uploads/banner-design.jpg" class="attachment-products-thumb size-products-thumb wp-post-image" alt="banner-design">  <h4>Banner Design</h4>
-          <p>Greet 'em with a bang! The banner works side-... <a data-id="112" class="detail">(More)</a></p>
-        </li>
-                <li class="post-113 shop-products type-shop-products status-publish has-post-thumbnail hentry">
-          <img width="105" height="99" src="http://maverickheroes.com/wp-content/uploads/inner-pages.jpg" class="attachment-products-thumb size-products-thumb wp-post-image" alt="inner-pages">  <h4>5-8 Inner Pages</h4>
-          <p>Our inner pages are created with focus on eng... <a data-id="113" class="detail">(More)</a></p>
-        </li>
-                <li class="post-114 shop-products type-shop-products status-publish has-post-thumbnail hentry">
-          <img width="121" height="91" src="http://maverickheroes.com/wp-content/uploads/text-management.jpg" class="attachment-products-thumb size-products-thumb wp-post-image" alt="text-management">  <h4>Text Management</h4>
-          <p>Easily update your website with engaging and ... <a data-id="114" class="detail">(More)</a></p>
-        </li>
-                <li class="post-115 shop-products type-shop-products status-publish has-post-thumbnail hentry">
-          <img width="113" height="70" src="http://maverickheroes.com/wp-content/uploads/image-management.jpg" class="attachment-products-thumb size-products-thumb wp-post-image" alt="image-management">  <h4>Image Management</h4>
-          <p>How often do you find a pointless image to a ... <a data-id="115" class="detail">(More)</a></p>
-        </li>
-                <li class="post-336 shop-products type-shop-products status-publish has-post-thumbnail hentry">
-          <img width="105" height="103" src="http://maverickheroes.com/wp-content/uploads/inquiry-contact-feature.jpg" class="attachment-products-thumb size-products-thumb wp-post-image" alt="inquiry-contact-feature">  <h4>Inquiry/ Contact Feature</h4>
-          <p>The Contact us page is where customer interac... <a data-id="336" class="detail">(More)</a></p>
-        </li>
-                <li class="post-117 shop-products type-shop-products status-publish has-post-thumbnail hentry">
-          <img width="143" height="120" src="http://maverickheroes.com/wp-content/uploads/faq-page-143x120.png" class="attachment-products-thumb size-products-thumb wp-post-image" alt="faq-page" srcset="http://maverickheroes.com/wp-content/uploads/faq-page-143x120.png 143w, http://maverickheroes.com/wp-content/uploads/faq-page.png 194w" sizes="(max-width: 143px) 100vw, 143px">  <h4>FAQ Page</h4>
-          <p>Have your website answer your customers' ques... <a data-id="117" class="detail">(More)</a></p>
-        </li>
-                <li class="post-118 shop-products type-shop-products status-publish has-post-thumbnail hentry">
-          <img width="134" height="120" src="http://maverickheroes.com/wp-content/uploads/3-social-media-designs-134x120.png" class="attachment-products-thumb size-products-thumb wp-post-image" alt="3-social-media-designs" srcset="http://maverickheroes.com/wp-content/uploads/3-social-media-designs-134x120.png 134w, http://maverickheroes.com/wp-content/uploads/3-social-media-designs.png 171w" sizes="(max-width: 134px) 100vw, 134px">  <h4>3 Social Media Designs</h4>
-          <p>Extend your business to the social world. Soc... <a data-id="118" class="detail">(More)</a></p>
-        </li>
-              </ul>
-                      </div>
+            <div class="col-md-12 course-sec" >
+                <div class="col-md-3">
+                    <img width="100%" src="{{ asset('/images/junior_c.png')}}" style="margin:auto;">
+                </div>
+
+                
+                <div class="col-md-6">
+                    <h4><b>JUNIOR CODER CLASS</b></h4>
+                    <p class="course-detail">This course provides an overview of Algorithms, Data, Programming, Computers and the Internet. At the end of this course, students should be able to show understanding of algorithms and what they can be used for, create a simple program using Python, use data types and simple data structures in coding that program, explain the main components of a computer system and how they fit together, and explain how the internet works.</p>
+
+                </div>
+                <div class="col-md-3">
+                    <p>
+                    <br>
+                    <b>For ages 8 to 11 years old</b>
+                    <br><br>
+                    Time : 8:30am - 12:30nn <br>
+                    July 22 and 29, August 5, 12, and 19
+                    <br><br>
+                    <b>P12,000 per module</b>
+
+                    </p>
+                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                </div>
+
+            </div> 
+            <div class="col-md-12">
+            <br>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-3">
+                    <img width="100%" src="{{ asset('/images/mobile_c.png')}}" style="margin:auto;">
+                </div>
+
+                
+                <div class="col-md-6">
+                    <h6>JUNIOR CODER CLASS:</h6>
+                    <h4><b>MOBILE APP DEVELOPMENT</b></h4>
+                    <p class="course-detail">Learn the basics of creating mobile apps, as you design, program, and deploy them in your android or IOS device. </p>
+
+                </div>
+                <div class="col-md-3">
+                    <p>
+                    <br>
+                    For ages 8 to 11 years old
+                    <br><br>
+                    Time : 8:30am - 12:30nn <BR>
+                    January 20 and 27, February 3, 10, and 17, 2018
+                    <br><br>
+                    <b>P12,000 per module</b>
+
+                    </p>
+                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                </div>
+
+            </div> 
+            <div class="col-md-12">
+            <br>
+            </div>
+            <div class="col-md-12 course-sec">
+                <div class="col-md-3 ">
+                    <img src="{{ asset('/images/java.png')}}" style="margin:auto;">
+                </div>
+
+                
+                <div class="col-md-6">
+                    <h6>APP DEVELOPMENT:</h6>
+                    <h4><b>JAVA PROGRAMMING</b></h4>
+                    <p class="course-detail">This course provides a solid foundation on how to develop a web and mobile enterprise application using the Java programming language. At the end of this course, students should be able to become well-versed in the Java programming language, understand the theory and engineering behind object-oriented development, platform independence and the Java ecosystem, and apply their knowledge in developing their own enterprise system application. </p>
+
+                </div>
+                <div class="col-md-3">
+                    <p>
+                    <br>
+                    For ages 12 to 16 years old
+                    <br><br>
+                    Time :  8:30am - 12:30nn  <BR>
+                    •  <b>Beginner:</b>July 22 and 29, August 5 and 12   <br><br>
+                    •  <b>Intermediate:</b>August 19 and 26, September 2 and 9 <br><br>
+                    •  <b>Advanced:</b>September 16, 23, and 30, October 7
+                    <br><br>
+                    <b>P15,000 per module</b>
+
+                    </p>
+                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                </div>
+
+            </div> 
+            <div class="col-md-12">
+            <br>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-3 ">
+                    <img src="{{ asset('/images/c_prog.png')}}" style="margin:auto;">
+                </div>
+
+                
+                <div class="col-md-6">
+                    <h6>Electronics Engineering:</h6>
+                    <h4><b>C Programming</b></h4>
+                    <p class="course-detail">This course provides a solid foundation on how to develop an embedded system application using the C programming language. At the end of this course, students should be able to become well-versed in the C programming language, understand the theory and engineering behind embedded systems, and apply their knowledge in developing their own embedded system application. </p>
+
+                </div>
+                <div class="col-md-3">
+                    <p>
+                    <br>
+                    For ages 12 to 16 years old
+                    <br><br>
+                    Time :  8:30am - 12:30nn  <BR>
+                    •  <b>Beginner:</b>August 19 and 26, September 2, and 9 <br><br>
+                    •  <b>Intermediate:</b>September 16, 23, 30, October 7<br><br>
+                    •  <b>Advanced:</b>August 19 and 26, September 2, and 9 
+                    <br><br>
+                    <b>P15,000 per module</b>
+
+                    </p>
+                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                </div>
+
+            </div> 
+
+            <div class="col-md-12">
+            <br>
+            </div>
+            <div class="col-md-12 course-sec">
+                <div class="col-md-3 ">
+                    <img src="{{ asset('/images/python.png')}}" style="margin:auto;">
+                </div>
+
+                
+                <div class="col-md-6">
+                    <h6>Game Development:</h6>
+                    <h4><b>Python Programming</b></h4>
+                    <p class="course-detail">This course provides a solid foundation on how to develop a game using the Python programming language. At the end of this course, students should be able to become well-versed in the Python programming language, understand the theory, physics, math, play, design, and core concepts behind games, and apply their knowledge in developing their own game. </p>
+
+                </div>
+                <div class="col-md-3">
+                    <p>
+                    <br>
+                    For ages 12 to 16 years old
+                    <br><br>
+                    Time :  01:30pm - 05:30pm<BR>
+                    •  <b>Beginner:</b>September 16, 23, and 30, October 7<br><br>
+                    •  <b>Intermediate:</b>October 14, 21, and 28, November 4<br><br>
+                    •  <b>Advanced:</b>November 11, 18, and 25, December 2
+                    <br><br>
+                    <b>P15,000 per module</b>
+
+                    </p>
+                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                </div>
+
+            </div> 
           </div>
         </section>
     </div>
