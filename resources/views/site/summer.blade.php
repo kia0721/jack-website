@@ -7,25 +7,130 @@
             height: 100%;
             background-color: white;
         }
+        nav ul, nav ol, li{
+        list-style: none;
+        list-style-image: none;
+    }
+
+    .navigation:before {
+        background: url(../../images/courses-nav.png) no-repeat 0 -2px;
+        bottom: 100%;
+        content: '';
+        display: block;
+        height: 83px;
+        margin-bottom: -5px;
+        position: absolute;
+        left: 56%;
+        width: 90px;
+        top: -80px;
+    }
+
+    .navigation .Summer {
+        background-position: 0 -87px;
+        height: 50px !important;
+        /*width: 84px;*/
+    }
+    .icon.Summer .label{
+        color: #eca220 !important;
+    }
+
+    .navigation .Junior {
+        background-position: 0 -139px;
+        height: 51px !important;
+        
+    }
+
+    .icon.Junior .label{
+        color: #0b52a4 !important;
+    }
+
+    .navigation .Master {
+        background-position: 0 -194px;
+        
+    }
+
+    .icon.Master .label{
+        top: 15px;
+        color: #db4242 !important;
+    }
+
+    .navigation li {
+        position: relative;
+        margin-bottom: 3px;
+    }
+
+    .navigation .icon {
+        display: block;
+        background-image: url("{{ asset('/images/courses-nav.png') }}");
+        cursor: pointer;
+        height: 51px;
+        width: 69px;
+    }
+
+    .navigation .label {
+        display: none;
+        background-color: #fff;
+        margin-right: 15px;
+        left: 115%;
+        top: 10px;
+        padding: 7px 5px 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+        -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+        box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+        color:black;
+        width:80px;
+        height: 24px;
+        
+    }
+ 
+    .navigation .label, .navigation .label:after {
+        position: absolute;
+    }
+
+    .navigation .label:after {
+        content: '';
+        height: 0;
+        right: 100%;
+        margin-top: -5px;
+        top: 2px;
+        top: 50%;
+        width: 0;
+        border-top: 5px solid #ce0c0c00;
+        border-right: 10px solid #fff;
+        border-bottom: 5px solid transparent;
+    }
+    
+
+    .navigation{
+        margin-top: -105px;
+        position: fixed;
+        left: -38px;
+        top: 88%;
+        z-index: 20;
+    }
         .banner{
-            background-color: #52DEFF;
+            background-color: #3fa5b4;
             position: relative;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             height: 50%;
-            background:transparent url({{ asset('images/coder_banner.jpg') }});
+            background:transparent url("{{ asset('images/coder_banner.jpg') }}") no-repeat center bottom;
 
         }
         #main-wrapper {
     padding-bottom: 0;
 }
     .banner, .price:after {
-    background-color: #f1b754;
+    background-color: #3fa5b4;
+
 }
     .banner {
     color: white;
-    padding: 92px 0 0px;
+    padding: 83px 0 0px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
@@ -100,10 +205,27 @@ p.course-detail{
     border-radius: 5px;
 
 }
+
+
+
     </style>
 @endsection
 
 @section('content')
+    <div class="navigation" >
+        <ul >
+                
+            <li >
+                <a href="{{ url('/courses/summer') }}"><p class="icon Summer"><span class="label">Summer</span></p></a>
+            </li>
+            <li >
+                <a href="{{ url('/courses/junior') }}"><p class="icon Junior"><span class="label">Junior</span></p></a>
+            </li>
+            <li >
+                <a href="{{ url('/courses/master') }}"><p class="icon Master"><span class="label">Master</span></p></a>
+            </li>
+        </ul>
+    </div>
     <div id="main-wrapper">
 
         <div class="banner">
@@ -114,7 +236,7 @@ p.course-detail{
                   <h1 class="course-title">CODER</h1>
                 <H3>Be a junior or master coder and learn the art of Java, C and Python.</H3>
 
-                  <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">GO BACK TO COURSES</a> 
+                  <a href="{{ url('/courses') }}" class="btn btn-orange">GO BACK TO COURSES</a> 
                 </div>
               </div>
               <div class="course-descr2-d">
@@ -292,6 +414,14 @@ p.course-detail{
 @endsection
 @section('script_link')
   <script type="text/javascript">
-  
+   $('p.icon').bind('mouseover', function() {
+            
+        var classN = $(this).attr('class');  
+        var divId = classN.split(' ')[1];
+        $("."+divId+" .label").show();
+
+    }).on('mouseleave', function() { 
+        $(".icon .label").hide();
+    });
 </script>
 @endsection

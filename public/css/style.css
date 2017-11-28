@@ -355,3 +355,9 @@ padding-right: 0px !important;
   background-color: #b91919;
   color: white;
 }
+
+
+nav ul, nav ol, li{
+    list-style: none;
+    list-style-image: none;
+}

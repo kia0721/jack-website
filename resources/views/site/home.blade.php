@@ -47,11 +47,6 @@
         color:#fff;
     }
 
-    nav ul, nav ol, li{
-        list-style: none;
-        list-style-image: none;
-    }
-
     .navigation:before {
         background: url(../images/nav.png) no-repeat 0 -2px;
         bottom: 100%;
@@ -398,7 +393,7 @@
                 <div class="layer-holder layer-bg bg4"  id="Gallery">
                     <div class="container">
                         <div class="sub-con" >
-                            <div class="top-description" >
+                            <div class="top-description" style="z-index:20 !important;" >
                                 <div  style="top: 377px; left: 89px; text-align: center; width: 180px; cursor: pointer;" >
                                     <IMG SRC="../images/gallery.gif"/>
                                 </div>
@@ -415,13 +410,32 @@
                 <div class="layer-holder layer-bg bg5" id="Contact-us">
                     <div class="container">
                         <div class="sub-con" >
-                            <div class="top-description" >
+                            <div class="top-description" style="z-index: 16; padding-right: 42px;">
                                 <div style="top: 165px; left: 380px;" >
                                     <h1>CONTACT US!</h1>
                                 </div>
-                                <div  style="top: 239px; left: 200px; max-width: 800px;" >
+                                <div  style="top: 239px; left: 220px; max-width: 800px;" >
                                     <p>We like to create things with fun, open-minded people. Feel free to say hello!
                                     </p>
+                                </div>
+
+                                <div style="top: 275px; left: 201px; max-width: 800px; background-color: #ffffff91; border-radius: 10px; padding-right: 40px;" >
+                                    <div class="col-md-12" style="border-radius: 10px; border-width: 2px; border-color: #f5af0a; border-style: solid; margin: 20px;">
+                                        <div class="col-md-6">
+                                            <h5>ADDRESS<br></h5>
+                                            <p>Penthouse, East Tower, <br>
+                                            Philippine Stock Exchange<br>
+                                            Center, Exchange Road, Ortigas<br>
+                                            Center, Pasig City, 1605</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            
+                                            <h5>CONTACTS<br></h5>
+                                            <p>Email: learncoding@jack.com.ph <br>
+                                            Phone: +63977 841 0482<br><br>
+                                            facebook.com/JackSchoolPH</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="contactUsShowFormBtn" data-toggle="modal" data-target="#contactUsShowFormModal" style="top: 130px; left: 653px; cursor: pointer;" >
                                     <IMG SRC="../images/mail-btn.gif"/>

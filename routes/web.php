@@ -43,11 +43,9 @@ Route::prefix('admin')->group(function () {
 Route::get('/home', 'HomeController@index');
 Route::prefix('courses')->group(function () {
 	Route::get('/', 'HomeController@courses');
-	Route::get('/coder', 'HomeController@courseCoder');
-	Route::get('/courses/detail/{id}', 'HomeController@detailView');
-	Route::post('/addSchedule', 'HomeController@addSchedule');
-
-
+	Route::get('/summer', 'HomeController@summer');
+	Route::get('/junior', 'HomeController@junior');
+	Route::get('/master', 'HomeController@master');
 });
 
 Route::get('/calendar', 'HomeController@calendar');

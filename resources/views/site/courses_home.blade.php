@@ -49,7 +49,7 @@
     .yellow.ball {
         animation: MoveUpDown 4s linear infinite;
         position: absolute;
-        left: 72px;
+        left: 186px;
         bottom: 400px;
     }
 
@@ -69,7 +69,7 @@
     .blue.ball {
         animation: MoveUpDown_blue 3.5s cubic-bezier(0, 0, 0.24, 0.43) infinite;
         position: absolute;
-        left: 309px;
+        left: 443px;
         bottom: 420px;
     }
 
@@ -88,7 +88,7 @@
     .red.ball {
         animation: MoveUpDown_red 3.8s cubic-bezier(0, 0, 0.24, 0.43) infinite;
         position: absolute;
-        left: 553px;
+        left: 703px;
         bottom: 380px;
     }
 
@@ -101,25 +101,6 @@
       }
       100% {
         bottom: 380px;
-      }
-    }
-
-    .green.ball {
-        animation: MoveUpDown_green 4.6s cubic-bezier(0, 0, 0.24, 0.43) infinite;
-        position: absolute;
-        left: 801px;
-        bottom: 370px;
-    }
-
-    @keyframes MoveUpDown_green {
-      0% {
-        bottom: 370px;
-      }
-      50% {
-        bottom: 440px;
-      }
-      100% {
-        bottom: 370px;
       }
     }
 
@@ -167,11 +148,14 @@
         top: 20px;
     }
 
+    
+
+
 </style>
 @endsection
 
 @section('content')
-
+    
     <div class="main-wrapper">
 
         <section data-name="Faqs" class="layer pos1" >
@@ -188,34 +172,28 @@
                             </div>
 
                             <div class="yellow bubble" >
-                                Be a junior or master coder and learn the art of Java, C and Python.
+                                Delve into the wonderful world of coding by learning how to develop applications where you can create your very own stories and games.
                             </div>
                             <div class="blue bubble" >
-                                Delve into the wonderful world of coding by learning how to develop applications where you can create your very own stories and games.
+                                
+                                Be a junior or master coder and learn the art of Java, C and Python.
                             </div>
 
                             <div class="red bubble" >
                                 Teach BB8 Droids and Parrot Drones to follow rules, avoid obstructions, and execute maneuvers. Learn the basics of programming by coding these machines to life.
                             </div>
-                            <div class="green bubble" >
-                                Specialize on courses that will mold you into a young engineer. Build robots or circuits, as you learn the core concepts about coding, robotics, engineering, and electricity through hands-on activities in track.
-                            </div>
                             
                         </div>
                         <div class="top-img" >
                             <div class="yellow ball"  >
-                                <a href="{{ url('/courses/coder') }}" id="contactUsLink"><img src="../images/yellow_ball.png" /></a>
+                                <a href="{{ url('/courses/summer') }}" ><img src="../images/summer_ball.png" /></a>
                             </div>
                             <div class="blue ball">
-                                <img src="../images/blue_ball.png" />
+                                <a href="{{ url('/courses/junior') }}" ><img src="../images/junior_ball.png" /></a>
                             </div>
 
                             <div class="red ball" >
-                                <img src="../images/red_ball.png" />
-                            </div>
-
-                            <div class="green ball" >
-                                <img src="../images/green_ball.png" />
+                                <a href="{{ url('/courses/master') }}" ><img src="../images/master_ball.png" /></a>
                             </div>
                         </div>
                     </div>
@@ -248,5 +226,8 @@
             })).resize( $.debounce( 250, false, function(e){
                  resizeLayerBg();
         }));
+
+   
+
 </script>
 @endsection

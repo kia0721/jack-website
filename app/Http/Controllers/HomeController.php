@@ -30,9 +30,18 @@ class HomeController extends Controller
     {
         return view('site.courses_home');
     }
-    public function courseCoder()
+    public function summer()
     {
-        return view('site.course_coder');
+        return view('site.summer');
+    }
+    public function junior()
+    {
+        return view('site.junior');
+    }
+
+    public function master()
+    {
+        return view('site.master');
     }
 
     public function calendar()
