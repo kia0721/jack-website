@@ -3,49 +3,7 @@
 @section('css_link')
 
     <style type="text/css">
-      .left, .right {
-        float:left;
-        height:100vh;
-    }
-    
-    .left {
-        background: #337ab7;
-        display: inline-block;
-        white-space: nowrap;
-        width: 50px;
-        transition: width 1s ;
-    }
-
-    .right {
-        background: #fff;
-        width: 350px;
-        transition: width 1s;
-        border-style:solid;
-        border-color:#ccc;
-        border-width:1px;
-    }    
-
-    .left:hover {
-        width: 250px;
-    }    
-        
-    
-            
-    .left .glyphicon {
-        margin:15px;
-        width:20px;
-        color:#fff;
-    }
-        
-    .right .glyphicon {
-        color:#a9a9a9;
-    }
-    
-    .item {
-        height:50px;
-        overflow:hidden;
-        color:#fff;
-    }
+     
 
     .navigation:before {
         background: url(../images/nav.png) no-repeat 0 -2px;
@@ -372,13 +330,16 @@
                 <div class="layer-holder layer-bg bg3"  id="Courses">
                     <div class="container">
                         <div class="sub-con" >
-                            <div class="top-description" >
+                            <div class="top-description" style="z-index: 16;">
                                 <div style="top: 145px; left: 380px;" >
                                     <h1>COURSES OFFERED</h1>
                                 </div>
                                 <div  style="top: 239px; left: 200px; max-width: 800px;" >
                                     <p>In today's digital world, coding has become a fundamental skill that is best taught at an early age. When kids learn how to create using the latest hardware trends and innovations, they also learn how to be more creative, at the same time, using logic, to solve problems.
                                     </p>
+                                </div>
+                                <div  style="top: 372px; left: 94px; width: 169px; height:72px; cursor: pointer;" onclick="location.href='{{ url('/courses') }}';" >
+                                    &nbsp
                                 </div>
                             </div>
                             <div class="top-img" >
@@ -394,8 +355,8 @@
                     <div class="container">
                         <div class="sub-con" >
                             <div class="top-description" style="z-index:20 !important;" >
-                                <div  style="top: 377px; left: 89px; text-align: center; width: 180px; cursor: pointer;" >
-                                    <IMG SRC="../images/gallery.gif"/>
+                                <div style="top: 377px; left: 89px; text-align: center; width: 180px; cursor: pointer;" >
+                                    <a href="{{ url('/gallery') }}"><IMG SRC="../images/gallery.gif"/></a>
                                 </div>
                             </div>
                             <div class="top-img" >
@@ -432,7 +393,8 @@
                                             
                                             <h5>CONTACTS<br></h5>
                                             <p>Email: learncoding@jack.com.ph <br>
-                                            Phone: +63977 841 0482<br><br>
+                                            Phone: +63977 841 0482<br>
+                                            Landline: (02) 636 74 99 loc. 887<br>
                                             facebook.com/JackSchoolPH</p>
                                         </div>
                                     </div>

@@ -1,27 +1,27 @@
 @extends('layouts.site')
 
 @section('css_link_2')
-
+    @include('css.courses_nav') 
     <style type="text/css">
         body{
             height: 100%;
             background-color: white;
         }
         .banner{
-            background-color: #3fa5b4;
+            background-color: #135f6f;
             position: relative;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             height: 50%;
-            background:transparent url({{ asset('images/create_banner.jpg') }}) no-repeat center bottom;
+            background:transparent url({{ asset('images/junior_banner.jpg') }}) no-repeat center bottom;
 
         }
         #main-wrapper {
     padding-bottom: 0;
 }
     .banner, .price:after {
-    background-color: #97b4bc;
+    background-color: #135f6f;
 
 }
     .banner {
@@ -108,6 +108,7 @@ p.course-detail{
 @endsection
 
 @section('content')
+    @include('html.courses_nav') 
     <div id="main-wrapper">
 
         <div class="banner">
@@ -115,7 +116,7 @@ p.course-detail{
             <div class="banner-content clrf">
               <div class="course-descr-d" style="width:60%;">
                 <div>
-                  <h1 class="course-title">CREATE TRACK</h1>
+                  <h1 class="course-title">JUNIOR</h1>
                 <H3>Delve into the wonderful world of coding by learning how to develop applications where you can create your very own stories and games.</H3>
 
                   <a href="{{ url('/courses') }}" class="btn btn-orange">GO BACK TO COURSES</a> 

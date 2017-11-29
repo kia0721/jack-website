@@ -8,20 +8,20 @@
             background-color: white;
         }
         .banner{
-            background-color: #79d3b0;
+            background-color: #e45d51;
             position: relative;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             height: 50%;
-            background:transparent url({{ asset('images/stem_banner.jpg') }}) no-repeat center bottom;
+            background:transparent url({{ asset('images/master_banner.jpg') }}) no-repeat center bottom;
 
         }
         #main-wrapper {
     padding-bottom: 0;
 }
     .banner, .price:after {
-    background-color: #79d3b0;
+    background-color: #e45d51;
 
 }
     .banner {
@@ -115,7 +115,7 @@ p.course-detail{
             <div class="banner-content clrf">
               <div class="course-descr-d" style="width:60%;">
                 <div>
-                  <h1 class="course-title">STEM TRACK</h1>
+                  <h1 class="course-title">MASTER</h1>
                 <H3>Teach BB8 Droids and Parrot Drones to follow rules, avoid obstructions, and execute maneuvers. Learn the basics of programming by coding these machines to life.</H3>
 
                   <a href="{{ url('/courses') }}" class="btn btn-orange">GO BACK TO COURSES</a> 

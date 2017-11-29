@@ -1,118 +1,21 @@
 @extends('layouts.site')
 
 @section('css_link_2')
-
+@include('css.courses_nav') 
     <style type="text/css">
         body{
             height: 100%;
             background-color: white;
+            color: black;
         }
         nav ul, nav ol, li{
         list-style: none;
         list-style-image: none;
     }
 
-    .navigation:before {
-        background: url(../../images/courses-nav.png) no-repeat 0 -2px;
-        bottom: 100%;
-        content: '';
-        display: block;
-        height: 83px;
-        margin-bottom: -5px;
-        position: absolute;
-        left: 56%;
-        width: 90px;
-        top: -80px;
-    }
-
-    .navigation .Summer {
-        background-position: 0 -87px;
-        height: 50px !important;
-        /*width: 84px;*/
-    }
-    .icon.Summer .label{
-        color: #eca220 !important;
-    }
-
-    .navigation .Junior {
-        background-position: 0 -139px;
-        height: 51px !important;
-        
-    }
-
-    .icon.Junior .label{
-        color: #0b52a4 !important;
-    }
-
-    .navigation .Master {
-        background-position: 0 -194px;
-        
-    }
-
-    .icon.Master .label{
-        top: 15px;
-        color: #db4242 !important;
-    }
-
-    .navigation li {
-        position: relative;
-        margin-bottom: 3px;
-    }
-
-    .navigation .icon {
-        display: block;
-        background-image: url("{{ asset('/images/courses-nav.png') }}");
-        cursor: pointer;
-        height: 51px;
-        width: 69px;
-    }
-
-    .navigation .label {
-        display: none;
-        background-color: #fff;
-        margin-right: 15px;
-        left: 115%;
-        top: 10px;
-        padding: 7px 5px 10px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
-        -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
-        box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
-        color:black;
-        width:80px;
-        height: 24px;
-        
-    }
- 
-    .navigation .label, .navigation .label:after {
-        position: absolute;
-    }
-
-    .navigation .label:after {
-        content: '';
-        height: 0;
-        right: 100%;
-        margin-top: -5px;
-        top: 2px;
-        top: 50%;
-        width: 0;
-        border-top: 5px solid #ce0c0c00;
-        border-right: 10px solid #fff;
-        border-bottom: 5px solid transparent;
-    }
     
-
-    .navigation{
-        margin-top: -105px;
-        position: fixed;
-        left: -38px;
-        top: 88%;
-        z-index: 20;
-    }
         .banner{
-            background-color: #3fa5b4;
+            background-color: #ff932b;
             position: relative;
             background-position: center;
             background-repeat: no-repeat;
@@ -125,11 +28,11 @@
     padding-bottom: 0;
 }
     .banner, .price:after {
-    background-color: #3fa5b4;
+    background-color: #ff932b;
 
 }
     .banner {
-    color: white;
+    color: black;
     padding: 83px 0 0px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
@@ -178,6 +81,7 @@
 .course-title
 {
     font-size: 65px;
+    color: #00bff3;
 }
 .btn-orange {
     padding: 6px 25px;
@@ -212,20 +116,7 @@ p.course-detail{
 @endsection
 
 @section('content')
-    <div class="navigation" >
-        <ul >
-                
-            <li >
-                <a href="{{ url('/courses/summer') }}"><p class="icon Summer"><span class="label">Summer</span></p></a>
-            </li>
-            <li >
-                <a href="{{ url('/courses/junior') }}"><p class="icon Junior"><span class="label">Junior</span></p></a>
-            </li>
-            <li >
-                <a href="{{ url('/courses/master') }}"><p class="icon Master"><span class="label">Master</span></p></a>
-            </li>
-        </ul>
-    </div>
+    @include('html.courses_nav') 
     <div id="main-wrapper">
 
         <div class="banner">
@@ -233,7 +124,7 @@ p.course-detail{
             <div class="banner-content clrf">
               <div class="course-descr-d">
                 <div>
-                  <h1 class="course-title">CODER</h1>
+                  <h1 class="course-title">SUMMER</h1>
                 <H3>Be a junior or master coder and learn the art of Java, C and Python.</H3>
 
                   <a href="{{ url('/courses') }}" class="btn btn-orange">GO BACK TO COURSES</a> 

@@ -56,4 +56,8 @@ class HomeController extends Controller
     {
         return view('site.faqs');
     }
+    public function gallery()
+    {
+        return view('site.gallery');
+    }
 }
