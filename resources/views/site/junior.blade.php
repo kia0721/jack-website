@@ -71,10 +71,7 @@
     display: block;
 }
 
-.course-title
-{
-    font-size: 65px;
-}
+
 .btn-orange {
     padding: 6px 25px;
     margin-top: 30px;
@@ -116,7 +113,7 @@ p.course-detail{
             <div class="banner-content clrf">
               <div class="course-descr-d" style="width:60%;">
                 <div>
-                  <h1 class="course-title">JUNIOR</h1>
+                  <h1 class="course-title">JUNIOR CODER</h1>
                 <H3>Delve into the wonderful world of coding by learning how to develop applications where you can create your very own stories and games.</H3>
 
                   <a href="{{ url('/courses') }}" class="btn btn-orange">GO BACK TO COURSES</a> 

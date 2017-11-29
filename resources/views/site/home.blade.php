@@ -304,11 +304,11 @@
                 <div class="layer-holder layer-bg bg2" id="About-us">
                     <div class="container">
                         <div class="sub-con" >
-                            <div class="top-description" >
+                            <div class="top-description" style="z-index: 16;">
                                 <div style="top: 176px; left: 243px;" >
                                     <h1>ABOUT THE ACADEMY</h1>
                                 </div>
-                                <div  style="top: 239px; left: 44px; max-width: 800px;" >
+                                <div  style="top: 239px; left: 64px; max-width: 800px;" >
                                     <p>In today's digital world, coding has become a fundamental skill that is best taught at an early age. When kids learn how to create using the latest hardware trends and innovations, they also learn how to be more creative, at the same time, using logic, to solve problems.
                                     </p>
                                     <p style="max-width: 700px;">
@@ -354,9 +354,9 @@
                 <div class="layer-holder layer-bg bg4"  id="Gallery">
                     <div class="container">
                         <div class="sub-con" >
-                            <div class="top-description" style="z-index:20 !important;" >
-                                <div style="top: 377px; left: 89px; text-align: center; width: 180px; cursor: pointer;" >
-                                    <a href="{{ url('/gallery') }}"><IMG SRC="../images/gallery.gif"/></a>
+                            <div class="top-description" style="z-index:16 !important;" >
+                                <div style="top: 372px; left: 89px; text-align: center; width: 180px; height:71px; cursor: pointer;" onclick="location.href='{{ url('/gallery') }}';">
+                                    <IMG SRC="../images/gallery.gif" style="margin-top: 10px;"/>
                                 </div>
                             </div>
                             <div class="top-img" >
@@ -375,7 +375,7 @@
                                 <div style="top: 165px; left: 380px;" >
                                     <h1>CONTACT US!</h1>
                                 </div>
-                                <div  style="top: 239px; left: 220px; max-width: 800px;" >
+                                <div  style="top: 239px; left: 230px; max-width: 800px;" >
                                     <p>We like to create things with fun, open-minded people. Feel free to say hello!
                                     </p>
                                 </div>
@@ -383,7 +383,7 @@
                                 <div style="top: 275px; left: 201px; max-width: 800px; background-color: #ffffff91; border-radius: 10px; padding-right: 40px;" >
                                     <div class="col-md-12" style="border-radius: 10px; border-width: 2px; border-color: #f5af0a; border-style: solid; margin: 20px;">
                                         <div class="col-md-6">
-                                            <h5>ADDRESS<br></h5>
+                                            <p><b>ADDRESS<br></b></p>
                                             <p>Penthouse, East Tower, <br>
                                             Philippine Stock Exchange<br>
                                             Center, Exchange Road, Ortigas<br>
@@ -391,11 +391,11 @@
                                         </div>
                                         <div class="col-md-6">
                                             
-                                            <h5>CONTACTS<br></h5>
+                                            <p><b>CONTACTS<br></b></p>
                                             <p>Email: learncoding@jack.com.ph <br>
                                             Phone: +63977 841 0482<br>
                                             Landline: (02) 636 74 99 loc. 887<br>
-                                            facebook.com/JackSchoolPH</p>
+                                            <a href="http://www.facebook.com/JackSchoolPH" target="_blank">facebook.com/JackSchoolPH</a> </p>
                                         </div>
                                     </div>
                                 </div>

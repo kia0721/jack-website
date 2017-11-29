@@ -60,4 +60,8 @@ class HomeController extends Controller
     {
         return view('site.gallery');
     }
+    public function register()
+    {
+        return view('site.register');
+    }
 }

@@ -9,9 +9,13 @@ body {
     /* Margin bottom by footer height */
   margin-bottom: 0px;
   /*font-family: 'Source Sans Pro','Helvetica Neue','Helvetica','Arial','sans-serif';*/
-  font-family: 'GothamRnd-Medium';
-  background-color: #d3cac1;
+  font-family: 'Karla';
+ /* background-color: #d3cac1;*/
+  height: 100%;
+  background-color: white;
+  color: black;
 }
+
 @font-face {
   font-family: "GothamRnd-Medium";
   /*src: local(Roboto Light), url("../fonts/GothamRnd-Medium.otf");*/
@@ -20,9 +24,9 @@ body {
 }
 
 @font-face {
-  font-family: "CapitalisTypOasis";
+  font-family: "Karla";
   /*src: local(Roboto Light), url("../fonts/GothamRnd-Medium.otf");*/
-  src: url("../fonts/CapitalisTypOasis.ttf") format("truetype");
+  src: url("../fonts/Karla-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 h1,h2{
@@ -360,4 +364,8 @@ padding-right: 0px !important;
 nav ul, nav ol, li{
     list-style: none;
     list-style-image: none;
+}
+
+#main-wrapper {
+    padding-bottom: 0;
 }

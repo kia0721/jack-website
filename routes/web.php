@@ -41,6 +41,7 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::get('/home', 'HomeController@index');
+Route::get('/register', 'HomeController@register');
 Route::prefix('courses')->group(function () {
 	Route::get('/', 'HomeController@courses');
 	Route::get('/summer', 'HomeController@summer');

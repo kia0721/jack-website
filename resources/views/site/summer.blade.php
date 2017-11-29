@@ -3,15 +3,8 @@
 @section('css_link_2')
 @include('css.courses_nav') 
     <style type="text/css">
-        body{
-            height: 100%;
-            background-color: white;
-            color: black;
-        }
-        nav ul, nav ol, li{
-        list-style: none;
-        list-style-image: none;
-    }
+        
+        
 
     
         .banner{
@@ -24,9 +17,7 @@
             background:transparent url("{{ asset('images/coder_banner.jpg') }}") no-repeat center bottom;
 
         }
-        #main-wrapper {
-    padding-bottom: 0;
-}
+        
     .banner, .price:after {
     background-color: #ff932b;
 
@@ -38,80 +29,13 @@
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
 }
-    .wrapper {
-    margin: 0 auto;
-    max-width: 1064px;
-}
-.banner .banner-content {
-    position: relative;
-}
-.wrapper > div {
-    padding: 0 10px;
-}
-@media (min-width: 896px){
-    .wrapper > div {
-        padding: 0 20px;
-    }
-}
-
-
-@media (min-width: 768px){
-    .course-descr-d {
-        width: 60%;
-        float: left;
-    }
-    .course-descr2-d {
-        width: 30%;
-      float: left;
-    }
-}
-.banner h2, .price {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.clr, .clrf:before, .clrf:after {
-    width: 100%!important;
-    float: none!important;
-    clear: both;
-    content: '';
-    display: block;
-}
+ 
 
 .course-title
-{
-    font-size: 65px;
-    color: #00bff3;
-}
-.btn-orange {
-    padding: 6px 25px;
-    margin-top: 30px;
-    margin-right: 5px;
-    color: black;
-}
-
-.btn-orange {
-    background-color: #f8c91b;
-}
-
-.btn-orange:hover {
-    background-color: #e8be20;
-    color: #020101;
-}
-
-p.course-detail{
-    font-size: 12px;
-}
-
-.course-sec{
-    background-color: #efefef; 
-    padding: 20px 0px !important; 
-    border-radius: 5px;
-
-}
-
-
-
+    {
+      
+        color: #00bff3;
+    }
     </style>
 @endsection
 

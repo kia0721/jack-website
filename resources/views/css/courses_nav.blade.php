@@ -99,4 +99,80 @@
         top: 83%;
         z-index: 20;
     }
+
+
+
+    .wrapper {
+        margin: 0 auto;
+        max-width: 1064px;
+    }
+    .banner .banner-content {
+        position: relative;
+    }
+    .wrapper > div {
+        padding: 0 10px;
+    }
+    @media (min-width: 896px){
+        .wrapper > div {
+            padding: 0 20px;
+        }
+    }
+
+
+    @media (min-width: 768px){
+        .course-descr-d {
+            width: 60%;
+            float: left;
+        }
+        .course-descr2-d {
+            width: 30%;
+          float: left;
+        }
+    }
+    .banner h2, .price {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .clr, .clrf:before, .clrf:after {
+        width: 100%!important;
+        float: none!important;
+        clear: both;
+        content: '';
+        display: block;
+    }
+
+    .course-title
+    {
+        color: white;
+        font-size: 65px;
+    }
+    
+    .btn-orange {
+        padding: 6px 25px;
+        margin-top: 30px;
+        margin-right: 5px;
+        color: black;
+    }
+
+    .btn-orange {
+        background-color: #f8c91b;
+    }
+
+    .btn-orange:hover {
+        background-color: #e8be20;
+        color: #020101;
+    }
+
+    p.course-detail{
+        font-size: 12px;
+    }
+
+    .course-sec{
+        background-color: #efefef; 
+        padding: 20px 0px !important; 
+        border-radius: 5px;
+
+    }
+
 </style>

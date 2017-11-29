@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('css_link_2')
-    @include('css.courses_nav') 
+
     <style type="text/css">
         body{
             height: 100%;
@@ -71,6 +71,10 @@
     display: block;
 }
 
+.course-title
+{
+    font-size: 65px;
+}
 .btn-orange {
     padding: 6px 25px;
     margin-top: 30px;
@@ -104,7 +108,6 @@ p.course-detail{
 @endsection
 
 @section('content')
-@include('html.courses_nav') 
     <div id="main-wrapper">
 
         <div class="banner">
@@ -112,7 +115,7 @@ p.course-detail{
             <div class="banner-content clrf">
               <div class="course-descr-d" style="width:60%;">
                 <div>
-                  <h1 class="course-title">MASTER CODER</h1>
+                  <h1 class="course-title">MASTER</h1>
                 <H3>Teach BB8 Droids and Parrot Drones to follow rules, avoid obstructions, and execute maneuvers. Learn the basics of programming by coding these machines to life.</H3>
 
                   <a href="{{ url('/courses') }}" class="btn btn-orange">GO BACK TO COURSES</a> 
