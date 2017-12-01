@@ -94,13 +94,13 @@
 
     @keyframes MoveUpDown_red {
       0% {
-        bottom: 380px;
+        bottom: 390px;
       }
       50% {
-        bottom: 450px;
+        bottom: 470px;
       }
       100% {
-        bottom: 380px;
+        bottom: 390px;
       }
     }
 

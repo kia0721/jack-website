@@ -3,24 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\HelperUtil;
+use Config;
+use Illuminate\Support\Facades\Log;
+use Validator;
 
 class HomeController extends Controller
 {
-    // /**
-    //  * Create a new controller instance.
-    //  *
-    //  * @return void
-    //  */
-    // public function __construct()
-    // {
-    //     $this->middleware('guest');
-    // }
+    private $helperUtil;
+    public function __construct()
+    {
+       
+        $this->helperUtil = new HelperUtil;
+    }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('site.home');
@@ -63,5 +59,32 @@ class HomeController extends Controller
     public function register()
     {
         return view('site.register');
+    }
+
+    public function contactUs(Request $request)
+    {
+        $data = $request->only('fullname', 'email', 'contactNum', 'email',  'message_detail', 'RegisterCaptcha');
+        $rules = [
+            'fullname' => 'required|max:255',
+            'email' => 'required|max:255',
+            'contactNum' => 'sometimes|max:255',
+            // 'password' => 'required|min:6',
+            'message_detail' => 'required'
+            // 'RegisterCaptcha' => 'required|valid_captcha'
+        ];
+
+        $isHuman = captcha_validate($data['RegisterCaptcha']);
+
+        Log::info("rules ".json_encode($rules));
+        $validator = Validator::make($data, $rules);
+
+        if($validator->fails()) {
+            return $this->helperUtil->resultToJSON($validator->errors()->all(), Config::get('constants.SC_ERR_VALIDATION'), 0, false);   
+        } else if ($isHuman == false) {
+            return $this->helperUtil->resultToJSON("Invalid code", Config::get('constants.SC_ERR_VALIDATION'), 0, false);   
+        }
+
+        return $this->helperUtil->resultToJSON("No validation error encountered", Config::get('constants.SC_SUCCESS'), 0, true);  
+        
     }
 }

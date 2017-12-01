@@ -42,6 +42,9 @@ Route::prefix('admin')->group(function () {
 
 Route::get('/home', 'HomeController@index');
 Route::get('/register', 'HomeController@register');
+Route::post('/contactUs', 'HomeController@contactUs');
+Route::post('/addRegister', 'HomeController@addRegister');
+
 Route::prefix('courses')->group(function () {
 	Route::get('/', 'HomeController@courses');
 	Route::get('/summer', 'HomeController@summer');

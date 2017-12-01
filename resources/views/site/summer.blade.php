@@ -79,7 +79,7 @@
             <div class="col-md-12"><br></div>
             <div class="col-md-12 section-course">
                 <div class="col-md-3">
-                    <img src="{{ asset('/images/no.png')}}" style="margin:auto;">
+                    <img src="{{ asset('/images/tynker.png')}}" style="margin:auto;">
                 </div>
 
                 
@@ -136,7 +136,7 @@
 
             <div class="col-md-12 section-course">
                 <div class="col-md-3 ">
-                    <img src="{{ asset('/images/swift_playground.png')}}" style="margin:auto;">
+                    <img src="{{ asset('/images/swift2.png')}}" style="margin:auto;">
                 </div>
 
                 
@@ -206,7 +206,7 @@
             <div class="col-md-12"><br> </div>
             <div class="col-md-12 course-sec section-course">
                 <div class="col-md-3 ">
-                    <img src="{{ asset('/images/code_n_mode.png')}}" style="margin:auto;">
+                    <img src="{{ asset('/images/minecraft3.png')}}" style="margin:auto;">
                 </div>
 
                 

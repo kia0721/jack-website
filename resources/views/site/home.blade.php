@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('css_link')
-
+    <link href="{{ captcha_layout_stylesheet_url() }}" type="text/css" rel="stylesheet">
     <style type="text/css">
      
 
@@ -434,10 +434,14 @@
                                     <input id="contactNum" type="text" class="form-control" name="contactNum" placeholder="CONTACT NUMBER" required >
 
                                     <textarea id="message_detail" type="text" class="form-control" maxlength="140"  name="message_detail" placeholder="MESSAGE" style="height:177px;" required ></textarea>
+
+                                    {!! captcha_image_html('RegisterCaptcha') !!}<BR>
+                                    <input class="form-control" type="text" id="RegisterCaptcha" name="RegisterCaptcha">
                                 </div>  
                                 <div class="col-md-6 text-xs-center"><br>
                                     <img src="../images/blue_char_cf.png"  width="150" />
                                 </div> 
+                                
                                 <div class="col-md-6 text-xs-center" style="margin-top: 20px;">
                                     <button type="submit" class="btn btn-primary center" id="submitContactUs"><span class="btn-text">SEND</span><i class="btn-loader"></i></button>
                                 </div>               

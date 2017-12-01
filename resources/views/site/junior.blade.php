@@ -72,7 +72,7 @@
             <div class="col-md-12"><br></div>
             <div class="col-md-12 section-course">
                 <div class="col-md-3">
-                    <img  src="{{ asset('/images/python.png')}}" style="margin:auto;">
+                    <img  src="{{ asset('/images/python_jr.png')}}" style="margin:auto;">
                 </div>
 
                 
