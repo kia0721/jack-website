@@ -3,103 +3,15 @@
 @section('css_link_2')
     @include('css.courses_nav') 
     <style type="text/css">
-        body{
-            height: 100%;
-            background-color: white;
-        }
-        .banner{
-            background-color: #e45d51;
-            position: relative;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 50%;
-            background:transparent url({{ asset('images/master_banner.jpg') }}) no-repeat center bottom;
-
-        }
-        #main-wrapper {
-    padding-bottom: 0;
-}
+        
+    .banner{
+        background-color: #e45d51;
+        background:transparent url({{ asset('images/master_banner.jpg') }}) no-repeat center bottom;
+    }
     .banner, .price:after {
-    background-color: #e45d51;
-
-}
-    .banner {
-    color: white;
-    padding: 83px 0 0px;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
-}
-    .wrapper {
-    margin: 0 auto;
-    max-width: 1064px;
-}
-.banner .banner-content {
-    position: relative;
-}
-.wrapper > div {
-    padding: 0 10px;
-}
-@media (min-width: 896px){
-    .wrapper > div {
-        padding: 0 20px;
+        background-color: #e45d51;
     }
-}
 
-
-@media (min-width: 768px){
-    .course-descr-d {
-        width: 60%;
-        float: left;
-    }
-    .course-descr2-d {
-        width: 30%;
-      float: left;
-    }
-}
-.banner h2, .price {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.clr, .clrf:before, .clrf:after {
-    width: 100%!important;
-    float: none!important;
-    clear: both;
-    content: '';
-    display: block;
-}
-
-.btn-orange {
-    padding: 6px 25px;
-    margin-top: 30px;
-    margin-right: 5px;
-    color: black;
-}
-
-.btn-orange {
-    background-color: #f8c91b;
-}
-
-.btn-orange:hover {
-    background-color: #e8be20;
-    color: #020101;
-}
-
-p.course-detail{
-    font-size: 12px;
-}
-
-.course-sec{
-    background-color: #efefef; 
-    padding: 20px 0px !important; 
-    border-radius: 5px;
-
-}
-.section-course .col-md-3{
-    text-align: center!important;
-}
     </style>
 @endsection
 
@@ -112,11 +24,11 @@ p.course-detail{
             <div class="banner-content clrf">
               <div class="course-descr-d" style="width:60%;">
                 <div>
-                  <h1 class="course-title">MASTER CODER</h1>
-                <H3>Teach BB8 Droids and Parrot Drones to follow rules, avoid obstructions, and execute maneuvers. Learn the basics of programming by coding these machines to life.</H3>
-
-                  <a href="{{ url('/courses') }}" class="btn btn-orange">GO BACK TO COURSES</a> 
-                  <br> <br>
+                    <h1 class="course-title">MASTER CODER</h1>
+                    <H2>For ages 12 to 17</H2>
+                    <br> <br>
+                    <a href="{{ url('/courses') }}" class="btn btn-orange">GO BACK TO COURSES</a> 
+                    <br> <br>
                 </div>
               </div>
             </div>
@@ -132,32 +44,58 @@ p.course-detail{
             </div>
             <div class="col-md-12 course-sec section-course" >
                 <div class="col-md-3">
-                    <center><img  src="{{ asset('/images/droid.png')}}" style="margin:auto;"></center>
+                    <img  src="{{ asset('/images/java.png')}}" style="margin:auto;">
                 </div>
 
                 
                 <div class="col-md-6">
-                    <h4><b>BB-8 DROID: CODE AND PLAY</b></h4>
-                    <p class="course-detail">This course teaches its students how to program a Sphero robot. Using the app-enabled BB-8 Droid, students learn the basics of coding as they program it to make 2D head movements, follow paths, avoid obstructions, and race with other Droids.</p>
+                    <h4><b>App Development: Java Programming</b></h4>
+                    <p class="course-detail">This course provides a solid foundation on how to develop a web and mobile enterprise application using the Java programming language. At the end of this course, students should be able to become well-versed in the Java programming language, understand the theory and engineering behind object-oriented development, platform independence and the Java ecosystem, and apply their knowledge in developing their own enterprise system application. </p>
 
                 </div>
                 <div class="col-md-3">
-                    <p>
-                    <br>
-                    <b>For ages 8 to 11 years old</b>
-                    <br><br>
-                    <B>COMPLETED! See you next summer.</B>
-                    <br><br>
-                    <b>Php 9,500 per module</b>
-
-                    </p>
+                    <p><b>Schedule and course fee for 2018 to be determined</b></p>
                     <!-- <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a>  -->
                 </div>
 
             </div> 
-            <div class="col-md-12">
-            <br>
-            </div>
+            <div class="col-md-12"><br></div>
+            <div class="col-md-12  section-course" >
+                <div class="col-md-3">
+                    <img  src="{{ asset('/images/c_prog.png')}}" style="margin:auto;">
+                </div>
+
+                
+                <div class="col-md-6">
+                    <h4><b>Electronics Engineering: C Programming</b></h4>
+                    <p class="course-detail">This course provides a solid foundation on how to develop an embedded system application using the C programming language. At the end of this course, students should be able to become well-versed in the C programming language, understand the theory and engineering behind embedded systems, and apply their knowledge in developing their own embedded system application. </p>
+
+                </div>
+                <div class="col-md-3">
+                    <p><b>Schedule and course fee for 2018 to be determined</b></p>
+                    <!-- <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a>  -->
+                </div>
+
+            </div> 
+            <div class="col-md-12"><br></div>
+            <div class="col-md-12 course-sec section-course" >
+                <div class="col-md-3">
+                    <img  src="{{ asset('/images/python.png')}}" style="margin:auto;">
+                </div>
+
+                
+                <div class="col-md-6">
+                    <h4><b>Game Development: Python Programming</b></h4>
+                    <p class="course-detail">This course provides a solid foundation on how to develop a game using the Python programming language. At the end of this course, students should be able to become well-versed in the Python programming language, understand the theory, physics, math, play, design, and core concepts behind games, and apply their knowledge in developing their own game. </p>
+
+                </div>
+                <div class="col-md-3">
+                    <p><b>Schedule and course fee for 2018 to be determined</b></p>
+                    <!-- <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a>  -->
+                </div>
+
+            </div> 
+            <div class="col-md-12"><br></div>
             
           </div>
         </section>

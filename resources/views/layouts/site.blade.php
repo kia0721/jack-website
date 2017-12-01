@@ -22,6 +22,15 @@
             height: auto!important;
             min-height: 100%;
         }
+
+        div.outer { 
+            right: 0px;
+            bottom: 0px;
+            position: fixed; 
+            z-index: 20;
+            cursor: pointer;
+        }
+       
     </style>
     @yield('css_link_2')
     <!-- Scripts -->
@@ -93,7 +102,7 @@
                   </div>
                 </div> -->
                 <div id="navbar" class="collapse navbar-right navbar-collapse" >
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav" style="font-weight: bold;">
                         <li><a href="{{ url('/courses') }}"><img src="{{ asset('/images/courses.png') }}" class="icon-menu-top"> Courses</a></li>
                         <li><a href="{{ url('/calendar') }}"><img src="{{ asset('/images/calendar.png') }}" class="icon-menu-top"> Calendar</a></li>
                         <li><a href="{{ url('/e-magazine') }}"><img src="{{ asset('/images/e-magazine.png') }}" class="icon-menu-top"> E-Magazine</a></li>
@@ -104,7 +113,9 @@
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
-        
+        <div class="outer" onclick="location.href='{{ url('/register') }}';">
+            <img src="{{ asset('/images/register_here.png') }}"/>
+        </div>
         @yield('content')
         
     </div>

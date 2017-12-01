@@ -4,11 +4,13 @@
 html {
     position: relative;
     min-height: 100%;
+    font-family: 'Arial';
 }
 body {
     /* Margin bottom by footer height */
+  font-family: 'Source Sans Pro','Arial','sans-serif';
   margin-bottom: 0px;
-  /*font-family: 'Source Sans Pro','Helvetica Neue','Helvetica','Arial','sans-serif';*/
+  
   font-family: 'Karla';
  /* background-color: #d3cac1;*/
   height: 100%;
@@ -18,14 +20,13 @@ body {
 
 @font-face {
   font-family: "GothamRnd-Medium";
-  /*src: local(Roboto Light), url("../fonts/GothamRnd-Medium.otf");*/
   src: url("../fonts/GothamRnd-Medium.otf") format("opentype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Karla";
-  /*src: local(Roboto Light), url("../fonts/GothamRnd-Medium.otf");*/
+ 
   src: url("../fonts/Karla-Regular.ttf") format("truetype");
   font-weight: normal;
 }
@@ -368,4 +369,18 @@ nav ul, nav ol, li{
 
 #main-wrapper {
     padding-bottom: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1064px;
+}
+
+.wrapper > div {
+    padding: 0 10px;
+}
+@media (min-width: 896px){
+    .wrapper > div {
+        padding: 0 20px;
+    }
 }

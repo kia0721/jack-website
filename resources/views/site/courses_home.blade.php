@@ -88,7 +88,7 @@
     .red.ball {
         animation: MoveUpDown_red 3.8s cubic-bezier(0, 0, 0.24, 0.43) infinite;
         position: absolute;
-        left: 703px;
+        left: 678px;
         bottom: 380px;
     }
 

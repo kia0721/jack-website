@@ -106,6 +106,13 @@
         margin: 0 auto;
         max-width: 1064px;
     }
+    .banner{
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50%;
+    }
     .banner .banner-content {
         position: relative;
     }
@@ -132,6 +139,13 @@
     .banner h2, .price {
         display: inline-block;
         vertical-align: middle;
+    }
+    .banner {
+        color: white;
+        padding: 83px 0 0px;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
     }
 
     .clr, .clrf:before, .clrf:after {
@@ -164,15 +178,24 @@
         color: #020101;
     }
 
-    p.course-detail{
-        font-size: 12px;
-    }
-
     .course-sec{
         background-color: #efefef; 
         padding: 20px 0px !important; 
         border-radius: 5px;
 
+    }
+
+
+    .section-course .col-md-3{
+        text-align: center!important;
+    }
+
+    .section-course .col-md-3 p{
+        font-size: 16px;
+        text-align: left;
+    }
+    .section-course .col-md-3 a{
+        font-weight: bold;
     }
 
 </style>
