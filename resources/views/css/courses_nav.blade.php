@@ -162,21 +162,7 @@
         font-size: 65px;
     }
     
-    .btn-orange {
-        padding: 6px 25px;
-        margin-top: 30px;
-        margin-right: 5px;
-        color: black;
-    }
-
-    .btn-orange {
-        background-color: #f8c91b;
-    }
-
-    .btn-orange:hover {
-        background-color: #e8be20;
-        color: #020101;
-    }
+    
 
     .course-sec{
         background-color: #efefef; 

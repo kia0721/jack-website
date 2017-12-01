@@ -418,7 +418,7 @@
                 <!-- Modal content-->
                 <div class="modal-content" style="border-radius: 30px; background-color: #f7b11b;">
                     
-                    <form class="form-horizontal"  method="POST" action="{{ url('register') }}">
+                    <form class="form-horizontal"  method="POST" action="{{ url('contactUs') }}">
                     <div class="modal-body" style="padding: 20px 30px; ">
                         <div class="row">
                             <div class="col-md-12">
@@ -558,6 +558,11 @@
                 // isClicked = true;
 
             });
+        }
+
+
+        function checkForm(){
+            $('#fullname').val();
         }
     </script>
      

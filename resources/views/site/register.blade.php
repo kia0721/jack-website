@@ -8,7 +8,7 @@
         background-color: #f3f3f3;
     }
 
-
+   
     </style>
 @endsection
 
@@ -47,7 +47,7 @@
                 <h3 style="text-align: center;"> <br> <br> <br></h3>
                 
             </div>
-            <div class="personalDetails">
+            <div id="personalDetails">
                 <div class="col-md-12">
                     <br><br><hr>
                     <h3 style="text-align: center;">Personal Details</h3>
@@ -57,31 +57,31 @@
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                             <label class="form-control-label" for="studGivenName">Student's given name<span class="form-asterisk">*</span></label>
-                                <input id="studGivenName" type="text" class="form-control" name="studGivenName" value="" >
+                                <input id="studGivenName" type="text" class="form-control" name="studGivenName" value="" required />
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                             <label class="form-control-label" for="studLastName">Student's lastname<span class="form-asterisk">*</span></label>
-                                <input id="studLastName" type="text" class="form-control" name="studLastName" value="" >
+                                <input id="studLastName" type="text" class="form-control" name="studLastName" value="" required />
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                             <label class="form-control-label" for="school">School<span class="form-asterisk">*</span></label>
-                                <input id="school" type="text" class="form-control" name="school" value="" >
+                                <input id="school" type="text" class="form-control" name="school" value="" required/>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                             <label class="form-control-label" for="studLastName">Grade level<span class="form-asterisk">*</span></label>
-                                <input id="gradeLevel" type="text" class="form-control" name="gradeLevel" value="" >
+                                <input id="gradeLevel" type="text" class="form-control" name="gradeLevel" value="" required />
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                             <label class="form-control-label" for="birthday">Birthday<span class="form-asterisk">*</span></label>
-                                <input id="birthday" type="date" class="form-control" name="birthday" value="" >
+                                <input id="birthday" type="date" class="form-control" name="birthday" value="" required/>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
@@ -95,60 +95,63 @@
                                 <label class="form-control-label" for="age">Please describe the student’s background on coding/programming:<span class="form-asterisk">*</span></label>
                                 
                                 <div class="col-sm-12 radio">
-                                  <label><input type="radio" name="optradio" class="optradio" value="Not yet">None yet</label>
+                                  <label><input type="radio" name="optradio" class="optradio" value="Not yet" required />None yet</label>
                                 </div>
                                 <div class="col-sm-12 radio">
-                                  <label><input type="radio" name="optradio" class="optradio" value="Self-taugth">Self-taught</label>
+                                  <label><input type="radio" name="optradio" class="optradio" value="Self-taugth"/>Self-taught</label>
                                 </div>
                                 <div class="col-sm-12 radio">
-                                  <label><input type="radio" name="optradio" class="optradio" value="Previously enrolled with JACK">Previously enrolled with JACK</label>
+                                  <label><input type="radio" name="optradio" class="optradio" value="Previously enrolled with JACK"/>Previously enrolled with JACK</label>
                                 </div>
                                 <div class="col-sm-12 radio">
-                                    <label><input type="radio" name="optradio" class="optradio" value="Previously enrolled with other school">Previously enrolled with other school</label>
+                                    <label><input type="radio" name="optradio" class="optradio" value="Previously enrolled with other school"/>Previously enrolled with other school</label>
                                 </div>
                                 <div class="col-sm-12 radio">
-                                  <label><input type="radio" name="optradio" class="optradio" value="0">Other</label>
+                                  <label><input type="radio" name="optradio" class="optradio" value="0"/>Other</label>
                                 </div>
                                 <div class="col-sm-12 radio studentBackground" style="display:none;">
-                                    <input type="text" name="studentBackground" id="studentBackground" value="" required="">
+                                    <input type="text" name="studentBackground" id="studentBackground" value="" />
                                 </div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                             <label class="form-control-label" for="contactPerson">Contact Person<span class="form-asterisk">*</span></label>
-                                <input id="contactPerson" type="date" class="form-control" name="contactPerson" value="" >
+                                <input id="contactPerson" type="text" class="form-control" name="contactPerson" value="" required/>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                             <label class="form-control-label" for="relationship">Relationship<span class="form-asterisk">*</span></label>
-                                <input id="relationship" type="text" class="form-control" name="relationship" value="" >
+                                <input id="relationship" type="text" class="form-control" name="relationship" value="" required />
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                             <label class="form-control-label" for="email">Email<span class="form-asterisk">*</span></label>
-                                <input id="email" type="email" class="form-control" name="email" value="" >
+                                <input id="email" type="email" class="form-control" name="email" value="" required />
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                             <label class="form-control-label" for="contactNum">Contact number<span class="form-asterisk">*</span></label>
-                                <input id="contactNum" type="text" class="form-control" name="contactNum" placeholder="09XX XXX XXXX" value="" >
+                                <input id="contactNum" type="text" class="form-control" name="contactNum" placeholder="09XX XXX XXXX" value="" required />
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-12">
                             <div class="form-group">
                             <label class="form-control-label" for="address">Address/Location</label>
-                                <input id="address" type="text" class="form-control" name="address" value="" >
+                                <input id="address" type="text" class="form-control" name="address" value="" required />
                             </div>
                         </div>
-                        
+                        <div class="col-xs-12 col-md-12 text-center">
+                            <button class="btn btn-lg btn-orange" id="personalNextBtn">NEXT</button>
+                        </div>
                     </div>
                 </div>
 
-
+            </div>
+            <div id="courseDetails">
                 <div class="col-md-12">
                     <br><br><hr>
                     <h3 style="text-align: center;">Course Details</h3>
@@ -158,11 +161,11 @@
                         <div class="col-xs-12 col-md-12">
                             <div class="form-group">
                                 
-                                <label class="form-control-label" for="age">How did you find out about JACK?<span class="form-asterisk">*</span> </label>
+                                <label class="form-control-label" for="find">How did you find out about JACK?<span class="form-asterisk">*</span> </label>
                                 
                                 <div class="col-md-12">
                                     <div class="col-xs-12 col-md-6 radio">
-                                        <label><input type="radio" name="find" value="Google Search Result">Google Search Result</label><br>
+                                        <label><input type="radio" name="find" value="Google Search Result" required />Google Search Result</label><br>
                                         <label><input type="radio" name="find" value="Facebook Ad">Facebook Ad</label><br>
                                         <label><input type="radio" name="find" value="Instagram Ad">Instagram Ad</label><br>
                                         <label><input type="radio" name="find" value="School">School</label>
@@ -176,7 +179,18 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <label>
+                                <input type="checkbox" name="allowPhotograph" class="allowPhotograph" id="allowPhotograph" checked="checked">  
+                                <small><i>I allow JACK to photograph or video my child in the school setting, and I understand that these materials may be used in print or electronic media that will be displayed in platforms owned or supported by JACK. </i></small>
+                            </label>
+                            
                         </div>
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-12 text-center">
+                        <button class="btn btn-lg btn-orange" id="coursePrevBtn">PREVIOUS</button>
+                        <button class="btn btn-lg btn-orange" id="saveBtn">SUMBIT</button>
                     </div>
                 </div>
             </div>
@@ -191,7 +205,26 @@
 
 @endsection
 @section('script_link')
+
   <script type="text/javascript">
-  
+  $('#courseDetails').hide();
+  $('#personalNextBtn').click(function (){
+      $('#courseDetails').show();
+      $('#personalDetails').hide();
+
+      $('html, body').animate({
+            scrollTop: $("#courseDetails").offset().top
+        }, 500, function () {
+        });
+  });
+  $('#coursePrevBtn').click(function (){
+      $('#courseDetails').hide();
+      $('#personalDetails').show();
+
+      $('html, body').animate({
+            scrollTop: $("#personalDetails").offset().top
+        }, 500, function () {
+        });
+  });
 </script>
 @endsection
