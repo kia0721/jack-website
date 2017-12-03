@@ -436,7 +436,7 @@
                                     <textarea id="message_detail" type="text" class="form-control" maxlength="140"  name="message_detail" placeholder="MESSAGE" style="height:177px;" required ></textarea>
 
                                     {!! captcha_image_html('RegisterCaptcha') !!}<BR>
-                                    <input class="form-control" type="text" id="RegisterCaptcha" name="RegisterCaptcha">
+                                    <input class="form-control" type="text" id="RegisterCaptcha" name="RegisterCaptcha" placeholder="Enter Captcha" />
                                 </div>  
                                 <div class="col-md-6 text-xs-center"><br>
                                     <img src="../images/blue_char_cf.png"  width="150" />
@@ -444,7 +444,11 @@
                                 
                                 <div class="col-md-6 text-xs-center" style="margin-top: 20px;">
                                     <button type="submit" class="btn btn-primary center" id="submitContactUs"><span class="btn-text">SEND</span><i class="btn-loader"></i></button>
-                                </div>               
+                                </div>   
+
+                                <div class="col-md-6 text-xs-center" style="margin-top: 30px;">
+                                    <label id="returnMessage" style="display: none;">SUCCESS!</label>
+                                </div>             
                         </div>
                     </div>
                     
@@ -457,9 +461,10 @@
 
 @endsection
 @section('script_link')
+    <script src="{{ asset('/js/jquery.form.js') }}"></script>
   <script type="text/javascript" >
    
-      
+        $('#RegisterCaptcha_CaptchaImageDiv a').remove();
         var divPos = getDivPos(window.location.hash);
 
         var lastScrollTop = 1, delta = 5;
@@ -512,12 +517,44 @@
             });
 
             
-              window.location.hash = (divId);
-              history.pushState(null, null, '#'+divId);
-              currentHash = divId;
+            window.location.hash = (divId);
+            history.pushState(null, null, '#'+divId);
+            currentHash = divId;
         });
 
-    
+        $("body").on("click","#submitContactUs",function(e){
+            $(this).parents("form").ajaxForm(contactUsSubmit);
+        });
+        var contactUsSubmit = { 
+            beforeSubmit:function(formData, jqForm, options){
+                
+                waitingDialog.show("Sending contact....");
+                $("#contactUsShowFormModal").modal("hide");
+                return true;
+            },
+            complete: function(response) 
+            {
+                var res = response.responseJSON;
+                if(res.isSuccessful){
+
+                    waitingDialog.show("SUCCESS", {
+                        modalHeader: 'success',
+                        dialog: "Successfully created",
+                        footer: true,
+                        onHide: function(){
+                          // window.location = URL+'/'+res.id;
+                          console.log(res.id);
+                        }
+                    });   
+
+
+                } else {
+                    waitingDialog.hide();
+                    $("#contactUsShowFormModal").modal("show");
+                    $('#returnMessage').html(res.result);
+                }
+            }
+        };
 
 
         function getDivId(divPosP){
