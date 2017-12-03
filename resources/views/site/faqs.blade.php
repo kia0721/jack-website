@@ -6,7 +6,7 @@
         background-color: #d3cac1;
     }
     .bg1 {
-        background-image: url(../images/faqs_bg.png);
+        background-image: url("{{ asset('images/faqs_bg.png') }}");
         background-color: #d3cac1;
     }
 

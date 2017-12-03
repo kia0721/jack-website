@@ -23,17 +23,17 @@
                 <h1 style="font-size: 50px;"><span style="color:#00bff3;">JACK</span> <span style="color: #ff9d34;">REGISTRATION</span></h1>
             </div>
             <div class="col-md-4"  style="text-align: center;">
-                <img src="../images/reg_step_1.png" />
+                <img src="{{ asset('images/reg_step_1.png') }}" />
                 <H2>STEP 1</H2>
                 <h5>Go to jack.com.ph/register and fill out the form</h5>
             </div>
             <div class="col-md-4"  style="text-align: center;">
-                <img src="../images/reg_step_2.png" />
+                <img src="{{ asset('images/reg_step_2.png') }}" />
                 <H2>STEP 2</H2>
                 <h5>Proceed with payment via bank deposit or at JACK HQ</h5>
             </div>
             <div class="col-md-4"  style="text-align: center;">
-                <img src="../images/reg_step_3.png" />
+                <img src="{{ asset('images/reg_step_3.png') }}" />
                 <H2>STEP 3</H2>
                 <h5>You are already booked for the class</h5>
             </div>

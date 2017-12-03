@@ -42,7 +42,7 @@
             </div>
             <div class="col-md-12 section-course">
                 <div class="col-md-4">
-                    <!-- <img  width="100%" src="{{ asset('images/calendar/month_1.jpg') }}" > -->
+                    
                     <a href="{{ asset('images/calendar/month_1.jpg') }}" data-lightbox="image-1" data-title="January 2018"><img  width="100%" src="{{ asset('images/calendar/month_1.jpg') }}" ></a>
                 </div>
 
@@ -60,7 +60,7 @@
             <div class="col-md-12"><br></div>
             <div class="col-md-12 section-course">
                 <div class="col-md-4">
-                    <!-- <img  width="100%" src="{{ asset('images/calendar/month_1.jpg') }}" > -->
+                    
                     <a href="{{ asset('images/calendar/month_4.jpg') }}" data-lightbox="image-1" data-title="April 2018"><img  width="100%" src="{{ asset('images/calendar/month_4.jpg') }}" ></a>
                 </div>
 
@@ -77,7 +77,7 @@
             <div class="col-md-12"><br></div>
             <div class="col-md-12 section-course">
                 <div class="col-md-4">
-                    <!-- <img  width="100%" src="{{ asset('images/calendar/month_1.jpg') }}" > -->
+                    
                     <a href="{{ asset('images/calendar/month_7.jpg') }}" data-lightbox="image-1" data-title="July 2018"><img  width="100%" src="{{ asset('images/calendar/month_7.jpg') }}" ></a>
                 </div>
 
@@ -94,7 +94,7 @@
             <div class="col-md-12"><br></div>
             <div class="col-md-12 section-course">
                 <div class="col-md-4">
-                    <!-- <img  width="100%" src="{{ asset('images/calendar/month_1.jpg') }}" > -->
+                    
                     <a href="{{ asset('images/calendar/month_10.jpg') }}" data-lightbox="image-1" data-title="October 2018"><img  width="100%" src="{{ asset('images/calendar/month_10.jpg') }}" ></a>
                 </div>
 

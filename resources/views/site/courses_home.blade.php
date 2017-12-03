@@ -6,7 +6,7 @@
         background-color: #e3e3e8;
     }
     .bg1 {
-        background-image: url(../images/courses_home_bg.png);
+        background-image: url("{{ asset('images/courses_home_bg.png') }}");
         background-color: #e3e3e8;
     }
 
@@ -165,7 +165,7 @@
                         <div class="top-description" >
 
                             <div class="" style="top: 385px;left: 112px;">
-                                <img src="../images/black_char.png" />
+                                <img src="{{ asset('images/black_char.png') }}" />
                             </div>
                             <div class="default bubble" style="background-color: #ffb15e; color: black; ">
                                 Jack  offers four different main courses. Feel free to choose!
@@ -186,14 +186,14 @@
                         </div>
                         <div class="top-img" >
                             <div class="yellow ball"  >
-                                <a href="{{ url('/courses/summer') }}" ><img src="../images/summer_ball.png" /></a>
+                                <a href="{{ url('/courses/summer') }}" ><img src="{{ asset('images/summer_ball.png') }}" /></a>
                             </div>
                             <div class="blue ball">
-                                <a href="{{ url('/courses/junior') }}" ><img src="../images/junior_ball.png" /></a>
+                                <a href="{{ url('/courses/junior') }}" ><img src="{{ asset('images/junior_ball.png') }}" /></a>
                             </div>
 
                             <div class="red ball" >
-                                <a href="{{ url('/courses/master') }}" ><img src="../images/master_ball.png" /></a>
+                                <a href="{{ url('/courses/master') }}" ><img src="{{ asset('images/master_ball.png') }}" /></a>
                             </div>
                         </div>
                     </div>

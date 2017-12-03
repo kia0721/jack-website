@@ -68,7 +68,6 @@ class HomeController extends Controller
             'fullname' => 'required|max:255',
             'email' => 'required|max:255',
             'contactNum' => 'sometimes|max:255',
-            // 'password' => 'required|min:6',
             'message_detail' => 'required'
             // 'RegisterCaptcha' => 'required|valid_captcha'
         ];

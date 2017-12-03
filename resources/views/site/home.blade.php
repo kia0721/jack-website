@@ -6,7 +6,7 @@
      
 
     .navigation:before {
-        background: url(../images/nav.png) no-repeat 0 -2px;
+        background: url("{{ asset('images/nav.png') }}") no-repeat 0 -2px;
         bottom: 100%;
         content: '';
         display: block;
@@ -72,7 +72,7 @@
    
     .navigation .icon {
         display: block;
-        background-image: url(../images/nav.png);
+        background-image: url("{{ asset('images/nav.png') }}");
         cursor: pointer;
         height: 51px;
         width: 84px;
@@ -124,25 +124,25 @@
 
 
     .bg1 {
-        background-image: url(../images/01_BG.png);
+        background-image: url("{{ asset('images/01_BG.png') }}");
         background-color: #d3cac1;
     }
 
     .bg2 {
-        background-image: url(../images/02_BG.png);
+        background-image: url("{{ asset('images/02_BG.png') }}");
         background-color: #d6f2e7;
     }
     .bg3 {
-        background-image: url(../images/03_BG.png);
+        background-image: url("{{ asset('images/03_BG.png') }}");
         background-color: #fff0f1;
     }
 
     .bg4 {
-        background-image: url(../images/04_BG.png);
+        background-image: url("{{ asset('images/04_BG.png') }}");
         background-color: #a9bec7;
     }
     .bg5 {
-        background-image: url(../images/05_BG.png);
+        background-image: url("{{ asset('images/05_BG.png') }}");
         background-color: #fff0f0;
     }
 
@@ -282,7 +282,7 @@
 
             <div class="characters charpos2">
                 <div class="char-pos">
-                    <img src="../images/CHARACTERS.png" />
+                    <img src="{{ asset('images/CHARACTERS.png') }}" />
                 </div>
                  <div class="mouse-scroll"></div>
             </div>
@@ -293,7 +293,7 @@
                     <div class="container">
                         <div class="sub-con" >
                             <div class="top-img" >
-                                <img src="../images/01_TOP.png" />
+                                <img src="{{ asset('images/01_TOP.png') }}" />
                             </div>
                         </div>
                     </div>
@@ -315,11 +315,11 @@
                                     JACK's mission is to provide kids with the highest quality learning experience by celebrating and encouraging their creativity through dynamic and project-based learning all in a fun and engaging environment.</p>
                                 </div>
                                 <div style="top: 135px; left: 653px; cursor: pointer;" >
-                                    <IMG SRC="../images/play-btn.gif"/>
+                                    <IMG SRC="{{ asset('images/play-btn.gif') }}"/>
                                 </div>
                             </div>
                             <div class="top-img" >
-                                <img src="../images/02_TOP.png" />
+                                <img src="{{ asset('images/02_TOP.png') }}" />
                             </div>
                         </div>
                     </div>
@@ -343,7 +343,7 @@
                                 </div>
                             </div>
                             <div class="top-img" >
-                                <img src="../images/03_TOP.png" />
+                                <img src="{{ asset('images/03_TOP.png') }}" />
                             </div>
                         </div>
                     </div>
@@ -356,11 +356,11 @@
                         <div class="sub-con" >
                             <div class="top-description" style="z-index:16 !important;" >
                                 <div style="top: 372px; left: 89px; text-align: center; width: 180px; height:71px; cursor: pointer;" onclick="location.href='{{ url('/gallery') }}';">
-                                    <IMG SRC="../images/gallery.gif" style="margin-top: 10px;"/>
+                                    <IMG SRC="{{ asset('images/gallery.gif') }}" style="margin-top: 10px;"/>
                                 </div>
                             </div>
                             <div class="top-img" >
-                                <img src="../images/04_TOP.png" />
+                                <img src="{{ asset('images/04_TOP.png') }}" />
                             </div>
                         </div>
                     </div>
@@ -400,11 +400,11 @@
                                     </div>
                                 </div>
                                 <div id="contactUsShowFormBtn" data-toggle="modal" data-target="#contactUsShowFormModal" style="top: 130px; left: 653px; cursor: pointer;" >
-                                    <IMG SRC="../images/mail-btn.gif"/>
+                                    <IMG SRC="{{ asset('images/mail-btn.gif') }}"/>
                                 </div>
                             </div>
                             <div class="top-img" >
-                                <img src="../images/05_TOP.png" />
+                                <img src="{{ asset('images/05_TOP.png') }}" />
                             </div>
                         </div>
                     </div>
@@ -439,7 +439,7 @@
                                     <input class="form-control" type="text" id="RegisterCaptcha" name="RegisterCaptcha" placeholder="Enter Captcha" />
                                 </div>  
                                 <div class="col-md-6 text-xs-center"><br>
-                                    <img src="../images/blue_char_cf.png"  width="150" />
+                                    <img src="{{ asset('images/blue_char_cf.png') }}"  width="150" />
                                 </div> 
                                 
                                 <div class="col-md-6 text-xs-center" style="margin-top: 20px;">
