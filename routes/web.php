@@ -56,3 +56,4 @@ Route::get('/calendar', 'HomeController@calendar');
 Route::get('/e-magazine', 'HomeController@emagazine');
 Route::get('/faqs', 'HomeController@faqs');
 Route::get('/gallery', 'HomeController@gallery');
+Route::get('/downloadCalendar', 'HomeController@downloadCalendar');

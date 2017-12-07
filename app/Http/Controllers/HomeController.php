@@ -7,6 +7,7 @@ use App\HelperUtil;
 use Config;
 use Illuminate\Support\Facades\Log;
 use Validator;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -58,7 +59,37 @@ class HomeController extends Controller
     }
     public function register()
     {
-        return view('site.register');
+        $courses = DB::table('jack_course as jc')
+            ->where('jc.status', '=', false)
+            ->get();
+        return view('site.register')
+                ->with('courses', $courses);
+    }
+
+    public function registerStudent(Request $request){
+        $studentDetail = new \App\Models\JackStudentDetail;
+        $studentDetail->firstname = $input['firstname'];
+        $studentDetail->lastname = $input['lastname'];
+        $studentDetail->school = $input['school'];
+        $studentDetail->birthdate = $input['birthdate'];
+        $studentDetail->age = $input['age'];
+        $studentDetail->codingBackground = $input['codingBackground'];
+        $studentDetail->parentName = $input['parentName'];
+        $studentDetail->parentContactNum = $input['parentContactNum'];
+        $studentDetail->completeAddress = $input['completeAddress'];
+        $studentDetail->findjack = $input['findjack'];
+        $studentDetail->allowPhotograph = $input['allowPhotograph'];
+        $studentDetail->save();
+
+
+        $jackStudentCourse = new \App\Models\JackStudentCourse;
+        $jackStudentCourse->studentID = $studentDetail->id;
+        $jackStudentCourse->course = $input['course'];
+        $jackStudentCourse->level = $input['level'];
+        $jackStudentCourse->courseSchedule = $input['courseSchedule'];
+        $jackStudentCourse->mobileDevelopment = $input['mobileDevelopment'];
+        $jackStudentCourse->save();
+
     }
 
     public function contactUs(Request $request)
@@ -85,5 +116,9 @@ class HomeController extends Controller
 
         return $this->helperUtil->resultToJSON("No validation error encountered", Config::get('constants.SC_SUCCESS'), 0, true);  
         
+    }
+
+    public function downloadCalendar(){
+        return response()->download(Config::get('constants.CALENDAR_PATH'), "JACK CALENDAR 2018.pdf");
     }
 }

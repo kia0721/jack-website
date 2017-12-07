@@ -125,7 +125,7 @@
 
     .bg1 {
         background-image: url("{{ asset('images/01_BG.png') }}");
-        background-color: #d3cac1;
+        background-color: #ffedda;
     }
 
     .bg2 {
@@ -139,7 +139,7 @@
 
     .bg4 {
         background-image: url("{{ asset('images/04_BG.png') }}");
-        background-color: #a9bec7;
+        background-color: #4da2c7;
     }
     .bg5 {
         background-image: url("{{ asset('images/05_BG.png') }}");

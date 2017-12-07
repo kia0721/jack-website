@@ -24,10 +24,11 @@
         <div class="banner">
           <div class="wrapper">
             <div class="banner-content clrf">
-              <div class="course-descr-d" style="width:60%;">
-                <div>
-                    <img  src="{{ asset('images/calendar_banner.png') }}" style="margin:auto;">
-                </div>
+              <div class="course-descr-d">
+                <center><div>
+                    <img src="{{ asset('images/calendar_banner.png') }}" style="margin:auto;">
+
+                </div></center>
               </div>
             </div>
           </div>
@@ -37,7 +38,7 @@
         <section>
           <div class="wrapper">
             <div class="entry-content">
-                <h3 style="text-align: center;"> <br></h3>
+                <h3 style="text-align: center;"> <a href="{{ url('downloadCalendar') }}" >Download Calendar Here!</a></h3>
                 
             </div>
             <div class="col-md-12 section-course">

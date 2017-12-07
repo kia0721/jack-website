@@ -8,7 +8,16 @@
         background-color: #f3f3f3;
     }
 
-   
+    .checkbox{
+        display: table-row;
+    }
+
+    .register-div{
+        background-color: #afb9fb;
+        border-radius: 33px;
+        padding-bottom: 10px;
+    }
+
     </style>
 @endsection
 
@@ -50,9 +59,10 @@
             <div id="personalDetails">
                 <div class="col-md-12">
                     <br><br><hr>
-                    <h3 style="text-align: center;">Personal Details</h3>
+                    
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 register-div">
+                    <h3 style="text-align: center;">Personal Details</h3>
                     <div class="col-md-8 col-md-offset-2">
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
@@ -154,14 +164,46 @@
             <div id="courseDetails">
                 <div class="col-md-12">
                     <br><br><hr>
-                    <h3 style="text-align: center;">Course Details</h3>
+                    
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 register-div">
+                    <h3 style="text-align: center;">Course Details</h3>
                     <div class="col-md-8 col-md-offset-2">
                         <div class="col-xs-12 col-md-12">
                             <div class="form-group">
+                                <label class="form-control-label" for="courses">Please select the courses you would like to take?<span class="form-asterisk">*</span> </label>
                                 
-                                <label class="form-control-label" for="find">How did you find out about JACK?<span class="form-asterisk">*</span> </label>
+                                <table class="display table table-striped" id="c4wiUserTable"  width="100%" >
+                                    <tbody  width="100%" >
+                                    @foreach ($courses as $course)
+                                        <tr class="checkbox">
+                                            <td  width="70%" style=" width: 70%;"><label> <input type="checkbox" class="courseCbox" name="courses[]"  value="{{ $course->id }}"> {{ $course->courseTitle }} </label></td>
+                                            <td  width="30%" style="width: 30%;">
+                                                @if($course->courseType == 3)
+                                                <select class="form-control" id="level_{{ $course->id }}">
+                                                    <option selected="" disabled="">--Select Level--</option>
+                                                    <option value="1"> Beginner</option>
+                                                    <option value="2"> Intermediate</option>
+                                                    <option value="3"> Advanced</option>
+                                                </select>
+                                                @elseif($course->mobileDev == 1)
+
+                                                <select class="form-control selectedmobileDev" id="selectedmobileDev_{{ $course->id }}">
+                                                    <option value="0" selected="" disabled=""> -- Select Mobile Development -- </option>
+                                                    <option value="Android">Android</option>
+                                                    <option value="iOS">iOS</option>
+                                                </select>
+                                                @else
+
+                                                &nbsp;
+                                            @endif
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                                <br>
+                                <label class="form-control-label" for="find">How did you find out about JACK?<span class="form-asterisk">*</span></label>
                                 
                                 <div class="col-md-12">
                                     <div class="col-xs-12 col-md-6 radio">
