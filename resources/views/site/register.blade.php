@@ -18,6 +18,11 @@
         padding-bottom: 10px;
     }
 
+    .errorCourseMsg{
+        color:red;
+        font-style: italic;
+    }
+
     </style>
 @endsection
 
@@ -61,6 +66,7 @@
                     <br><br><hr>
                     
                 </div>
+                <form class=""  method="POST" action="{{ url('addRegister1') }}">
                 <div class="col-md-12 register-div">
                     <h3 style="text-align: center;">Personal Details</h3>
                     <div class="col-md-8 col-md-offset-2">
@@ -159,47 +165,85 @@
                         </div>
                     </div>
                 </div>
-
+                </form>
             </div>
             <div id="courseDetails">
                 <div class="col-md-12">
                     <br><br><hr>
                     
                 </div>
+                <form class=""  method="POST" action="{{ url('addRegister2') }}">
                 <div class="col-md-12 register-div">
                     <h3 style="text-align: center;">Course Details</h3>
                     <div class="col-md-8 col-md-offset-2">
                         <div class="col-xs-12 col-md-12">
                             <div class="form-group">
-                                <label class="form-control-label" for="courses">Please select the courses you would like to take?<span class="form-asterisk">*</span> </label>
+                                <label class="form-control-label" for="courses">Please select the courses you would like to take?<span class="form-asterisk">*</span> <span class="errorCourseMsg"></span></label>
                                 
                                 <table class="display table table-striped" id="c4wiUserTable"  width="100%" >
                                     <tbody  width="100%" >
-                                    @foreach ($courses as $course)
+                                    
+
+                                    @for ($i = 0; $i < count($courses); $i++)
+                                        <?php $course = $courses[$i]; ?>
                                         <tr class="checkbox">
-                                            <td  width="70%" style=" width: 70%;"><label> <input type="checkbox" class="courseCbox" name="courses[]"  value="{{ $course->id }}"> {{ $course->courseTitle }} </label></td>
-                                            <td  width="30%" style="width: 30%;">
+                                            <td  width="60%" style=" width: 70%;">
+
+                                            <label> <input type="checkbox" class="courseCbox" name="courses[]" value="{{ $course->id }}"> {{ $course->courseTitle }} </label>
+
+                                            </td>
+                                            <td  width="40%" style="width: 30%;">
                                                 @if($course->courseType == 3)
-                                                <select class="form-control" id="level_{{ $course->id }}">
+
+                                                <select class="form-control courseSelectBox_{{ $course->id }}" id="level_{{ $course->id }}" style="display: none;">
                                                     <option selected="" disabled="">--Select Level--</option>
-                                                    <option value="1"> Beginner</option>
-                                                    <option value="2"> Intermediate</option>
-                                                    <option value="3"> Advanced</option>
+                                                    <?php 
+                                                        $optionLength = $i+3;
+                                                        if($i+3 >= count($courses))
+                                                            $optionLength =  count($courses);
+                                                    ?>
+                                                    @for ($a = $i; $a < $optionLength; $a++)
+                                                        <?php $course = $courses[$a]; ?>
+                                                        <option value="{{ $course->levelId }}_{{ $course->courseScheduleId }}"> {{ $course->courseLevel }}</option>
+                                                    @endfor
+
+                                                    <?php 
+                                                        
+                                                        if($i+2 >= count($courses))
+                                                            $i = count($courses);
+                                                        else
+                                                            $i = $i+2;
+                                                    ?>
                                                 </select>
                                                 @elseif($course->mobileDev == 1)
 
-                                                <select class="form-control selectedmobileDev" id="selectedmobileDev_{{ $course->id }}">
-                                                    <option value="0" selected="" disabled=""> -- Select Mobile Development -- </option>
-                                                    <option value="Android">Android</option>
-                                                    <option value="iOS">iOS</option>
-                                                </select>
-                                                @else
+                                                    <select class="form-control selectedmobileDev courseSelectBox_{{ $course->id }}" id="selectedmobileDev_{{ $course->id }}" style="display: none;">
+                                                        <option value="0" selected="" disabled=""> -- Select Mobile Development -- </option>
+                                                        <option value="Android">Android</option>
+                                                        <option value="iOS">iOS</option>
+                                                    </select>
+                                                @elseif($course->courseType == 1)
+                                                    <select class="form-control courseSelectBox_{{ $course->id }}" id="summer_{{ $course->id }}" style="display: none;">
+                                                        <option value="0" selected="" disabled=""> -- Select Schedule -- </option>
+                                                        @for ($a = $i; $a < count($courses); $a++)
+                                                            <?php 
+                                                            $tempCourse = $course;
+                                                            $course = $courses[$a]; ?>
 
-                                                &nbsp;
-                                            @endif
+                                                            @if($tempCourse->id == $course->id)
+                                                                <option value="{{ $course->levelId }}_{{ $course->courseScheduleId }}"> {{ $course->startDate }} to {{ $course->endDate }}</option>
+                                                            @else
+                                                                <?php $i = $a;
+                                                                $a = count($courses);
+                                                                ?>
+                                                            @endif
+                                                        @endfor
+
+                                                    </select>
+                                                @endif
                                             </td>
                                         </tr>
-                                    @endforeach
+                                    @endfor
                                     </tbody>
                                 </table>
                                 <br>
@@ -231,10 +275,11 @@
                         
                     </div>
                     <div class="col-xs-12 col-md-12 text-center">
-                        <button class="btn btn-lg btn-orange" id="coursePrevBtn">PREVIOUS</button>
+                        <input type="button"  class="btn btn-lg btn-orange" id="coursePrevBtn" value="PREVIOUS">
                         <button class="btn btn-lg btn-orange" id="saveBtn">SUMBIT</button>
                     </div>
                 </div>
+                </form>
             </div>
             <div class="col-md-12">
             <br>
@@ -247,26 +292,113 @@
 
 @endsection
 @section('script_link')
-
+    <script src="{{ asset('/js/jquery.form.js') }}"></script>
   <script type="text/javascript">
-  $('#courseDetails').hide();
-  $('#personalNextBtn').click(function (){
-      $('#courseDetails').show();
-      $('#personalDetails').hide();
+    $('#courseDetails').hide();
+ 
+    $(".courseCbox").change(function() {
 
-      $('html, body').animate({
-            scrollTop: $("#courseDetails").offset().top
+        var id = $(this).val();
+        console.log(id);
+        var isChecked = $(this).is(":checked");
+        if(isChecked){
+            $('.courseSelectBox_'+id).show();
+            $('.courseSelectBox_'+id).css('border-color', '#ccc');
+        }
+        else{
+            $('.courseSelectBox_'+id).hide();
+        }
+       
+    });
+
+    $("body").on("click","#personalNextBtn",function(e){
+        $(this).parents("form").ajaxForm(toCourseDetail);
+    });
+    var toCourseDetail = { 
+        beforeSubmit:function(formData, jqForm, options){
+            $('#courseDetails').show();
+            $('#personalDetails').hide();
+            
+            $('html, body').animate({
+                scrollTop: $('.register-div').offset().top + 300
+            }, 500, function () {
+            });
+            return false;
+        },
+        complete: function(response) 
+        {
+            
+        }
+    };
+
+    $("body").on("click","#saveBtn",function(e){
+        $(this).parents("form").ajaxForm(registerStudent);
+    });
+    var registerStudent = { 
+        beforeSubmit:function(formData, jqForm, options){
+            console.log("Validate register");
+            
+            var checkedCourses = $('.courseCbox:checkbox:checked');
+            $('.errorCourseMsg').html("");
+
+            var isCourseComplete = true;
+            if(checkedCourses.length == 0){
+                isCourseComplete = false;
+                $('.errorCourseMsg').html("Please select course");
+            }
+            
+            for(var x = 0; x < checkedCourses.length; x++){
+                var courseId = checkedCourses[x].value;
+                var valueId = $('.courseSelectBox_'+courseId).val();
+                console.log("Validate register "+ valueId);
+                if(valueId == null){
+                    isCourseComplete = false;
+                    x = checkedCourses.length;
+                    $('.errorCourseMsg').html("Please select schedule");
+                    $('.courseSelectBox_'+courseId).css('border-color', 'red');
+                }
+            }
+            if(isCourseComplete){
+                $.ajax({
+                    url: "{{ url('registerStudent') }}?_token="+$("input[name=_token]").val(),
+                    type: 'post',
+                    data: { 'id' : 'werwer',
+                            'email' : 'dsfs'
+
+                    },
+                    success: function (data) {
+                        waitingDialog.show("SUCCESS", {
+                            modalHeader: 'success',
+                            dialog: data.result,
+                            footer: true
+                        });  
+                    }
+                });
+            } else {
+                $('html, body').animate({
+                    scrollTop: $('.register-div').offset().top + 300
+                }, 500, function () {
+                });
+            }
+           
+            
+            return false;
+        },
+        complete: function(response) 
+        {
+            
+        }
+    };
+
+    
+
+    $("body").on("click","#coursePrevBtn",function(e){
+        $('#courseDetails').hide();
+        $('#personalDetails').show();
+        $('html, body').animate({
+            scrollTop: $('.register-div').offset().top + 300
         }, 500, function () {
         });
-  });
-  $('#coursePrevBtn').click(function (){
-      $('#courseDetails').hide();
-      $('#personalDetails').show();
-
-      $('html, body').animate({
-            scrollTop: $("#personalDetails").offset().top
-        }, 500, function () {
-        });
-  });
+    });
 </script>
 @endsection

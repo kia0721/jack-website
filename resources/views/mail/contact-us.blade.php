@@ -29,7 +29,7 @@
                     <!-- Logo -->
                     <tr>
                         <td style="padding: 25px 0; text-align: center;">
-                            <a style="font-family: Arial, &#039;Helvetica Neue&#039;, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #2F3133; text-decoration: none; text-shadow: 0 1px 0 white;" href="{!! $URL !!}" target="_blank">
+                            <a style="font-family: Arial, &#039;Helvetica Neue&#039;, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #2F3133; text-decoration: none; text-shadow: 0 1px 0 white;" href="http://jack.com.ph" target="_blank">
                                 Jack Website
                             </a>
                         </td>
@@ -42,38 +42,39 @@
                                 <tr>
                                     <td style="font-family: Arial, &#039;Helvetica Neue&#039;, Helvetica, sans-serif; padding: 35px;">
                                         <!-- Greeting -->
-                                        <h1 style="margin-top: 0; color: #2F3133; font-size: 19px; font-weight: bold; text-align: left;">Hello {{ $name }}!</h1>
-
-                                        <!-- Intro -->
-                                        <p style="margin-top: 0; color: #74787E; font-size: 16px; line-height: 1.5em;">
-                                             You are receiving this email because you we're registered by Administrator. Below is your credentials:
-                                        </p>
+                                        <h1 style="margin-top: 0; color: #2F3133; font-size: 19px; font-weight: bold; text-align: left;">Message from an inquirer.</h1>
                                         
                                         <!-- Action Button -->
                                         <table style="width: 100%; margin: 30px auto; padding: 0; text-align: center;" align="center" width="100%" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td style="text-align: left;">
-                                                        <b>Email: </b>{!!$email!!}
+                                                        <b>Date: </b>{!!$date!!}
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: left;">
-                                                        <b>Password:</b> {!!$password!!}
+                                                        <b>Name:</b> {!!$fullname!!}
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left;">
+                                                        <b>Email:</b> {!!$email!!}
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left;">
+                                                        <b>Phone:</b> {!!$contactNum!!}
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left;">
+                                                        <b>Message:</b> {!!$message_detail!!}
                                                     </td>
                                                 </tr>
                                             </table>
                                         
                                         <!-- Outro -->
-                                         <p style="margin-top: 0; color: #74787E; font-size: 12px; line-height: 1.5em;">
-                                                {!! $URL !!}
-                                            </p>
-                                        
-                                        <!-- Salutation -->
-                                        <p style="margin-top: 0; color: #74787E; font-size: 16px; line-height: 1.5em;">
-                                            Regards,<br>Customer Satisfaction Survey
-                                        </p>
-
-                                        
+                                                                               
                                     </td>
                                 </tr>
                             </table>
@@ -88,8 +89,7 @@
                                     <td style="font-family: Arial, &#039;Helvetica Neue&#039;, Helvetica, sans-serif; color: #AEAEAE; padding: 35px; text-align: center;">
                                         <p style="margin-top: 0; color: #74787E; font-size: 12px; line-height: 1.5em;">
                                             &copy; 2017
-                                            <a style="color: #3869D4;" href="{{ $URL }}" target="_blank">Customer Satisfaction Survey</a>.
-                                            All rights reserved.
+                                            Jack Website |  All rights reserved
                                         </p>
                                     </td>
                                 </tr>
