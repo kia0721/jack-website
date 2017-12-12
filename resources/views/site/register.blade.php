@@ -96,8 +96,8 @@
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
-                            <label class="form-control-label" for="birthday">Birthday<span class="form-asterisk">*</span></label>
-                                <input id="birthday" type="date" class="form-control" name="birthday" value="" required/>
+                            <label class="form-control-label" for="birthdate">Birthday<span class="form-asterisk">*</span></label>
+                                <input id="birthdate" type="date" class="form-control" name="birthdate" value="" required/>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
@@ -111,22 +111,22 @@
                                 <label class="form-control-label" for="age">Please describe the student’s background on coding/programming:<span class="form-asterisk">*</span></label>
                                 
                                 <div class="col-sm-12 radio">
-                                  <label><input type="radio" name="optradio" class="optradio" value="Not yet" required />None yet</label>
+                                  <label><input type="radio" name="codingBg" class="optradio codingBg" value="Not yet" required />None yet</label>
                                 </div>
                                 <div class="col-sm-12 radio">
-                                  <label><input type="radio" name="optradio" class="optradio" value="Self-taugth"/>Self-taught</label>
+                                  <label><input type="radio" name="codingBg" class="optradio codingBg" value="Self-taugth"/>Self-taught</label>
                                 </div>
                                 <div class="col-sm-12 radio">
-                                  <label><input type="radio" name="optradio" class="optradio" value="Previously enrolled with JACK"/>Previously enrolled with JACK</label>
+                                  <label><input type="radio" name="codingBg" class="optradio codingBg" value="Previously enrolled with JACK"/>Previously enrolled with JACK</label>
                                 </div>
                                 <div class="col-sm-12 radio">
-                                    <label><input type="radio" name="optradio" class="optradio" value="Previously enrolled with other school"/>Previously enrolled with other school</label>
+                                    <label><input type="radio" name="codingBg" class="optradio codingBg" value="Previously enrolled with other school"/>Previously enrolled with other school</label>
                                 </div>
                                 <div class="col-sm-12 radio">
-                                  <label><input type="radio" name="optradio" class="optradio" value="0"/>Other</label>
+                                  <label><input type="radio" name="codingBg" class="optradio codingBg" value="0"/>Other </label>
                                 </div>
-                                <div class="col-sm-12 radio studentBackground" style="display:none;">
-                                    <input type="text" name="studentBackground" id="studentBackground" value="" />
+                                <div class="col-sm-12 radio studentBackground" >
+                                    <input type="text" class="form-control" name="studentBackground" id="studentBackground" value="" placeholder="Please specify" />
                                 </div>
                             </div>
                         </div>
@@ -189,13 +189,13 @@
                                         <tr class="checkbox">
                                             <td  width="60%" style=" width: 70%;">
 
-                                            <label> <input type="checkbox" class="courseCbox" name="courses[]" value="{{ $course->id }}"> {{ $course->courseTitle }} </label>
+                                            <label> <input type="checkbox" class="courseCbox" name="courses[]" value="{{ $course->id }}_{{ $course->courseType }}"> {{ $course->courseTitle }} </label>
 
                                             </td>
                                             <td  width="40%" style="width: 30%;">
                                                 @if($course->courseType == 3)
 
-                                                <select class="form-control courseSelectBox_{{ $course->id }}" id="level_{{ $course->id }}" style="display: none;">
+                                                <select class="form-control courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" id="level_{{ $course->id }}" style="display: none;">
                                                     <option selected="" disabled="">--Select Level--</option>
                                                     <?php 
                                                         $optionLength = $i+3;
@@ -217,13 +217,13 @@
                                                 </select>
                                                 @elseif($course->mobileDev == 1)
 
-                                                    <select class="form-control selectedmobileDev courseSelectBox_{{ $course->id }}" id="selectedmobileDev_{{ $course->id }}" style="display: none;">
+                                                    <select class="form-control selectedmobileDev courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" id="selectedmobileDev_{{ $course->id }}" style="display: none;">
                                                         <option value="0" selected="" disabled=""> -- Select Mobile Development -- </option>
-                                                        <option value="Android">Android</option>
-                                                        <option value="iOS">iOS</option>
+                                                        <option value="Android_{{ $course->courseScheduleId }}">Android</option>
+                                                        <option value="iOS_{{ $course->courseScheduleId }}">iOS</option>
                                                     </select>
                                                 @elseif($course->courseType == 1)
-                                                    <select class="form-control courseSelectBox_{{ $course->id }}" id="summer_{{ $course->id }}" style="display: none;">
+                                                    <select class="form-control courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" id="summer_{{ $course->id }}" style="display: none;">
                                                         <option value="0" selected="" disabled=""> -- Select Schedule -- </option>
                                                         @for ($a = $i; $a < count($courses); $a++)
                                                             <?php 
@@ -251,17 +251,18 @@
                                 
                                 <div class="col-md-12">
                                     <div class="col-xs-12 col-md-6 radio">
-                                        <label><input type="radio" name="find" value="Google Search Result" required />Google Search Result</label><br>
-                                        <label><input type="radio" name="find" value="Facebook Ad">Facebook Ad</label><br>
-                                        <label><input type="radio" name="find" value="Instagram Ad">Instagram Ad</label><br>
-                                        <label><input type="radio" name="find" value="School">School</label>
+                                        <label><input type="radio" name="findJack" class="findJack" value="Google Search Result" required />Google Search Result</label><br>
+                                        <label><input type="radio" name="findJack" class="findJack" value="Facebook Ad">Facebook Ad</label><br>
+                                        <label><input type="radio" name="findJack" class="findJack" value="Instagram Ad">Instagram Ad</label><br>
+                                        <label><input type="radio" name="findJack" class="findJack" value="School">School</label>
                                     </div>
                                     <div class="col-xs-12 col-md-6 radio">
                                         
-                                        <label style="margin-top: 11px;"><input type="radio" name="find" value="Flyers">Flyers</label><br>
-                                        <label><input type="radio" name="find" value="Email Updates">Email Updates</label><br>
-                                        <label><input type="radio" name="find" value="Referred by a friend/Student">Referred by a friend/Student</label><br>
-                                        <label><input type="radio" name="find" value="0">Other <input type="text" class="form-control" id="findJack" style="display:none;"></label>
+                                        <label style="margin-top: 11px;"><input type="radio" name="find" class="findJack" value="Flyers">Flyers</label><br>
+                                        <label><input type="radio" name="findJack" class="findJack" value="Email Updates">Email Updates</label><br>
+                                        <label><input type="radio" name="findJack" class="findJack" value="Referred by a friend/Student">Referred by a friend/Student</label><br>
+                                        <label><input type="radio" name="findJack" class="findJack" value="0">Other </label>
+                                        <input type="text" class="form-control" id="findJackVal" style="display:none;" placeholder="Please specify">
                                     </div>
                                 </div>
                             </div>
@@ -272,7 +273,8 @@
                             </label>
                             
                         </div>
-                        
+                        {{ csrf_field() }}
+                        <input type="hidden" name="courseSelected" id="courseSelected"/>
                     </div>
                     <div class="col-xs-12 col-md-12 text-center">
                         <input type="button"  class="btn btn-lg btn-orange" id="coursePrevBtn" value="PREVIOUS">
@@ -295,6 +297,21 @@
     <script src="{{ asset('/js/jquery.form.js') }}"></script>
   <script type="text/javascript">
     $('#courseDetails').hide();
+    $('#studentBackground').hide();
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+     if(dd<10){
+            dd='0'+dd
+        } 
+        if(mm<10){
+            mm='0'+mm
+        } 
+
+    today = (yyyy-6)+'-'+mm+'-'+dd;
+    document.getElementById("birthdate").setAttribute("max", today);
+
  
     $(".courseCbox").change(function() {
 
@@ -311,11 +328,51 @@
        
     });
 
+    $("#birthdate").change(function() {
+
+        $('#age').val(getAge($(this).val()));
+       
+    });
+
+    $(".codingBg").change(function() {
+        var value = $('input[name=codingBg]:checked').val();
+
+        if(value == 0){
+            $('#studentBackground').show();
+            $('#studentBackground').val("");
+        } else {
+            $('#studentBackground').hide();
+            $('#studentBackground').val(value);
+        }
+    });
+
+    $(".findJack").change(function() {
+        var value = $('input[name=findJack]:checked').val();
+
+        if(value == 0){
+            $('#findJackVal').show();
+            $('#findJackVal').val("");
+        } else {
+            $('#findJackVal').hide();
+            $('#findJackVal').val(value);
+        }
+    });
+
+    
+
     $("body").on("click","#personalNextBtn",function(e){
         $(this).parents("form").ajaxForm(toCourseDetail);
     });
     var toCourseDetail = { 
         beforeSubmit:function(formData, jqForm, options){
+
+            var value = $('input[name=codingBg]:checked').val();
+
+            if(value == 0 && $('#studentBackground').val() == "" ){
+                $('#studentBackground').css('border-color', 'red');
+                return false;
+            }
+            $('#studentBackground').css('border-color', '#ccc');
             $('#courseDetails').show();
             $('#personalDetails').hide();
             
@@ -337,6 +394,13 @@
     var registerStudent = { 
         beforeSubmit:function(formData, jqForm, options){
             console.log("Validate register");
+            var value = $('input[name=findJack]:checked').val();
+
+            if(value == 0 && $('#findJackVal').val() == "" ){
+                $('#findJackVal').css('border-color', 'red');
+                return false;
+            }
+            $('#findJackVal').css('border-color', '#ccc');
             
             var checkedCourses = $('.courseCbox:checkbox:checked');
             $('.errorCourseMsg').html("");
@@ -346,32 +410,78 @@
                 isCourseComplete = false;
                 $('.errorCourseMsg').html("Please select course");
             }
-            
+            var courseArr = [];
             for(var x = 0; x < checkedCourses.length; x++){
-                var courseId = checkedCourses[x].value;
-                var valueId = $('.courseSelectBox_'+courseId).val();
+                var courseTypeId = checkedCourses[x].value;
+                var valueId = $('.courseSelectBox_'+courseTypeId).val();
                 console.log("Validate register "+ valueId);
                 if(valueId == null){
                     isCourseComplete = false;
                     x = checkedCourses.length;
                     $('.errorCourseMsg').html("Please select schedule");
-                    $('.courseSelectBox_'+courseId).css('border-color', 'red');
+                    $('.courseSelectBox_'+courseTypeId).css('border-color', 'red');
                 }
+
+                var courses = courseTypeId.split("_");
+                var details = valueId.split("_");
+
+                courseArr.push({
+                    id: courses[0],
+                    type: courses[1],
+                    levelId: details[0],
+                    scheduleId: details[1]
+                });
             }
+
+
+
+            
             if(isCourseComplete){
+                $('#courseSelected').val(JSON.stringify(courseArr));
                 $.ajax({
                     url: "{{ url('registerStudent') }}?_token="+$("input[name=_token]").val(),
                     type: 'post',
-                    data: { 'id' : 'werwer',
-                            'email' : 'dsfs'
+                    data: { 
+                        'studGivenName' : $('#studGivenName').val(),
+                        'studLastName' : $('#studLastName').val(),
+                        'school' : $('#school').val(),
+                        'gradeLevel' : $('#gradeLevel').val(),
+                        'birthdate' : $('#birthdate').val(),
+                        'age' : $('#age').val(),
+                        'codingBackground' : $('#studentBackground').val(),
+                        'parentName' : $('#contactPerson').val(),
+                        'relationship' : $('#relationship').val(),
+                        'parentEmail' : $('#email').val(),
+                        'parentContactNum' : $('#contactNum').val(),
+                        'completeAddress' : $('#address').val(),
+                        'findjack' : $('#findJackVal').val(),
+                        'allowPhotograph' : $('#allowPhotograph').is(':checked')  ? 1 : 0,
+                        'courseSelected' : $('#courseSelected').val()
 
                     },
                     success: function (data) {
-                        waitingDialog.show("SUCCESS", {
-                            modalHeader: 'success',
-                            dialog: data.result,
-                            footer: true
-                        });  
+                        if(data.isSuccessful){
+                            $('html, body').animate({
+                                scrollTop: $('.register-steps').offset().top
+                            }, 500, function () {
+                            });
+                            waitingDialog.show("SUCCESS", {
+                                modalHeader: 'success',
+                                dialog: data.result,
+                                footer: true,
+                                onHide: function(){
+                                   location.reload();
+                                
+                                }
+                            });  
+                        } else {
+                            waitingDialog.show("ERROR", {
+                                modalHeader: 'danger',
+                                dialog: data.result,
+                                footer: true
+                            }); 
+                        }
+                        
                     }
                 });
             } else {
@@ -400,5 +510,16 @@
         }, 500, function () {
         });
     });
+
+    function getAge(dateString) {
+        var today = new Date();
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
 </script>
 @endsection

@@ -73,11 +73,11 @@ class HomeController extends Controller
 
     public function registerStudent(Request $request){
 
-        $input = $request->only('firstname', 'lastname', 'school', 'birthdate', 'age', 'codingBackground', 'parentName', 'parentContactNum',
-            'completeAddress', 'findjack', 'allowPhotograph', 'courses' );
+        $input = $request->only('studGivenName', 'studLastName', 'school', 'birthdate', 'age', 'codingBackground', 'parentName', 'parentEmail', 'parentContactNum',
+            'completeAddress', 'findjack', 'allowPhotograph', 'courseSelected' );
         $studentDetail = new \App\Models\JackStudentDetail;
-        $studentDetail->firstname = $input['firstname'];
-        $studentDetail->lastname = $input['lastname'];
+        $studentDetail->firstname = $input['studGivenName'];
+        $studentDetail->lastname = $input['studLastName'];
         $studentDetail->school = $input['school'];
         $studentDetail->birthdate = $input['birthdate'];
         $studentDetail->age = $input['age'];
@@ -87,16 +87,30 @@ class HomeController extends Controller
         $studentDetail->completeAddress = $input['completeAddress'];
         $studentDetail->findjack = $input['findjack'];
         $studentDetail->allowPhotograph = $input['allowPhotograph'];
+        $studentDetail->parentEmail = $input['parentEmail'];
         $studentDetail->save();
 
+        $courseSelected = json_decode($input['courseSelected'], true);
 
-        $jackStudentCourse = new \App\Models\JackStudentCourse;
-        $jackStudentCourse->studentID = $studentDetail->id;
-        $jackStudentCourse->course = $input['course'];
-        $jackStudentCourse->level = $input['level'];
-        $jackStudentCourse->courseSchedule = $input['courseSchedule'];
-        $jackStudentCourse->mobileDevelopment = $input['mobileDevelopment'];
-        $jackStudentCourse->save();
+        Log::info($courseSelected);
+
+        for($x=0; $x<count($courseSelected); $x++){
+            $jackStudentCourse = new \App\Models\JackStudentCourse;
+            $jackStudentCourse->studentID = $studentDetail->id;
+            $jackStudentCourse->course = $courseSelected[$x]['id'];
+            $levelId = $courseSelected[$x]['levelId'];
+            if(is_numeric($levelId)){
+                $jackStudentCourse->level = $levelId;
+            }
+            else{
+                $jackStudentCourse->mobileDevelopment = $levelId;
+            }
+
+            $jackStudentCourse->courseSchedule = $courseSelected[$x]['scheduleId'];
+            
+            $jackStudentCourse->save();
+        }
+        
 
         return $this->helperUtil->resultToJSON("Successfully registered.", Config::get('constants.SC_SUCCESS'), 0, true);  
     }
@@ -142,4 +156,5 @@ class HomeController extends Controller
     public function downloadCalendar(){
         return response()->download(Config::get('constants.CALENDAR_PATH'), "JACK CALENDAR 2018.pdf");
     }
+
 }
