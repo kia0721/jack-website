@@ -18,9 +18,12 @@ class HomeController extends Controller
         $this->helperUtil = new HelperUtil;
     }
 
-    public function index()
+    public function index(Request $require)
     {
-        return view('site.home');
+        // if($this->helperUtil->isMobileDevice($require)){
+            return view('mobile.home');
+        // }
+        // return view('site.home');
     }
 
     public function courses()
@@ -155,6 +158,12 @@ class HomeController extends Controller
 
     public function downloadCalendar(){
         return response()->download(Config::get('constants.CALENDAR_PATH'), "JACK CALENDAR 2018.pdf");
+    }
+
+
+    public function mobiIndex()
+    {
+        return view('mobile.home');
     }
 
 }

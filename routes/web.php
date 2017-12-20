@@ -18,8 +18,10 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
-
-
+Route::get('/m.home', function () {
+    return redirect('/m.home');
+});
+Route::get('/m.home', 'HomeController@mobiIndex');
 
 Route::get('/accounts', 'AccountController@index');
 Route::get('/accounts/{userType}', 'AccountController@getUsers');
