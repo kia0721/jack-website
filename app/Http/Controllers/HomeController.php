@@ -20,10 +20,10 @@ class HomeController extends Controller
 
     public function index(Request $require)
     {
-        // if($this->helperUtil->isMobileDevice($require)){
+        if($this->helperUtil->isMobileDevice($require)){
             return view('mobile.home');
-        // }
-        // return view('site.home');
+        }
+        return view('site.home');
     }
 
     public function courses()

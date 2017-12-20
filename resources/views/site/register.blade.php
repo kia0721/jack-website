@@ -13,7 +13,7 @@
     }
 
     .register-div{
-        background-color: #afb9fb;
+        background-color: #00bff3;
         border-radius: 33px;
         padding-bottom: 10px;
     }

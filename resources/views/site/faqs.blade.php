@@ -79,45 +79,46 @@
                                 <br>
 
                                 <h4>WHAT ARE THE CLASS SCHEDULES?</h4>
-                                <p>Classes for the Junior Coder, App Development (Java Programming), Electronics Engineering (C Programming) will be held from 08:30am to 12:30pm on scheduled Saturdays. Classes for the Game Development (Python Programming) will be held from 01:30pm to 05:30pm on scheduled Saturdays.</p>
+                                <p>Summer classes are held during weekdays from 8am to 12pm. Our Junior Coder and Master Coder classes are held during weekends, from 8:30am to 12:30pm or 1:30pm to 5:30pm. The Junior Coder classes are usually in the morning, while the Master Coder class may have an afternoon schedule. All classes have a 30-minute break. To know the specific schedule of a course, kindly check our Courses (link) page.</p>
 
                                 <br>
                                 <h4>WHERE WILL IT BE HELD?</h4>
                                 <p>JACK is located at Penthouse, East Tower, Philippine Stock Exchange Center, Exchange Road, Ortigas Center, Pasig City.</p>
                                 <br>
                                 <h4>WHO MAY ENROLL?</h4>
-                                <p>The Junior Coder Classes are open to children ages 8 to 11 while the Master Coder Classes are for 12-17 year old kids</p>
+                                <p>Summer classes are open for ages 7 to 16. The Junior Coder classes are open to students ages 8 to 11, while the Master Coder classes are for ages 12 to 17 years old.</p>
                                 <br>
 
                                 <h4>CAN MY CHILD ENROLL IF HE OR SHE HAS NO KNOWLEDGE IN CODING?</h4>
-                                <p>JACK trainers are graduates of the University of the Philippines, who are also current IT industry practitioners. Armed with industry knowledge, skills, as well as experience in teaching kids, JACK trainers have the mind and heart to help unlock your kid’s full potential.</p>
+                                <p>Of course, JACK’s Foundations of Coding program is designed to introduce your child to the world of coding. If your child wants to enroll in the other courses, we highly recommend that he or she undergo this program first.</p>
                                 <br>
 
+                                <h4>WHO ARE THE TEACHERS?</h4>
+                                <P>JACK teachers are graduates of the University of the Philippines, who are also current IT industry practitioners. Armed with industry knowledge, skills, as well as experience in teaching kids, JACK teachers have the mind and heart to help unlock your kid’s full potential.</P>
+                                <br>
+                                
                                 <h4>WHAT IS THE CLASS SIZE OF EACH COURSE?</h4>
-                                <p>Each class is composed of 15 to 20 students.</p>
+                                <p>Each class is composed of 10 to 20 students.</p>
                                 <br>
                                 <br>
 
                                 <h2>Registration and Payment</h2>
                                 <br>
                                 <h4>HOW TO REGISTER ?</h4>
-                                <p>To register, please go to www.jack.com.ph/register or you may also click the REGISTER tab in our Facebook page.</p>
-                                <br>
-
-                                <h4>WHAT ARE THE INCLUSIONS OF THE COURSE FEE?</h4>
-                                <p>Course fees are inclusive of the admission to the five-day course, a hands-on training on coding, as well as the necessary equipment for the class. A certificate of completion is also given at the end of the course.</p>
+                                <p>To register, please go to jack.com.ph/register and follow the instructions that will be sent in your email.</p>
                                 <br>
 
                                 <h4>HOW DO WE AVAIL COURSE FEE DISCOUNTS?</h4>
-                                <p>JACK offers a 5% discount on the total amount due for those who enroll witha buddy. Also, we offer a P3000 discount for those who will enroll one time in the 3 levels (beginner, intermediate, and advanced) for each of the Master Coder courses.</p>
+                                <p>JACK offers a buddy/sibling discount. Enroll with a buddy and get 5% off on the total amount due for the two enrollees.</p>
                                 <br>
 
                                 <h4>HOW DO WE PAY?</h4>
-                                <p>Payments could be done through bank deposit or directly at JACK's office. We will advise you on the bank details once you have completed your registration. </p>
+                                <p>Payments can be made through bank deposit or directly at JACK's office. We will advise you on the details once you have completed your registration.</p>
                                 <br>
 
-
-
+                                <h4>WHAT ARE THE INCLUSIONS OF THE COURSE FEE?</h4>
+                                <p>Course fees are inclusive of the admission to the course, a hands-on training, as well as the necessary equipment for the class, unless otherwise stated. A certificate of completion is also given at the end of the course.</p>
+                                <br>
 
                             </div>
                         </div>

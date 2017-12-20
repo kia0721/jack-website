@@ -62,7 +62,7 @@ h1,h2{
 
 .navbar, .navbar-brand{
     min-height: 60px;
-    background-color: #ffffff;
+    background-color: #ff9c34;
     color: white;
     border-color: white;
 }
@@ -90,7 +90,13 @@ h1,h2{
     background-color: rgba(150, 144, 144, 0.06);
 }
 
+.navbar-inverse .navbar-toggle{
+  border-color: transparent;
+}
 
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+  background-color: #f98710;
+}
 .modal {
  overflow-y: auto;
 }
@@ -404,4 +410,9 @@ nav ul, nav ol, li{
 
 .btn-bold{
   font-weight: bold;
+}
+
+.no-padding{
+  padding: 0px;
+  margin: 0px;
 }

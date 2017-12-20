@@ -308,11 +308,13 @@
                                 <div style="top: 176px; left: 243px;" >
                                     <h1>ABOUT THE ACADEMY</h1>
                                 </div>
-                                <div  style="top: 239px; left: 64px; max-width: 800px;" >
-                                    <p>In today's digital world, coding has become a fundamental skill that is best taught at an early age. When kids learn how to create using the latest hardware trends and innovations, they also learn how to be more creative, at the same time, using logic, to solve problems.
+                                <div  style="top: 239px; left: 64px; max-width: 800px; font-weight: bold;" >
+                                    <p>At the Junior Academy for Coding Knowledge (JACK), we equip kids with the fundamental knowledge and skills to be innovators.<br>
+                                    Believing that anybody can code, JACK was founded in 2016 with the mission to provide an avenue for  kids to become fluent with technology at their early age. Not only does this make them capable of navigating today’s technology-driven world, this also instills such skills as problem solving and critical thinking - skills that will be valuable to them in the long run.
+
                                     </p>
-                                    <p style="max-width: 700px;">
-                                    JACK's mission is to provide kids with the highest quality learning experience by celebrating and encouraging their creativity through dynamic and project-based learning all in a fun and engaging environment.</p>
+                                    <p style="max-width: 690px;">
+                                    And the best part? They can do more with coding. We provide a space where kids can learn concepts and do hands-on activities, mixing learning with play, empowering them to create and innovate. Let’s work together in shaping our future creators and digital leaders!</p>
                                 </div>
                                 <div style="top: 135px; left: 653px; cursor: pointer;" >
                                     <IMG SRC="{{ asset('images/play-btn.gif') }}"/>
@@ -334,8 +336,11 @@
                                 <div style="top: 145px; left: 380px;" >
                                     <h1>COURSES OFFERED</h1>
                                 </div>
-                                <div  style="top: 239px; left: 200px; max-width: 800px;" >
-                                    <p>In today's digital world, coding has become a fundamental skill that is best taught at an early age. When kids learn how to create using the latest hardware trends and innovations, they also learn how to be more creative, at the same time, using logic, to solve problems.
+                                <div  style="top: 235px; left: 254px; max-width: 607px; font-weight: bold;" >
+                                    <p>JACK’s carefully-designed modules allow students ages 7 to 17 to learn and develop the necessary knowledge and skills to be fluent with technology. 
+                                    </p>
+                                    <p>
+                                    Our classes are available throughout the year. Choose among our wide selection of fun summer courses, or take more advanced classes during the weekends. Want to know more? Check out our Summer, Junior, and Master classes.
                                     </p>
                                 </div>
                                 <div  style="top: 372px; left: 94px; width: 169px; height:72px; cursor: pointer;" onclick="location.href='{{ url('/courses') }}';" >

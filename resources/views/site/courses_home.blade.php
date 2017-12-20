@@ -168,19 +168,21 @@
                                 <img src="{{ asset('images/black_char.png') }}" />
                             </div>
                             <div class="default bubble" style="background-color: #ffb15e; color: black; ">
-                                Jack  offers four different main courses. Feel free to choose!
+                                Jack  offers 3 different main courses. Feel free to choose!
                             </div>
 
                             <div class="yellow bubble" >
-                                Delve into the wonderful world of coding by learning how to develop applications where you can create your very own stories and games.
+                                <b>LEARN TO CODE. PLAY AND HAVE FUN!</b><br>
+                                JACK’s summer courses are open for students ages 7 to 16. Here, kids can discover, learn, and enjoy the world of coding.
                             </div>
                             <div class="blue bubble" >
-                                
-                                Be a junior or master coder and learn the art of Java, C and Python.
+                                <b>START THEM YOUNG!</b><br>
+                                The Junior Coder classes are specifically crafted for ages 8 to 11. Have a  head start in coding and learn more advanced classes like Python Programming and Mobile App Development.
                             </div>
 
                             <div class="red bubble" >
-                                Teach BB8 Droids and Parrot Drones to follow rules, avoid obstructions, and execute maneuvers. Learn the basics of programming by coding these machines to life.
+                                <b>UPGRADE YOUR PROGRAMMING SKILLS!</b><br>
+                                The Master Coder classes allow students ages 12 to 17 to specialize in a programming language. 
                             </div>
                             
                         </div>

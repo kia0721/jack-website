@@ -166,7 +166,7 @@
 
     .course-sec{
         background-color: #efefef; 
-        padding: 20px 0px !important; 
+        padding: 20px 20px !important; 
         border-radius: 5px;
 
     }
@@ -182,6 +182,54 @@
     }
     .section-course .col-md-3 a{
         font-weight: bold;
+    }
+
+    
+    .course-detail{
+        font-size: 16px;
+        color:#502d02;
+    }
+
+    .division-title{
+        text-align: center;
+        color: #00bef3;
+        text-shadow: 2px 2px 2px black;
+        font-stretch: semi-condensed;
+        font-weight: bolder;
+        font-size: 43px;
+        letter-spacing: 2px;
+    }
+
+    .ccourse-title2{
+        color: #b46500;
+    }
+
+    .to-be-annc{
+        font-weight: bolder;
+        text-shadow: 2px 2px 2px black;
+        color: red;
+        font-size: 32px;
+        border-color: red;
+        border-width: 2px;
+        border-style: dashed;
+        padding: 10px;
+        letter-spacing: 3px;
+    }
+
+    .detail{
+        padding: 5px 10px; 
+        border-radius: 5px;
+    }
+    .date.detail{
+        background-color: rgba(0, 190, 243, 0.4117647058823529);       
+    }
+
+    .time.detail{
+        background-color: rgba(255, 156, 55, 0.5019607843137255);   
+    }
+
+    .fee.detail{
+        background-color: rgba(85, 229, 160, 0.72);
     }
 
 </style>
