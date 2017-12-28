@@ -15,30 +15,36 @@
 
 
         #submitContactUs {
-          background: #00bef3;
-          background-image: -webkit-linear-gradient(top, #00bef3, #00abda);
-          background-image: -moz-linear-gradient(top, #00bef3, #00abda);
-          background-image: -ms-linear-gradient(top, #00bef3, #00abda);
-          background-image: -o-linear-gradient(top, #00bef3, #00abda);
-          background-image: linear-gradient(to bottom, #00bef3, #00abda);
+          background: #ff9c34;
+          background-image: -webkit-linear-gradient(top, #ff9c34, #e88216);
+          background-image: -moz-linear-gradient(top, #ff9c34, #e88216);
+          background-image: -ms-linear-gradient(top, #ff9c34, #e88216);
+          background-image: -o-linear-gradient(top, #ff9c34, #e88216);
+          background-image: linear-gradient(to bottom, #ff9c34, #e88216);
           -webkit-border-radius: 9;
           -moz-border-radius: 9;
           border-radius: 9px;
-          color: black;
+          color: white;
+          font-weight: bold;
           font-size: 20px;
           padding: 10px 20px 10px 20px;
           text-decoration: none;
           width: 200px;
+          border-color: #e88216;
         }
 
         #submitContactUs:hover {
-          background: #00abda;
-          background-image: -webkit-linear-gradient(top, #00abda, #00bef3);
-          background-image: -moz-linear-gradient(top, #00abda, #00bef3);
-          background-image: -ms-linear-gradient(top, #00abda, #00bef3);
-          background-image: -o-linear-gradient(top, #00abda, #00bef3);
-          background-image: linear-gradient(to bottom, #00abda, #00bef3);
+          background: #e88216;
+          background-image: -webkit-linear-gradient(top, #e88216, #ff9c34);
+          background-image: -moz-linear-gradient(top, #e88216, #ff9c34);
+          background-image: -ms-linear-gradient(top, #e88216, #ff9c34);
+          background-image: -o-linear-gradient(top, #e88216, #ff9c34);
+          background-image: linear-gradient(to bottom, #e88216, #ff9c34);
           text-decoration: none;
+        }
+
+        .sub-title{
+            font-size: 16px;
         }
 
 
@@ -50,7 +56,7 @@
 <div class="main-wrapper">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="col-md-12 col-sm-12">
+            <div class="col-md-12 col-sm-12"><br>
                 <center>
                     <img src="{{ asset('images/mobi_welcome.png') }}" />
                 </center>
@@ -74,6 +80,8 @@
                 <p>And the best part? They can do more with coding. We provide a space where kids can learn concepts and do hands-on activities, mixing learning with play, empowering them to create and innovate. Let’s work together in shaping our future creators and digital leaders!</p>
             </div>
         </div>
+    </div>
+    <div class="row">
         <div class="col-md-12 col-sm-12">
         &nbsp;
         </div>
@@ -136,7 +144,7 @@
                 <input type="hidden" name="user_type" id="user_type"/>
 
                  <div class="col-md-12" style="margin-top: 20px;">
-                    <input id="fullname" type="text" class="form-control" name="fullname" placeholder="FULLNAME" required autofocus>
+                    <input id="fullname" type="text" class="form-control" name="fullname" placeholder="FULLNAME" required >
                     <input id="email" type="email" class="form-control" name="email" placeholder="EMAIL"  required>
                     <input id="contactNum" type="text" class="form-control" name="contactNum" placeholder="CONTACT NUMBER" required >
 
@@ -158,6 +166,28 @@
             
             </form>
         </div>
+        
+        <div class="col-xs-1 no-padding"></div>
+        <div class="col-xs-10 " style="border-radius: 10px; border-width: 2px; border-color: #f5af0a; border-style: solid; margin-left: auto;">
+            <div class="col-xs-12">
+            <br>
+                <p><b>ADDRESS<br></b></p>
+                <p>Penthouse, East Tower, <br>
+                Philippine Stock Exchange<br>
+                Center, Exchange Road, Ortigas<br>
+                Center, Pasig City, 1605</p>
+            </div>
+            <div class="col-xs-12">
+                
+                <p><b>CONTACTS<br></b></p>
+                <p>Email: learncoding@jack.com.ph <br>
+                Phone: +63977 841 0482<br>
+                Landline: (02) 636 74 99 loc. 887<br>
+                <a href="http://www.facebook.com/JackSchoolPH" target="_blank">facebook.com/JackSchoolPH</a> </p><br>
+            </div>
+        </div>
+        <div class="col-xs-1 no-padding"></div>
+        
     </div>
 </div>
 @endsection

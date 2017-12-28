@@ -26,8 +26,11 @@ class HomeController extends Controller
         return view('site.home');
     }
 
-    public function courses()
+    public function courses(Request $require)
     {
+        if($this->helperUtil->isMobileDevice($require)){
+            return view('mobile.courses_home');
+        }
         return view('site.courses_home');
     }
     public function summer()
@@ -44,8 +47,11 @@ class HomeController extends Controller
         return view('site.master');
     }
 
-    public function calendar()
+    public function calendar(Request $require)
     {
+        if($this->helperUtil->isMobileDevice($require)){
+            return view('mobile.calendar');
+        }
         return view('site.calendar');
     }
     public function eMagazine()

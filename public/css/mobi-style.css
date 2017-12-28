@@ -86,7 +86,7 @@ h1,h2{
 }
 
 .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-    color: #e48e06;
+    color: white;
     background-color: rgba(150, 144, 144, 0.06);
 }
 

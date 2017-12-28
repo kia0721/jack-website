@@ -38,7 +38,7 @@
         }
 
         .main-wrapper{
-            margin-top: 73px;
+            margin-top: 61px;
         }
        
     </style>
