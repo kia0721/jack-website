@@ -33,6 +33,16 @@
         color: #b8b8b8;
     }
 
+    .division-title{
+        text-align: center;
+        color: #00bef3;
+        text-shadow: 2px 2px 2px black;
+        font-stretch: semi-condensed;
+        font-weight: bolder;
+        font-size: 23px;
+        letter-spacing: 2px;
+    }
+
     .detail{
         padding: 5px 10px; 
         border-radius: 5px;
@@ -65,64 +75,9 @@
 
             <div class="tab-content">
               <div id="summer" class="tab-pane fade in active">
-                <br>
-                <div class="col-xs-12 col-sm-12">
-        
-                        <div class="col-md-8 col-md-offset-2 course-event">
-                            <div class="row">
-                                <!-- <div class="col-xs-12 col-sm-12 "> -->
-                                <br>
-                                    <div class="col-xs-3 col-sm-3 text-xs-center">
-                                        <img src="{{ asset('images/scratch.png') }}"  width="100%" />
-                                    </div>
-                                    <div class="col-xs-9 col-sm-9 text-xs-center">
-                                        <H4 class="title">Scratch: Welcome to the World of Coding</H4>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 ">
-                                    <br>
-                                        <p >This is an introductory course on coding that uses the Scratch programming platform. In this class, students use block-based programming to create their own stories, animations, mini games, and more.</p>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-12">
-                                        <p class="date detail">
+               
+                @include('mobile.summer') 
                    
-                                        <B>Date:</B> <br>&nbsp; &nbsp; &nbsp; Batch 1: April 2 to 6
-                                        <br>&nbsp; &nbsp; &nbsp; Batch 2: May 14 to 18
-                                        <br>&nbsp; &nbsp; &nbsp; Batch 3: June 18 to 22
-                                        <br>&nbsp; &nbsp; &nbsp; Batch 4: July 2 to 6
-
-                                        </p>
-                                        <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN
-                                        </p>
-                                        <p class="fee detail">
-                                        <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 8,500 per module</span></p>
-                                        <center>
-                                        <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
-                                        </center>
-                                    </div>
-                                </div>
-                            </div>
-                           <br>
-                        <div class="col-md-8 col-md-offset-2 course-event">
-                            <div class="row">
-                                <br>
-                                    <div class="col-xs-3 col-sm-3 text-xs-center">
-                                        <img src="{{ asset('images/mobi_junior.png') }}"  width="100%" />
-                                    </div>
-                                    <div class="col-xs-9 col-sm-9 text-xs-center">
-                                        <H4 class="title">JUNIOR</H4>
-                                        <p class="sub-title">START THEM YOUNG!</p>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 ">
-                                    <br>
-                                        <p >The Junior Coder classes are specifically crafted for ages 8 to 11. Have a  head start in coding and learn more advanced classes like Python Programming and Mobile App Development. Here, kids are introduced to text based programming. </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                   
-                
               </div>
               <div id="junior" class="tab-pane fade">
                 <div class="col-md-12">

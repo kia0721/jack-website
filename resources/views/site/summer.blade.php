@@ -249,7 +249,7 @@
                     <p class="date detail"><B>Date:</B> <br>&nbsp; &nbsp; &nbsp; Batch 1: June 25 to 29
                     <br>&nbsp; &nbsp; &nbsp; Batch 2: July 9 to 13</p>
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
-                    <p class="date detail">
+                    <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 8,500 per module</span></p>
                     <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
