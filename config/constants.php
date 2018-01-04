@@ -9,10 +9,11 @@ return [
 
   
     'URL' => 'https://scpsmsgt.com/customer_survey/public/index.php',
-    'CALENDAR_PATH' => 'C:/xampp/htdocs/jack-website/public/images/calendar/CALENDAR.pdf',
+    // 'CALENDAR_PATH' => 'C:/xampp/htdocs/jack-website/public/images/calendar/CALENDAR.pdf',
+    'CALENDAR_PATH' => 'public_html/jack.com.ph/public/images/calendar/CALENDAR.pdf',
     // 'FROM_EMAIL' => 'jingky.sulpico@smsgt.com',
-    'FROM_EMAIL' => 'smsgt.jcsulpico@gmail.com',
-    'TO_FEEDBACK_EMAIL' => ['jingky.sulpico@smsgt.com'],
+    'FROM_EMAIL' => 'learncoding@jack.com.ph',
+    'TO_FEEDBACK_EMAIL' => ['learncoding@jack.com.ph'],
     // 'TO_FEEDBACK_EMAIL' => 'customer-feedback@smsgt.com',
 
     'APP_NAME' => 'Jack Website',

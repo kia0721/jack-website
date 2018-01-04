@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Jack Website</title>
+        <title>Jack</title>
 
         <style type="text/css">
 
@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
-                        <p>Dear: <b>{{ $detail->parent }}</b></p>
+                        <p>Dear: <b>{{ $detail->parentName }}</b></p>
                         <p>Thank you for your interest in the Junior Academy for Coding Knowledge classes. This is to confirm we have received your registration for COURSE.</p>
                         <p>COURSE DETAILS</p>
                         @foreach ($categories as $cate => $cat)

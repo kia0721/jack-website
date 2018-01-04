@@ -125,6 +125,18 @@ class HomeController extends Controller
             
             $jackStudentCourse->save();
         }
+        $mailData = $input;
+        $mailData['date'] = date("F d, Y h:i A");
+        Mail::send(['html'=>'mail.registered-mail'], $mailData, function ($message) use ($mailData) {
+
+            $message->from(Config::get('constants.FROM_EMAIL'), Config::get('constants.APP_NAME'));
+
+            $message->to(Config::get($mailData['parentEmail'])->subject('Thank you for your interest in the Junior Academy for Coding Knowledge');
+
+        });
+        if(count(Mail::failures()) > 0){
+            return $helperUtil->resultToJSON("Error", Config::get('constants.SC_UXP_ERR'), 0, false);  
+        }
         
 
         return $this->helperUtil->resultToJSON("Successfully registered.", Config::get('constants.SC_SUCCESS'), 0, true);  

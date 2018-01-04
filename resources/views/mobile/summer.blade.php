@@ -33,7 +33,7 @@
                 <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN
                 </p>
                 <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 8,500 per module</span></p>
+                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 8,800 per module</span></p>
                 <center>
                 <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
                 </center>
@@ -64,7 +64,7 @@
                 <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN
                 </p>
                 <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 8,500 per module</span></p>
+                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 8,800 per module</span></p>
                 <center>
                 <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
                 </center>
@@ -102,7 +102,7 @@
                 <B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN
                 </p>
                 <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 8,500 per module
+                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,000 per module
                 </span></p>
                 <center>
                 <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
@@ -167,7 +167,7 @@
                 <B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN
                 </p>
                 <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 8,500 per module
+                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,000 per module
                 </span></p>
                 <center>
                 <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
@@ -195,7 +195,7 @@
                 <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; April 30 to May 4</p>
                 <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                 <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,500 per module</span></p>
+                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,800 per module</span></p>
                 <center>
                 <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
                 </center>
@@ -222,7 +222,7 @@
                 <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; May 7 to 11</p>
                 <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                 <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 10,000 per module</span></p>
+                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 11,000 per module</span></p>
                 <center>
                 <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
                 </center>
@@ -250,7 +250,7 @@
                 <br>&nbsp; &nbsp; &nbsp; Batch 2: July 9 to 13</p>
                 <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                 <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 8,500 per module</span></p>
+                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,000 per module</span></p>
                 <center>
                 <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
                 </center>
@@ -284,7 +284,7 @@
                 <br>&nbsp; &nbsp; &nbsp; Batch 3: July 9 to 13</p>
                 <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                 <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,000 per module</span></p>
+                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 10,000 per module</span></p>
                 <center>
                 <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
                 </center>
@@ -311,7 +311,7 @@
                 <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; May 21 to 25</p>
                 <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                 <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 11,000 per module</span></p>
+                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 12,000 per module</span></p>
                 <center>
                 <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
                 </center>
