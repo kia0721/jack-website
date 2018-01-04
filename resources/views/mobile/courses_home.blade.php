@@ -1,7 +1,7 @@
 @extends('layouts.mobile')
 
 @section('css_link_2')
-<link href="{{ asset('/css/mobi-style.css') }}" rel="stylesheet">
+
 <style type="text/css">
    
     .course-tab>li{

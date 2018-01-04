@@ -2,7 +2,6 @@
 
 @section('css_link')
     
-    <link href="{{ asset('/css/mobi-style.css') }}" rel="stylesheet">
     <style type="text/css">
         .btn-next-prev{
             display: inline !important;

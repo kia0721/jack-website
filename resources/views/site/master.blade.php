@@ -57,7 +57,7 @@
                 <div class="col-md-3">
                     <h3 class="to-be-annc">TBA</h3>
                     <p><b>Schedule and course fee for 2018 to be determined</b></p>
-                    <!-- <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a>  -->
+                    <!-- <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a>  -->
                 </div>
 
             </div> 
@@ -76,7 +76,7 @@
                 <div class="col-md-3">
                     <h3 class="to-be-annc">TBA</h3>
                     <p><b>Schedule and course fee for 2018 to be determined</b></p>
-                    <!-- <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a>  -->
+                    <!-- <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a>  -->
                 </div>
 
             </div> 
@@ -95,7 +95,7 @@
                 <div class="col-md-3">
                     <h3 class="to-be-annc">TBA</h3>
                     <p><b>Schedule and course fee for 2018 to be determined</b></p>
-                    <!-- <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a>  -->
+                    <!-- <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a>  -->
                 </div>
 
             </div> 
