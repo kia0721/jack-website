@@ -316,7 +316,8 @@
                                     <p style="max-width: 690px;">
                                     And the best part? They can do more with coding. We provide a space where kids can learn concepts and do hands-on activities, mixing learning with play, empowering them to create and innovate. Let’s work together in shaping our future creators and digital leaders!</p>
                                 </div>
-                                <div style="top: 135px; left: 653px; cursor: pointer;" >
+                                 
+                                <div id="videoShowFormBtn" data-toggle="modal" data-target="#videoShowFormModal" style="top: 135px; left: 653px; cursor: pointer;" >
                                     <IMG SRC="{{ asset('images/play-btn.gif') }}"/>
                                 </div>
                             </div>
@@ -419,7 +420,7 @@
 
 
         <div id="contactUsShowFormModal" class="modal fade" role="dialog" >
-        <div class="modal-dialog modal-md" style="width:800px;">
+            <div class="modal-dialog modal-md" style="width:800px;">
                 <!-- Modal content-->
                 <div class="modal-content" style="border-radius: 30px; background-color: #f7b11b;">
                     
@@ -458,6 +459,33 @@
                     </div>
                     
                     </form>
+                </div><!-- // modal-content // -->
+                
+        </div><!-- // modal-dialog // -->
+    </div>
+
+    <div id="videoShowFormModal" class="modal fade" role="dialog" >
+            <div class="modal-dialog modal-md" style="width:920px;">
+                <!-- Modal content-->
+                <div class="modal-content" style="border-radius: 30px; background-color: #f7b11b;">
+                    
+                    
+                    <div class="modal-body" style="padding: 20px 30px; ">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+                            </div>
+                            <br>
+                            <div class="col-md-12" style="padding:35px;">
+                                <video width="100%" controls>
+                                  <source src="../JackWebsite/assets/video/JackVideo.mp4" type="video/mp4">
+                                  Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    
                 </div><!-- // modal-content // -->
                 
         </div><!-- // modal-dialog // -->

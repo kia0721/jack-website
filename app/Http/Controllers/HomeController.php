@@ -66,16 +66,22 @@ class HomeController extends Controller
     {
         return view('site.gallery');
     }
-    public function register()
+    public function register(Request $require)
     {
         $courses = DB::table('jack_course as jc')
-            ->leftJoin('jack_courseschedule as jcs', 'jcs.course', '=', 'jc.id')
-            ->leftJoin('jack_courselevel as jcl', 'jcs.level', '=', 'jcl.id')
+            ->leftJoin('jack_courseSchedule as jcs', 'jcs.course', '=', 'jc.id')
+            ->leftJoin('jack_courseLevel as jcl', 'jcs.level', '=', 'jcl.id')
             ->where('jc.status', '=', false)
             ->where('jcs.status', '=', false)
             ->orderBy('jcs.course', 'asc')
             ->orderBy('jcs.level', 'asc')
             ->get(['jc.id', 'jc.courseTitle', 'jc.courseType', 'jc.mobileDev', 'jcs.id as courseScheduleId', 'jcs.startDate', 'jcs.endDate', 'jcs.coderDate', 'jcl.id as levelId', 'jcl.courseLevel']);
+
+        if($this->helperUtil->isMobileDevice($require)){
+            return view('mobile.register')
+                ->with('courses', $courses);
+        }
+
         return view('site.register')
                 ->with('courses', $courses);
     }

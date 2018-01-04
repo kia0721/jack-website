@@ -52,7 +52,7 @@
 </head>
 <body>
     
-    <div id="wrapper" class="main-container">
+    <div id="main-wrapper" class="main-container">
         
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container-fluid">
@@ -85,7 +85,7 @@
     </div>
 
     
-        <div class="outer" >
+        <div class="outer"  onclick="location.href='{{ url('/register') }}';">
             <center><button class="btn" style="border-radius: 5px; border-color: white; background-color: transparent;">REGISTER HERE!</button></center>
         </div>
    <!--  <footer class="footer" >

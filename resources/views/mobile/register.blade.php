@@ -31,10 +31,10 @@
         <section>
           <div class="wrapper">
             <div class="entry-content register-steps">
-                <h3> <br></h3>
+                <h3> <br><br></h3>
             </div>
             <div class="col-md-12"  style="text-align: center;">
-                <h1 style="font-size: 50px;"><span style="color:#00bff3;">JACK</span> <span style="color: #ff9d34;">REGISTRATION</span></h1>
+                <h1 style="font-size: 30px;"><span style="color:#00bff3;">JACK</span> <span style="color: #ff9d34;">REGISTRATION</span></h1>
             </div>
             <div class="col-md-4"  style="text-align: center;">
                 <img src="{{ asset('images/reg_step_1.png') }}" />
@@ -58,18 +58,18 @@
         <section id="step_1" style="font-size: 16px;">
           <div class="wrapper">
             <div class="entry-content">
-                <h3 style="text-align: center;"> <br> <br> <br></h3>
+                <h3 style="text-align: center;"> <br> </h3>
                 
             </div>
             <div id="personalDetails">
                 <div class="col-md-12">
-                    <br><br><hr>
+                    <br><hr>
                     
                 </div>
                 <form class=""  method="POST" action="{{ url('addRegister1') }}">
-                <div class="col-md-12 register-div">
+                <div class=" row register-div">
                     <h3 style="text-align: center;">Personal Details</h3>
-                    <div class="col-md-8 col-md-offset-2">
+                   
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                             <label class="form-control-label" for="studGivenName">Student's given name<span class="form-asterisk">*</span></label>
@@ -164,7 +164,7 @@
                             <button class="btn btn-lg btn-orange" id="personalNextBtn">NEXT</button>
                         </div>
                     </div>
-                </div>
+                
                 </form>
             </div>
             <div id="courseDetails">
@@ -173,9 +173,9 @@
                     
                 </div>
                 <form class=""  method="POST" action="{{ url('addRegister2') }}">
-                <div class="col-md-12 register-div">
+                <div class=" row register-div">
                     <h3 style="text-align: center;">Course Details</h3>
-                    <div class="col-md-8 col-md-offset-2">
+                    
                         <div class="col-xs-12 col-md-12">
                             <div class="form-group">
                                 <label class="form-control-label" for="courses">Please select the courses you would like to take?<span class="form-asterisk">*</span> <span class="errorCourseMsg"></span></label>
@@ -280,7 +280,7 @@
                         <input type="button"  class="btn btn-lg btn-orange" id="coursePrevBtn" value="PREVIOUS">
                         <button class="btn btn-lg btn-orange" id="saveBtn">SUMBIT</button>
                     </div>
-                </div>
+                
                 </form>
             </div>
             <div class="col-md-12">
@@ -486,7 +486,7 @@
                 });
             } else {
                 $('html, body').animate({
-                    scrollTop: $('.register-div').offset().top + 300
+                    scrollTop: $('.register-div').offset().top 
                 }, 500, function () {
                 });
             }
@@ -506,7 +506,7 @@
         $('#courseDetails').hide();
         $('#personalDetails').show();
         $('html, body').animate({
-            scrollTop: $('.register-div').offset().top + 300
+            scrollTop: $('.register-div').offset().top 
         }, 500, function () {
         });
     });

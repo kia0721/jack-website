@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class JackCourseSchedule extends Model
 {
     //
-    protected $table = "jack_courseschedules";
+    protected $table = "jack_courseSchedule";
 }

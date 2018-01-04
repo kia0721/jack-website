@@ -49,6 +49,8 @@
           <div class="wrapper">
             <div class="banner-content clrf">
               <h1>OKAY</h1>
+
+                <img src="../JackWebsite/uploads/image_01.jpg" />
           </div>
         </div>
     </div>
@@ -56,7 +58,7 @@
 @endsection
 @section('script_link')
 <script type="text/javascript">
-    
+
     $(window)
             .resize( $.debounce( 250, true, function(e){
                  // resizeLayerBg();

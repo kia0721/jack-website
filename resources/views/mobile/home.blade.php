@@ -67,7 +67,7 @@
             <div class="col-xs-6 col-sm-6">
                 <img src="{{ asset('images/button_photos.png') }}" width="100%" />
             </div>
-            <div class="col-xs-6 col-sm-6">
+            <div class="col-xs-6 col-sm-6" id="videoShowFormBtn" data-toggle="modal" data-target="#videoShowFormModal" style="cursor: pointer;">
                 <img src="{{ asset('images/button_video.png') }}"  width="100%" />
             </div>
             <div class="col-md-12 col-sm-12">
@@ -189,6 +189,33 @@
         <div class="col-xs-1 no-padding"></div>
         
     </div>
+</div>
+
+<div id="videoShowFormModal" class="modal fade" role="dialog" >
+    <div class="modal-dialog modal-md" >
+        <!-- Modal content-->
+        <div class="modal-content" style="border-radius: 30px; background-color: #f7b11b;">
+            
+            
+            <div class="modal-body" style="padding: 20px 30px; ">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+                    </div>
+                    <br>
+                    <div class="col-md-12" style="padding:35px;">
+                        <video width="100%" controls>
+                          <source src="{{ asset('images/jack_video.mp4') }}" type="video/mp4">
+                          Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            
+        </div><!-- // modal-content // -->
+            
+    </div><!-- // modal-dialog // -->
 </div>
 @endsection
 @section('script_link')
