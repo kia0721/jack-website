@@ -51,7 +51,7 @@
                 <p class="fee detail">
                 <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 12,000 per module</span></p>
                 <center>
-                <a href="{{ url('{{ url('/register') }}') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
+                <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
                 </center>
             </div>
         </div>

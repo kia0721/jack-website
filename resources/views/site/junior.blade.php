@@ -27,7 +27,7 @@
             <div class="banner-content clrf">
               <div class="course-descr-d" style="width:60%;">
                 <div>
-                    <h2 class="course-title">JUNIOR CODER</h2>
+                    <h1 class="course-title">JUNIOR CODER</h1>
                     <H2>START THEM YOUNG!</H2>
                     <h4>The Junior Coder classes are specifically crafted for ages 8 to 11. Have a  head start in coding and learn more advanced classes like Python Programming and Mobile App Development. Here, kids are introduced to text based programming. </h4>
                     <br>

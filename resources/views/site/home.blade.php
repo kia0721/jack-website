@@ -279,7 +279,7 @@
             </ul>
         </div>
         <div class="main-wrapper">
-
+            <h1 class="hide">Junior Academy for Coding Knowledge</h1>
             <div class="characters charpos2">
                 <div class="char-pos">
                     <img src="{{ asset('images/CHARACTERS.png') }}" />
@@ -306,7 +306,7 @@
                         <div class="sub-con" >
                             <div class="top-description" style="z-index: 16;">
                                 <div style="top: 176px; left: 243px;" >
-                                    <h1>ABOUT THE ACADEMY</h1>
+                                    <h2>ABOUT THE ACADEMY</h2>
                                 </div>
                                 <div  style="top: 239px; left: 64px; max-width: 800px; font-weight: bold;" >
                                     <p>At the Junior Academy for Coding Knowledge (JACK), we equip kids with the fundamental knowledge and skills to be innovators.<br>
@@ -335,7 +335,7 @@
                         <div class="sub-con" >
                             <div class="top-description" style="z-index: 16;">
                                 <div style="top: 145px; left: 380px;" >
-                                    <h1>COURSES OFFERED</h1>
+                                    <h2>COURSES OFFERED</h2>
                                 </div>
                                 <div  style="top: 235px; left: 254px; max-width: 607px; font-weight: bold;" >
                                     <p>JACK’s carefully-designed modules allow students ages 7 to 17 to learn and develop the necessary knowledge and skills to be fluent with technology. 
@@ -379,7 +379,7 @@
                         <div class="sub-con" >
                             <div class="top-description" style="z-index: 16; padding-right: 42px;">
                                 <div style="top: 165px; left: 380px;" >
-                                    <h1>CONTACT US!</h1>
+                                    <h2>CONTACT US!</h2>
                                 </div>
                                 <div  style="top: 239px; left: 230px; max-width: 800px;" >
                                     <p>We like to create things with fun, open-minded people. Feel free to say hello!

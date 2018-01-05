@@ -68,8 +68,12 @@ class HomeController extends Controller
         return view('site.emagazine')
             ->with('titlePage', '- Emagazine');
     }
-    public function faqs()
+    public function faqs(Request $require)
     {
+        if($this->helperUtil->isMobileDevice($require)){
+            return view('mobile.faqs')
+                ->with('titlePage', '- FAQs');
+        }
         return view('site.faqs')
             ->with('titlePage', '- FAQs');
     }
@@ -92,7 +96,7 @@ class HomeController extends Controller
             ->where('jcs.status', '=', false)
             ->orderBy('jcs.course', 'asc')
             ->orderBy('jcs.level', 'asc')
-            ->get(['jc.id', 'jc.courseTitle', 'jc.courseType', 'jc.mobileDev', 'jcs.id as courseScheduleId', 'jcs.startDate', 'jcs.endDate', 'jcs.coderDate', 'jcl.id as levelId', 'jcl.courseLevel', 'jc.fee', 'jcs.strDate', 'jcs.startTime', 'jcs.endTime']);
+            ->get(['jc.id', 'jc.courseTitle', 'jc.courseType', 'jc.mobileDev', 'jcs.id as courseScheduleId', 'jcs.startDate', 'jcs.endDate', 'jcs.coderDate', 'jcl.id as levelId', 'jcl.courseLevel']);
 
         if($this->helperUtil->isMobileDevice($require)){
             return view('mobile.register')
@@ -127,7 +131,7 @@ class HomeController extends Controller
         $courseSelected = json_decode($input['courseSelected'], true);
 
         Log::info($courseSelected);
-
+        $courseSelectedList = [];
         for($x=0; $x<count($courseSelected); $x++){
             $jackStudentCourse = new \App\Models\JackStudentCourse;
             $jackStudentCourse->studentID = $studentDetail->id;
@@ -143,10 +147,17 @@ class HomeController extends Controller
             $jackStudentCourse->courseSchedule = $courseSelected[$x]['scheduleId'];
             
             $jackStudentCourse->save();
+
+            $courseSchedule = DB::table('jack_courseSchedule as jcs')
+            ->leftJoin('jack_course as course', 'course.id', '=', 'jcs.course')
+            ->where('jcs.id', '=', $courseSelected[$x]['scheduleId'])
+            ->first(['jcs.strDate', 'jcs.startTime', 'jcs.endTime', 'course.courseTitle', 'course.fee']);
+            array_push($courseSelectedList, $courseSchedule);
         }
         $mailData = $input;
         Log::info($mailData['parentEmail']);
         $mailData['date'] = date("F d, Y h:i A");
+        $mailData['courseSelectedList'] = $courseSelectedList;
         Mail::send(['html'=>'mail.registered-mail'], $mailData, function ($message) use ($mailData) {
 
             $message->from(Config::get('constants.FROM_EMAIL'), Config::get('constants.APP_NAME'));

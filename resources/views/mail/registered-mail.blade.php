@@ -34,11 +34,15 @@
                         <p>Dear: <b>{!!$parentName!!}</b></p>
                         <p>Thank you for your interest in the Junior Academy for Coding Knowledge classes. This is to confirm we have received your registration for COURSE.</p>
                         <p>COURSE DETAILS</p>
-                        @ for e ach ($ cat egories as $cate = > $ c at)
-                        <p>{C{ $ detail- >schudelue }C} - {C{ $ det ail- > fee }C}
+                        @foreach ($courseSelectedList as $course)
+                        <p>
+                        <b>Course: </b> {{ $course->courseTitle }}<br>
+                        <b>Dates: </b> {{ $course->strDate }} <br>
+                        <b>Time: </b> {{ $course->startTime }} to {{ $course->endTime }} <br>
+                        <b>Course Fee: </b> Php {{ $course->fee }}
 
-                        </p>
-                        @ e ndf oreach
+                        </p><br>
+                        @endforeach
 
                         <p>To complete the registration process and secure your slot/s, proceed by paying for the corresponding course fee through any of the payment procedures below:</p>
 

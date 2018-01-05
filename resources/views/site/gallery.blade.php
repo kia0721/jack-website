@@ -102,18 +102,5 @@
 @endsection
 @section('script_link')
 <script src="{{ asset('lightbox/js/lightbox.js') }}"></script>
-<script type="text/javascript">
-
-    $(window)
-            .resize( $.debounce( 250, true, function(e){
-                 // resizeLayerBg();
-                
-                 console.log('resize');
-            }))
-            .resize( $.debounce( 250, false, function(e){
-                 resizeLayerBg();
-               
-        }));
-</script>
 
 @endsection

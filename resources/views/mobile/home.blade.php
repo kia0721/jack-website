@@ -57,6 +57,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="col-md-12 col-sm-12"><br>
+                <h1 class="hide">Junior Academy for Coding Knowledge</h1>
                 <center>
                     <img src="{{ asset('images/mobi_welcome.png') }}" />
                 </center>

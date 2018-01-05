@@ -163,7 +163,7 @@
                 <div class="container">
                     <div class="sub-con" >
                         <div class="top-description" >
-
+                        <h1 class="hide">Courses</h1>
                             <div class="" style="top: 385px;left: 112px;">
                                 <img src="{{ asset('images/black_char.png') }}" />
                             </div>
@@ -221,15 +221,6 @@
         $('.default.bubble').fadeIn("slow");
       }
     );
-
-    $(window).resize( $.debounce( 250, true, function(e){
-                 resizeLayerBg();
-                 console.log('resize');
-            })).resize( $.debounce( 250, false, function(e){
-                 resizeLayerBg();
-        }));
-
-   
 
 </script>
 @endsection

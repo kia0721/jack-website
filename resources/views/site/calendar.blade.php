@@ -27,7 +27,7 @@
               <div class="course-descr-d">
                 <center><div>
                     <img src="{{ asset('images/calendar_banner.png') }}" style="margin:auto;">
-
+                    <h1 class="hide">CALENDAR</h1>
                 </div></center>
               </div>
             </div>

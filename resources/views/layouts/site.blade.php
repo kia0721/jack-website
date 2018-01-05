@@ -62,45 +62,6 @@
                     </div>
                 </div>
 
-               <!--  <div class="header-secondary">
-                  <div class="wrapper">
-                    <div>
-                      <div id="services" class="set set-one" style="display: block;">
-                        <div class="icon">
-                          <div>
-                            <img src="http://maverickheroes.com/wp-content/themes/maverickheroes/images/template/service-packages.png" alt="Promo Services" style="top: 25px;">
-                          </div>
-                          <div>
-                            <h2>Promo Packages</h2>
-                            <nav>
-                              <a href="http://maverickheroes.com/services-packages/starter-website/ ">Starter Website</a><a href="http://maverickheroes.com/services-packages/corporate-website/ ">Corporate Website</a><a href="http://maverickheroes.com/services-packages/basic-ecommerce/ ">Basic Ecommerce</a><a href="http://maverickheroes.com/services-packages/advanced-ecommerce/ ">Advanced Ecommerce</a>            </nav>
-                          </div>
-                        </div>
-                        <div class="icon">
-                          <div>
-                            <img src="http://maverickheroes.com/wp-content/themes/maverickheroes/images/template/service-website.png" alt="Website Services" style="top: 0px;">
-                          </div>
-                          <div>
-                            <h2>Website Services</h2>
-                            <nav>
-                              <a href="http://maverickheroes.com/services/web-design/ ">Web Design</a><a href="http://maverickheroes.com/services/web-development/ ">Web Development</a><a href="http://maverickheroes.com/services/web-programming/ ">Web Programming</a><a href="http://maverickheroes.com/services/web-copywriting/ ">Web Copywriting</a>            </nav>
-                          </div>
-                        </div>
-                        <div class="icon">
-                          <div>
-                            <img src="http://maverickheroes.com/wp-content/themes/maverickheroes/images/template/service-marketing.png" alt="Marketing Services" style="top: 10px;">
-                          </div>
-                          <div>
-                            <h2>Marketing Services</h2>
-                            <nav>
-                              <a href="http://maverickheroes.com/services/corporate-identity/ ">Corporate Identity</a><a href="http://maverickheroes.com/services/marketing-print/ ">Marketing  &amp; Print</a>            </nav>
-                          </div>
-                        </div>
-                        <div class="clr"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
                 <div id="navbar" class="collapse navbar-right navbar-collapse" >
                     <ul class="nav navbar-nav" style="font-weight: bold;">
                         <li><a href="{{ url('/courses') }}"><img src="{{ asset('/images/courses.png') }}" class="icon-menu-top"> Courses</a></li>
@@ -120,13 +81,6 @@
         
     </div>
 
-    
-   <!--  <footer class="footer" >
-    
-        <div class="container">
-            <p class="text-xs-center">Copyright © JACK | 2016</p>
-        </div>
-    </footer> -->
 
    
     <script src="{{ asset('/js/jquery-3.1.1.min.js') }}"></script>

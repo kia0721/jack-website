@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Jack Website</title>
+    <title>Jack {{ $titlePage }}</title>
     <link rel="shortcut icon" href="{{ asset('images/jack_icon.png') }}">
     @yield('css_link')
     <!-- Styles -->
