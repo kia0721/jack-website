@@ -71,7 +71,7 @@
                     </p>
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 8,800 per module</span></p>
-                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div> 
@@ -97,7 +97,7 @@
                     <B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 8,800 per module</span></p>
-                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div> 
@@ -130,7 +130,7 @@
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,000 per module
                     </span></p>
 
-                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div> 
@@ -152,7 +152,7 @@
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,500 per module</span></p>
-                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div> 
@@ -183,7 +183,7 @@
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,000 per module
                     </span></p>
-                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div> 
@@ -205,7 +205,7 @@
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,800 per module</span></p>
-                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div>
@@ -227,7 +227,7 @@
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 11,000 per module</span></p>
-                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div>
@@ -251,7 +251,7 @@
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,000 per module</span></p>
-                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div>
@@ -278,7 +278,7 @@
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 10,000 per module</span></p>
-                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div>
@@ -299,7 +299,7 @@
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 12,000 per module</span></p>
-                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a><br><br>
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a><br><br>
                 </div>
 
             </div>

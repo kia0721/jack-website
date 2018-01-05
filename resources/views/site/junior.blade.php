@@ -54,7 +54,7 @@
                 
                 <div class="col-md-6">
                     <h4 class="ccourse-title2"><b>Junior Coder: Mobile App Development</b></h4>
-                    <p class="course-detail">This course teaches the basics of creating a mobile app. In this class, students learn to design their app’s screens, implement their app ideas by programming them, and deploying them in their iOS or Android device. They also learn about testing, debugging, and the app development lifecycle.</p>
+                    <p class="course-detail">This course teaches the basics of creating a mobile app. In this class, students learn to design their app’s screens, implement their app ideas by programming them, and deploying them in their iOS or Android device. They also learn about testing, debugging, and the app development life cycle.</p>
 
                 </div>
                 <div class="col-md-3">
@@ -62,7 +62,7 @@
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8:30AM to 12:30PM</p>
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 12,000 per module</span></p>
-                    <a href="{{ url('/products/TruConnect') }}" class="btn btn-orange">ENROLL NOW</a> 
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div> 
@@ -76,7 +76,7 @@
                 <div class="col-md-6">
                    
                     <h4 class="ccourse-title2"><b>Junior Coder: Python Programming</b></h4>
-                    <p class="course-detail">This course provides an overview of Algorithms, Data, Programming, Computers and the Internet. At the end of this course, students should be able to show understanding of algorithms and what they can be used for, create a simple program using Python, use data types and simple data structures in coding that program, explain the main components of a computer system and how they fit together, and explain how the internet works. </p>
+                    <p class="course-detail">This course provides an overview of Algorithms, Data, Programming, Computers and the Internet. At the end of this course, students should be able to show an understanding of algorithms and what they can be used for, create a simple program using Python, use data types and simple data structures in coding that program, explain the main components of a computer system and how they fit together, and explain how the internet works. </p>
 
                 </div>
                 <div class="col-md-3">
@@ -84,7 +84,7 @@
                     <p><b>Schedule for 2018  to be determined</b>
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 12,000 per module</span></p>
-                    <!-- <a href="{{ url('/products/TruConnect') }}"  class="btn btn-orange">RESCHEDULED</a>  -->
+                    <!-- <a href="{{ url('/register') }}"  class="btn btn-orange">RESCHEDULED</a>  -->
                 </div>
 
             </div> 

@@ -1,6 +1,7 @@
 @extends('layouts.site')
 
 @section('css_link_2')
+<link href="{{ asset('lightbox/css/lightbox.css') }}" rel="stylesheet">
 <style type="text/css">
     body{
         background-color: #d3cac1;
@@ -35,8 +36,23 @@
         padding: 0 20px;
     }
 }
+.jack-images{
+    width: 15em;
+    border-radius: 4px;
+    vertical-align: bottom;
+}
 
+.jack-image-link{
+    display: inline-block;
+    padding: 2px;
+    margin: 0 0.5rem 1rem 0.5rem;
+    background-color: #fff;
+    line-height: 0;
+    border-radius: 4px;
+    transition: background-color 0.5s ease-out;
+}
 </style>
+
 @endsection
 
 @section('content')
@@ -45,18 +61,47 @@
    
     <div id="main-wrapper">
 
-        <div class="banner">
-          <div class="wrapper">
-            <div class="banner-content clrf">
-              <h1>OKAY</h1>
+        <section>
+            <div class="wrapper">
+                <div class="col-md-12">
+                <br>&nbsp; <br><br>&nbsp; <br>
+                <br>&nbsp; <br>
+                </div>
+                <div class="col-md-12" style="text-align: center;">
+                @for ($i = 0; $i < count($images); $i++)
+                    
+                    <div class="image-row"><div class="image-set">
+                    <?php 
+                        $optionLength = $i+3;
+                        if($i+3 >= count($images))
+                            $optionLength =  count($images);
+                    ?>
+                    @for ($a = $i; $a < $optionLength; $a++)
+                        <?php $image = $images[$a]; ?>
+                        <!-- <div class="col-xs-12 col-md-4 "> -->
 
-                <img src="../JackWebsite/uploads/image_01.jpg" />
-          </div>
-        </div>
-    </div>
+                            <a class="jack-image-link" href="../portal/{{ $image->image_location }}" data-lightbox="image-1" >
+                            <img  class="jack-images" src="../portal/{{ $image->image_location }}" ></a> 
+                        <!-- </div><br> -->
+                    @endfor
+                    <?php 
+                                                        
+                        if($i+2 >= count($images))
+                            $i = count($images);
+                        else
+                            $i = $i+2;
+                    ?>
+                </div></div>
+                @endfor
+                </div>
+            </div>
+        </section>
+
+    </div> 
 
 @endsection
 @section('script_link')
+<script src="{{ asset('lightbox/js/lightbox.js') }}"></script>
 <script type="text/javascript">
 
     $(window)

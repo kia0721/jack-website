@@ -31,14 +31,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
-                        <p>Dear: <b>{{ $detail->parentName }}</b></p>
+                        <p>Dear: <b>{!!$parentName!!}</b></p>
                         <p>Thank you for your interest in the Junior Academy for Coding Knowledge classes. This is to confirm we have received your registration for COURSE.</p>
                         <p>COURSE DETAILS</p>
-                        @foreach ($categories as $cate => $cat)
-                        <p>{{ $detail->schudelue }} - {{ $detail->fee }}
+                        @ for e ach ($ cat egories as $cate = > $ c at)
+                        <p>{C{ $ detail- >schudelue }C} - {C{ $ det ail- > fee }C}
 
                         </p>
-                        @endforeach
+                        @ e ndf oreach
 
                         <p>To complete the registration process and secure your slot/s, proceed by paying for the corresponding course fee through any of the payment procedures below:</p>
 
@@ -57,6 +57,19 @@
                         </p>
 
                         <p>If payment has been made through bank deposit, kindly send a copy of the deposit slip at <b><u>learncoding@jack.com.ph</u></b>. Please use the following <b>subject format</b>: <i>Payment: Student Name. Ex. Payment: Juan dela Cruz.</i>
+                        </p>
+
+                        <p>For any inquiries and concerns, you may reach us at 0977-8410482 or by replying to this email.
+                        <br><br>
+                        Thank you very much!
+                        <br>
+                        JACK Team</p>
+
+                        <br><br><br>--
+                        <p>Junior Academy for Coding Knowledge, Inc. <br>
+                        Penthouse, East Tower, Philippine Stock Exchange Centre<br>
+                        Exchange Road, Ortigas Center, Pasig City 1605 Philippines<br>
+                        jack.com.ph | (63) 977 841 0482 | (02) 636 74 99 loc. 887
                         </p>
                     </div>
                 </div>

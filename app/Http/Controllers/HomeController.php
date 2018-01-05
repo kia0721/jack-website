@@ -21,50 +21,67 @@ class HomeController extends Controller
     public function index(Request $require)
     {
         if($this->helperUtil->isMobileDevice($require)){
-            return view('mobile.home');
+            return view('mobile.home')
+        ->with('titlePage', '- Home');
         }
-        return view('site.home');
+        return view('site.home')
+        ->with('titlePage', '- Home');
     }
 
     public function courses(Request $require)
     {
         if($this->helperUtil->isMobileDevice($require)){
-            return view('mobile.courses_home');
+            return view('mobile.courses_home')
+            ->with('titlePage', '- Courses');
         }
-        return view('site.courses_home');
+        return view('site.courses_home')
+            ->with('titlePage', '- Courses');
     }
     public function summer()
     {
-        return view('site.summer');
+        return view('site.summer')
+            ->with('titlePage', '- Summer');
     }
     public function junior()
     {
-        return view('site.junior');
+        return view('site.junior')
+            ->with('titlePage', '- Junior');
     }
 
     public function master()
     {
-        return view('site.master');
+        return view('site.master')
+            ->with('titlePage', '- Master');
     }
 
     public function calendar(Request $require)
     {
         if($this->helperUtil->isMobileDevice($require)){
-            return view('mobile.calendar');
+            return view('mobile.calendar')
+            ->with('titlePage', '- Calendar');
         }
-        return view('site.calendar');
+        return view('site.calendar')
+            ->with('titlePage', '- Calendar');
     }
     public function eMagazine()
     {
-        return view('site.emagazine');
+        return view('site.emagazine')
+            ->with('titlePage', '- Emagazine');
     }
     public function faqs()
     {
-        return view('site.faqs');
+        return view('site.faqs')
+            ->with('titlePage', '- FAQs');
     }
     public function gallery()
     {
-        return view('site.gallery');
+        $images = DB::table('gallery_image as gi')
+            ->orderBy('gi.id', 'desc')
+            ->get();
+
+        return view('site.gallery')
+                ->with('images', $images)
+                ->with('titlePage', '- Gallery');
     }
     public function register(Request $require)
     {
@@ -75,15 +92,17 @@ class HomeController extends Controller
             ->where('jcs.status', '=', false)
             ->orderBy('jcs.course', 'asc')
             ->orderBy('jcs.level', 'asc')
-            ->get(['jc.id', 'jc.courseTitle', 'jc.courseType', 'jc.mobileDev', 'jcs.id as courseScheduleId', 'jcs.startDate', 'jcs.endDate', 'jcs.coderDate', 'jcl.id as levelId', 'jcl.courseLevel']);
+            ->get(['jc.id', 'jc.courseTitle', 'jc.courseType', 'jc.mobileDev', 'jcs.id as courseScheduleId', 'jcs.startDate', 'jcs.endDate', 'jcs.coderDate', 'jcl.id as levelId', 'jcl.courseLevel', 'jc.fee', 'jcs.strDate', 'jcs.startTime', 'jcs.endTime']);
 
         if($this->helperUtil->isMobileDevice($require)){
             return view('mobile.register')
-                ->with('courses', $courses);
+                ->with('courses', $courses)
+                ->with('titlePage', '- Register');
         }
 
         return view('site.register')
-                ->with('courses', $courses);
+                ->with('courses', $courses)
+                ->with('titlePage', '- Register');
     }
 
     public function registerStudent(Request $request){
@@ -126,12 +145,13 @@ class HomeController extends Controller
             $jackStudentCourse->save();
         }
         $mailData = $input;
+        Log::info($mailData['parentEmail']);
         $mailData['date'] = date("F d, Y h:i A");
         Mail::send(['html'=>'mail.registered-mail'], $mailData, function ($message) use ($mailData) {
 
             $message->from(Config::get('constants.FROM_EMAIL'), Config::get('constants.APP_NAME'));
 
-            $message->to(Config::get($mailData['parentEmail'])->subject('Thank you for your interest in the Junior Academy for Coding Knowledge');
+            $message->to($mailData['parentEmail'])->subject('JACK Registration Confirmation');
 
         });
         if(count(Mail::failures()) > 0){
