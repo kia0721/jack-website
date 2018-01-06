@@ -42,7 +42,7 @@
 </head>
 <body>
     
-    <div id="wrapper main-container" class="active">
+    <div id="main-container" class="active">
         
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container-fluid">
