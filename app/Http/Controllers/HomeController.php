@@ -63,8 +63,12 @@ class HomeController extends Controller
         return view('site.calendar')
             ->with('titlePage', '- Calendar');
     }
-    public function eMagazine()
+    public function eMagazine(Request $require)
     {
+        if($this->helperUtil->isMobileDevice($require)){
+            return view('mobile.emagazine')
+            ->with('titlePage', '- Emagazine');
+        }
         return view('site.emagazine')
             ->with('titlePage', '- Emagazine');
     }
