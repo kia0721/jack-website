@@ -13,7 +13,7 @@
     }
 
     .register-div{
-        background-color: #00bff3;
+        background-color: #5feaef;
         border-radius: 33px;
         padding-bottom: 10px;
     }
@@ -21,6 +21,15 @@
     .errorCourseMsg{
         color:red;
         font-style: italic;
+    }
+
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+
+        border-top: 1px solid #0075ff;
+    }
+
+    .table-striped>tbody>tr:nth-of-type(odd){
+        background-color: rgba(0, 94, 255, 0.11);
     }
 
     </style>
@@ -157,7 +166,7 @@
                         <div class="col-xs-12 col-md-12">
                             <div class="form-group">
                             <label class="form-control-label" for="address">Address/Location</label>
-                                <input id="address" type="text" class="form-control" name="address" value="" required />
+                                <input id="address" type="text" class="form-control" name="address" value="" />
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-12 text-center">
@@ -183,9 +192,20 @@
                                 <table class="display table table-striped" id="c4wiUserTable"  width="100%" >
                                     <tbody  width="100%" >
                                     
+                                        <tr style="background-color: #0075ff;">
+                                    <td colspan="2" style="text-align: center; font-weight: bold;">{{ $courses[0]->class }}</td>
+                                    </tr>
+                                    @for ($i = 1; $i <= count($courses); $i++)
+                                        <?php $course = $courses[$i-1]; 
+                                            $currCourseType = $course->class;
 
-                                    @for ($i = 0; $i < count($courses); $i++)
-                                        <?php $course = $courses[$i]; ?>
+                                            $courseTypeCtr = $i;
+
+                                            if($courseTypeCtr >= count($courses)){
+                                                $courseTypeCtr = $i-1;
+                                            }
+                                            $fuCourseType = $courses[$courseTypeCtr]->class;
+                                        ?>
                                         <tr class="checkbox">
                                             <td  width="60%" style=" width: 70%;">
 
@@ -198,21 +218,21 @@
                                                 <select class="form-control courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" id="level_{{ $course->id }}" style="display: none;">
                                                     <option selected="" disabled="">--Select Level--</option>
                                                     <?php 
-                                                        $optionLength = $i+3;
+                                                        $optionLength = $i+3-1;
                                                         if($i+3 >= count($courses))
                                                             $optionLength =  count($courses);
                                                     ?>
-                                                    @for ($a = $i; $a < $optionLength; $a++)
+                                                    @for ($a = $i-1; $a < $optionLength; $a++)
                                                         <?php $course = $courses[$a]; ?>
                                                         <option value="{{ $course->levelId }}_{{ $course->courseScheduleId }}"> {{ $course->courseLevel }}</option>
                                                     @endfor
 
                                                     <?php 
                                                         
-                                                        if($i+2 >= count($courses))
+                                                        if($i+2-1 >= count($courses))
                                                             $i = count($courses);
                                                         else
-                                                            $i = $i+2;
+                                                            $i = $i+3-1;
                                                     ?>
                                                 </select>
                                                 @elseif($course->mobileDev == 1)
@@ -225,7 +245,7 @@
                                                 @elseif($course->courseType == 1)
                                                     <select class="form-control courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" id="summer_{{ $course->id }}" style="display: none;">
                                                         <option value="0" selected="" disabled=""> -- Select Schedule -- </option>
-                                                        @for ($a = $i; $a < count($courses); $a++)
+                                                        @for ($a = $i-1; $a < count($courses); $a++)
                                                             <?php 
                                                             $tempCourse = $course;
                                                             $course = $courses[$a]; ?>
@@ -243,6 +263,11 @@
                                                 @endif
                                             </td>
                                         </tr>
+                                        @if($currCourseType != $fuCourseType)
+                                        <tr style="background-color: #0075ff;">
+                                            <td colspan="2" style="text-align: center; font-weight: bold;">{{ $fuCourseType }} </td>
+                                        </tr>
+                                        @endif
                                     @endfor
                                     </tbody>
                                 </table>
@@ -278,7 +303,7 @@
                     </div>
                     <div class="col-xs-12 col-md-12 text-center">
                         <input type="button"  class="btn btn-lg btn-orange" id="coursePrevBtn" value="PREVIOUS">
-                        <button class="btn btn-lg btn-orange" id="saveBtn">SUMBIT</button>
+                        <button class="btn btn-lg btn-orange" id="saveBtn">SUBMIT</button>
                     </div>
                 
                 </form>
@@ -411,6 +436,7 @@
                 $('.errorCourseMsg').html("Please select course");
             }
             var courseArr = [];
+            //CourseId_ CourseType
             for(var x = 0; x < checkedCourses.length; x++){
                 var courseTypeId = checkedCourses[x].value;
                 var valueId = $('.courseSelectBox_'+courseTypeId).val();
@@ -420,6 +446,8 @@
                     x = checkedCourses.length;
                     $('.errorCourseMsg').html("Please select schedule");
                     $('.courseSelectBox_'+courseTypeId).css('border-color', 'red');
+
+                    break;
                 }
 
                 var courses = courseTypeId.split("_");
@@ -433,7 +461,15 @@
                 });
             }
 
-
+            waitingDialog.show("Please wait", {
+                modalHeader: 'success',
+                dialog: "Sending request",
+                footer: true,
+                onHide: function(){
+                   location.reload();
+                
+                }
+            });  
 
             
             if(isCourseComplete){

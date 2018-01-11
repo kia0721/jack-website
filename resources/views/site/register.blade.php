@@ -13,7 +13,7 @@
     }
 
     .register-div{
-        background-color: #00bff3;
+        background-color: #5feaef;
         border-radius: 33px;
         padding-bottom: 10px;
     }
@@ -21,6 +21,15 @@
     .errorCourseMsg{
         color:red;
         font-style: italic;
+    }
+
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+
+        border-top: 1px solid #0075ff;
+    }
+
+    .table-striped>tbody>tr:nth-of-type(odd){
+        background-color: rgba(0, 94, 255, 0.11);
     }
 
     </style>
@@ -67,9 +76,13 @@
                     
                 </div>
                 <form class=""  method="POST" action="{{ url('addRegister1') }}">
+                <!-- <div class="col-md-12"> -->
                 <div class="col-md-12 register-div">
+                    <div class="row">
                     <h3 style="text-align: center;">Personal Details</h3>
-                    <div class="col-md-8 col-md-offset-2">
+                    <!-- <div class="col-md-8 col-md-offset-2"> -->
+                    <div class="col-md-12">
+
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                             <label class="form-control-label" for="studGivenName">Student's given name<span class="form-asterisk">*</span></label>
@@ -157,13 +170,13 @@
                         <div class="col-xs-12 col-md-12">
                             <div class="form-group">
                             <label class="form-control-label" for="address">Address/Location</label>
-                                <input id="address" type="text" class="form-control" name="address" value="" required />
+                                <input id="address" type="text" class="form-control" name="address" value="" />
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-12 text-center">
                             <button class="btn btn-lg btn-orange" id="personalNextBtn">NEXT</button>
                         </div>
-                    </div>
+                    </div></div>
                 </div>
                 </form>
             </div>
@@ -174,18 +187,34 @@
                 </div>
                 <form class=""  method="POST" action="{{ url('addRegister2') }}">
                 <div class="col-md-12 register-div">
+                    <div class="row">
                     <h3 style="text-align: center;">Course Details</h3>
-                    <div class="col-md-8 col-md-offset-2">
+                    <!-- <div class="col-md-8 col-md-offset-2"> -->
                         <div class="col-xs-12 col-md-12">
                             <div class="form-group">
                                 <label class="form-control-label" for="courses">Please select the courses you would like to take?<span class="form-asterisk">*</span> <span class="errorCourseMsg"></span></label>
                                 
                                 <table class="display table table-striped" id="c4wiUserTable"  width="100%" >
                                     <tbody  width="100%" >
-                                    
 
-                                    @for ($i = 0; $i < count($courses); $i++)
-                                        <?php $course = $courses[$i]; ?>
+                                    <tr style="background-color: #0075ff;">
+                                    <td colspan="2" style="text-align: center; font-weight: bold;">{{ $courses[0]->class }}</td>
+                                    </tr>
+                                   
+                                    @for ($i = 1; $i <= count($courses); $i++)
+                                        <?php 
+                                            $course = $courses[$i-1];
+                                            $currCourseType = $course->class;
+
+                                            $courseTypeCtr = $i;
+
+                                            if($courseTypeCtr >= count($courses)){
+                                                $courseTypeCtr = $i-1;
+                                            }
+                                            $fuCourseType = $courses[$courseTypeCtr]->class;
+                                            
+                                        ?>
+                                        
                                         <tr class="checkbox">
                                             <td  width="60%" style=" width: 70%;">
 
@@ -198,21 +227,21 @@
                                                 <select class="form-control courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" id="level_{{ $course->id }}" style="display: none;">
                                                     <option selected="" disabled="">--Select Level--</option>
                                                     <?php 
-                                                        $optionLength = $i+3;
-                                                        if($i+3 >= count($courses))
+                                                        $optionLength = $i+3-1;
+                                                        if($optionLength>= count($courses))
                                                             $optionLength =  count($courses);
                                                     ?>
-                                                    @for ($a = $i; $a < $optionLength; $a++)
+                                                    @for ($a = $i-1; $a < $optionLength; $a++)
                                                         <?php $course = $courses[$a]; ?>
                                                         <option value="{{ $course->levelId }}_{{ $course->courseScheduleId }}"> {{ $course->courseLevel }}</option>
                                                     @endfor
 
                                                     <?php 
                                                         
-                                                        if($i+2 >= count($courses))
+                                                        if($i+2-1 >= count($courses))
                                                             $i = count($courses);
                                                         else
-                                                            $i = $i+2;
+                                                            $i = $i+3-1;
                                                     ?>
                                                 </select>
                                                 @elseif($course->mobileDev == 1)
@@ -225,7 +254,7 @@
                                                 @elseif($course->courseType == 1)
                                                     <select class="form-control courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" id="summer_{{ $course->id }}" style="display: none;">
                                                         <option value="0" selected="" disabled=""> -- Select Schedule -- </option>
-                                                        @for ($a = $i; $a < count($courses); $a++)
+                                                        @for ($a = $i-1; $a < count($courses); $a++)
                                                             <?php 
                                                             $tempCourse = $course;
                                                             $course = $courses[$a]; ?>
@@ -240,9 +269,25 @@
                                                         @endfor
 
                                                     </select>
+                                                @else
+                                                    <select class="form-control courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" id="junior_{{ $course->id }}" style="display: none;">
+                                                       
+                                                                <option value="{{ $course->levelId }}_{{ $course->courseScheduleId }}"> {{ $course->strDate }} </option>
+                                                 
+
+                                                    </select>
                                                 @endif
                                             </td>
+
                                         </tr>
+
+                                        
+                                        @if($currCourseType != $fuCourseType)
+                                        <tr style="background-color: #0075ff;">
+                                            <td colspan="2" style="text-align: center; font-weight: bold;">{{ $fuCourseType }} </td>
+                                        </tr>
+                                        @endif
+
                                     @endfor
                                     </tbody>
                                 </table>
@@ -278,9 +323,9 @@
                     </div>
                     <div class="col-xs-12 col-md-12 text-center">
                         <input type="button"  class="btn btn-lg btn-orange" id="coursePrevBtn" value="PREVIOUS">
-                        <button class="btn btn-lg btn-orange" id="saveBtn">SUMBIT</button>
+                        <button class="btn btn-lg btn-orange" id="saveBtn">SUBMIT</button>
                     </div>
-                </div>
+                </div><
                 </form>
             </div>
             <div class="col-md-12">
@@ -420,6 +465,7 @@
                     x = checkedCourses.length;
                     $('.errorCourseMsg').html("Please select schedule");
                     $('.courseSelectBox_'+courseTypeId).css('border-color', 'red');
+                    break;
                 }
 
                 var courses = courseTypeId.split("_");
@@ -437,6 +483,7 @@
 
             
             if(isCourseComplete){
+                waitingDialog.show("Sending registration....");
                 $('#courseSelected').val(JSON.stringify(courseArr));
                 $.ajax({
                     url: "{{ url('registerStudent') }}?_token="+$("input[name=_token]").val(),

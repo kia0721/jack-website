@@ -20,7 +20,7 @@ class HomeController extends Controller
 
     public function index(Request $require)
     {
-        if($this->helperUtil->isMobileDevice($require)){
+        if($this->helperUtil->isMobileDevice($require, false)){
             return view('mobile.home')
         ->with('titlePage', '- Home');
         }
@@ -30,7 +30,7 @@ class HomeController extends Controller
 
     public function courses(Request $require)
     {
-        if($this->helperUtil->isMobileDevice($require)){
+        if($this->helperUtil->isMobileDevice($require, false)){
             return view('mobile.courses_home')
             ->with('titlePage', '- Courses');
         }
@@ -56,7 +56,7 @@ class HomeController extends Controller
 
     public function calendar(Request $require)
     {
-        if($this->helperUtil->isMobileDevice($require)){
+        if($this->helperUtil->isMobileDevice($require, false)){
             return view('mobile.calendar')
             ->with('titlePage', '- Calendar');
         }
@@ -65,7 +65,7 @@ class HomeController extends Controller
     }
     public function eMagazine(Request $require)
     {
-        if($this->helperUtil->isMobileDevice($require)){
+        if($this->helperUtil->isMobileDevice($require, false)){
             return view('mobile.emagazine')
             ->with('titlePage', '- Emagazine');
         }
@@ -74,7 +74,7 @@ class HomeController extends Controller
     }
     public function faqs(Request $require)
     {
-        if($this->helperUtil->isMobileDevice($require)){
+        if($this->helperUtil->isMobileDevice($require, false)){
             return view('mobile.faqs')
                 ->with('titlePage', '- FAQs');
         }
@@ -96,13 +96,16 @@ class HomeController extends Controller
         $courses = DB::table('jack_course as jc')
             ->leftJoin('jack_courseSchedule as jcs', 'jcs.course', '=', 'jc.id')
             ->leftJoin('jack_courseLevel as jcl', 'jcs.level', '=', 'jcl.id')
+            ->leftJoin('jack_class as jclass', 'jc.courseType', '=', 'jclass.id')
             ->where('jc.status', '=', false)
             ->where('jcs.status', '=', false)
+            ->orderBy('jc.courseType', 'asc')
             ->orderBy('jcs.course', 'asc')
             ->orderBy('jcs.level', 'asc')
-            ->get(['jc.id', 'jc.courseTitle', 'jc.courseType', 'jc.mobileDev', 'jcs.id as courseScheduleId', 'jcs.startDate', 'jcs.endDate', 'jcs.coderDate', 'jcl.id as levelId', 'jcl.courseLevel']);
+            ->get(['jc.id', 'jc.courseTitle', 'jc.courseType', 'jclass.class', 'jc.mobileDev', 'jcs.id as courseScheduleId', 'jcs.startDate', 'jcs.endDate', 'jcs.coderDate', 'jcs.strDate', 'jcl.id as levelId', 'jcl.courseLevel']);
 
-        if($this->helperUtil->isMobileDevice($require)){
+            Log::info($courses);
+        if($this->helperUtil->isMobileDevice($require, false)){
             return view('mobile.register')
                 ->with('courses', $courses)
                 ->with('titlePage', '- Register');
@@ -159,6 +162,8 @@ class HomeController extends Controller
             array_push($courseSelectedList, $courseSchedule);
         }
         $mailData = $input;
+        // $mailData['parentEmail'] = Config::get('constants.TO_REGISTRATION_EMAIL');
+        // array_push($mailData['parentEmail'], $input['parentEmail']);
         Log::info($mailData['parentEmail']);
         $mailData['date'] = date("F d, Y h:i A");
         $mailData['courseSelectedList'] = $courseSelectedList;
@@ -167,6 +172,7 @@ class HomeController extends Controller
             $message->from(Config::get('constants.FROM_EMAIL'), Config::get('constants.APP_NAME'));
 
             $message->to($mailData['parentEmail'])->subject('JACK Registration Confirmation');
+            $message->bcc(Config::get('constants.TO_REGISTRATION_EMAIL'))->subject('JACK Registration Confirmation');
 
         });
         if(count(Mail::failures()) > 0){

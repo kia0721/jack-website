@@ -510,10 +510,6 @@
         console.log("cBlock: "+currentHash +" lastScrollTop: "+lastScrollTop);
     
         var isClicked = true;
-        $('#contactUsShowFormBtn').bind('click', function() {
-            // $('#contactUsShowFormModal').modal('show');
-
-        });
         $('p.icon').bind('mouseover', function() {
             
             var classN = $(this).attr('class');  

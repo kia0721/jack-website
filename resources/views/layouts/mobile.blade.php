@@ -71,7 +71,7 @@
                 <div id="navbar" class="collapse navbar-right navbar-collapse" >
                     <ul class="nav navbar-nav" style="font-weight: bold;">
                         <li><a href="{{ url('/courses') }}"><img src="{{ asset('/images/courses.png') }}" class="icon-menu-top"> Courses</a></li>
-                        <li><a href="{{ url('/calendar') }}"><img src="{{ asset('/images/calendar.png') }}" class="icon-menu-top"> Calendar</a></li>
+                        <li><a href="{{ url('/calendar#JANUARY') }}"><img src="{{ asset('/images/calendar.png') }}" class="icon-menu-top"> Calendar</a></li>
                         <li><a href="{{ url('/e-magazine') }}"><img src="{{ asset('/images/e-magazine.png') }}" class="icon-menu-top"> E-Magazine</a></li>
                         <li><a href="{{ url('/faqs') }}"><img src="{{ asset('/images/faqs-icon.png') }}" class="icon-menu-top"> FAQ's</a></li>
                         <li><a href="{{ url('/home#Contact-us') }}" id="contactUsLink"><img src="{{ asset('/images/contact us.png') }}" class="icon-menu-top"> Contact us</a></li>

@@ -14,6 +14,8 @@ return [
     // 'FROM_EMAIL' => 'jingky.sulpico@smsgt.com',
     'FROM_EMAIL' => 'learncoding@jack.com.ph',
     'TO_FEEDBACK_EMAIL' => ['learncoding@jack.com.ph'],
+    'TO_REGISTRATION_EMAIL' => ['rose@jack.com.ph', 'kariza@jack.com.ph', 'vanessa@jack.com.ph'],
+    // 'TO_REGISTRATION_EMAIL' => ['smsgt.jcsulpico@gmail.com', 'jingky.sulpico@smsgt.com'],
     // 'TO_FEEDBACK_EMAIL' => 'customer-feedback@smsgt.com',
 
     'APP_NAME' => 'Jack Website',
