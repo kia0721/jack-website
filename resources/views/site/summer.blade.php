@@ -277,7 +277,7 @@
                     <br>&nbsp; &nbsp; &nbsp; Batch 3: July 9 to 13</p>
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                     <p class="fee detail">
-                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 10,000 per module</span></p>
+                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:19px; ">Php 10,000 per module</span></p>
                     <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
@@ -298,8 +298,29 @@
                     <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; May 21 to 25</p>
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                     <p class="fee detail">
-                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 12,000 per module</span></p>
+                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:19px; ">Php 12,000 per module</span></p>
                     <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a><br><br>
+                </div>
+
+            </div>
+            <div class="col-md-12"><br> </div>
+            <div class="col-md-12 course-sec section-course">
+                <div class="col-md-3 ">
+                    <img src="{{ asset('/images/Raspberry_PI.png')}}" style="margin:auto;">
+                </div>
+
+                
+                <div class="col-md-6">
+                    <h4 class="ccourse-title2"><b>A Slice of Raspberry Pi</b></h4>
+                    <p class="course-detail">This course teaches students to build their very own computer, as they learn about its parts. Students learn about interface actuators such as LEDs and Speakers, and detect inputs from sensors such as Push Buttons and Touch Sensors. Not only this, they’ll also learn how how to code a simple feedback control system. The class also includes a discussion on Linux and shell scripting.</p>
+
+                </div>
+                <div class="col-md-3">
+                    <p class="date detail"><B>Date:</B> <br>&nbsp; &nbsp; &nbsp; May 28, 29, 30, 31 and June 1.</p>
+                    <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
+                    <p class="fee detail">
+                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:19px; ">Php 13,500 per module</span></p>
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div>

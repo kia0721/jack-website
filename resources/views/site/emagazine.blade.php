@@ -25,15 +25,34 @@
     }
 
     .book-content2{
-        margin: 80px 20px 20px 30px;
+        margin: 50px 20px 20px 30px;
         font-size: 16px;
     }
     .sub-1{
         font-weight: bold;
         margin-top: 10px;
+        color: #fd9c33;
     }
     .sub-2{
         margin-left: 10px;
+    }
+
+    .custom-btn{
+        background-color: #f8c91b;
+        color: black;
+        border-color: #f8c91b;
+    }
+
+    .custom-btn:hover, .custom-btn:active:hover, .custom-btn:active, .custom-btn:focus{
+        background-color: #f7a853;
+        color: black;
+        font-weight: bold;
+        border-color: #fd9c33;
+    }
+
+    .blog_link:focus, .blog_link:hover {
+        color: #002e56;
+        text-decoration: none;
     }
 </style>
 </head>

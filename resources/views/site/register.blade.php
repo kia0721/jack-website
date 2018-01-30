@@ -484,6 +484,7 @@
             
             if(isCourseComplete){
                 waitingDialog.show("Sending registration....");
+                $('#saveBtn').prop('disabled', true);
                 $('#courseSelected').val(JSON.stringify(courseArr));
                 $.ajax({
                     url: "{{ url('registerStudent') }}?_token="+$("input[name=_token]").val(),
@@ -527,8 +528,19 @@
                                 dialog: data.result,
                                 footer: true
                             }); 
+
+                            $('#saveBtn').prop('disabled', false);
                         }
                         
+                    },
+                    error: function (data){
+                        waitingDialog.show("ERROR", {
+                            modalHeader: 'danger',
+                            dialog: "Can't process your request, please contact administrator",
+                            footer: true
+                        }); 
+
+                        $('#saveBtn').prop('disabled', false);
                     }
                 });
             } else {

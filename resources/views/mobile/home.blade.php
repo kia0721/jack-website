@@ -65,11 +65,13 @@
             <div class="col-md-12 col-sm-12">
             &nbsp;
             </div>
-            <div class="col-xs-6 col-sm-6">
-                <img src="{{ asset('images/button_photos.png') }}" width="100%" />
-            </div>
-            <div class="col-xs-6 col-sm-6" id="videoShowFormBtn" data-toggle="modal" data-target="#videoShowFormModal" style="cursor: pointer;">
-                <img src="{{ asset('images/button_video.png') }}"  width="100%" />
+            <div class="row">
+                <div class="col-xs-6 col-sm-6" >
+                    <a href="{{ url('/gallery') }}"><img src="{{ asset('images/button_photos.png') }}" alt="View Photos" width="100%"/></a>
+                </div>
+                <div class="col-xs-6 col-sm-6" >
+                    <img src="{{ asset('images/button_video.png') }}"  width="100%" id="videoShowFormBtn" data-toggle="modal" data-target="#videoShowFormModal" style="cursor: pointer;" />
+                </div>
             </div>
             <div class="col-md-12 col-sm-12">
             &nbsp;
