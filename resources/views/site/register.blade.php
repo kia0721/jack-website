@@ -192,6 +192,7 @@
                     <!-- <div class="col-md-8 col-md-offset-2"> -->
                         <div class="col-xs-12 col-md-12">
                             <div class="form-group">
+                                <div class="col-md-12">
                                 <label class="form-control-label" for="courses">Please select the courses you would like to take?<span class="form-asterisk">*</span> <span class="errorCourseMsg"></span></label>
                                 
                                 <table class="display table table-striped" id="c4wiUserTable"  width="100%" >
@@ -303,12 +304,22 @@
                                     </div>
                                     <div class="col-xs-12 col-md-6 radio">
                                         
-                                        <label style="margin-top: 11px;"><input type="radio" name="find" class="findJack" value="Flyers">Flyers</label><br>
+                                        <label style="margin-top: 11px;"><input type="radio" name="findJack" class="findJack" value="Flyers">Flyers</label><br>
                                         <label><input type="radio" name="findJack" class="findJack" value="Email Updates">Email Updates</label><br>
                                         <label><input type="radio" name="findJack" class="findJack" value="Referred by a friend/Student">Referred by a friend/Student</label><br>
                                         <label><input type="radio" name="findJack" class="findJack" value="0">Other </label>
                                         <input type="text" class="form-control" id="findJackVal" style="display:none;" placeholder="Please specify">
                                     </div>
+                                </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="col-md-3">
+                                <label class="form-control-label" for="promo_code">Promo code</label>
+                                </div>
+                                <div class="col-md-4">
+                                <input name="promo_code" id="promo_code" type="text" class="form-control" value="" placeholder="Promo Code" >
                                 </div>
                             </div>
                             
@@ -318,19 +329,17 @@
                             </label>
                             
                         </div>
+                         <div class="col-xs-12 col-md-12 text-center">
+                            <input type="button"  class="btn btn-lg btn-orange" id="coursePrevBtn" value="PREVIOUS">
+                            <button class="btn btn-lg btn-orange" id="saveBtn">SUBMIT</button>
+                        </div>
                         {{ csrf_field() }}
                         <input type="hidden" name="courseSelected" id="courseSelected"/>
                     </div>
-                    <div class="col-xs-12 col-md-12 text-center">
-                        <input type="button"  class="btn btn-lg btn-orange" id="coursePrevBtn" value="PREVIOUS">
-                        <button class="btn btn-lg btn-orange" id="saveBtn">SUBMIT</button>
-                    </div>
-                </div><
+                </div>
                 </form>
             </div>
-            <div class="col-md-12">
-            <br>
-            </div>
+            
             
           </div>
         </section>
@@ -504,7 +513,8 @@
                         'completeAddress' : $('#address').val(),
                         'findjack' : $('#findJackVal').val(),
                         'allowPhotograph' : $('#allowPhotograph').is(':checked')  ? 1 : 0,
-                        'courseSelected' : $('#courseSelected').val()
+                        'courseSelected' : $('#courseSelected').val(),
+                        'promo_code' : $('#promo_code').val()
 
                     },
                     success: function (data) {
