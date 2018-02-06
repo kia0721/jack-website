@@ -81,12 +81,16 @@ class HomeController extends Controller
         return view('site.faqs')
             ->with('titlePage', '- FAQs');
     }
-    public function gallery()
+    public function gallery(Request $require)
     {
         $images = DB::table('gallery_image as gi')
             ->orderBy('gi.id', 'desc')
             ->get();
-
+        if($this->helperUtil->isMobileDevice($require, false)){
+            return view('mobile.gallery')
+                ->with('images', $images)
+                ->with('titlePage', '- Gallery');
+        }
         return view('site.gallery')
                 ->with('images', $images)
                 ->with('titlePage', '- Gallery');
@@ -118,7 +122,7 @@ class HomeController extends Controller
 
     public function registerStudent(Request $request){
 
-        $input = $request->only('studGivenName', 'studLastName', 'school', 'birthdate', 'age', 'codingBackground', 'parentName', 'parentEmail', 'parentContactNum',
+        $input = $request->only('studGivenName', 'studLastName', 'school', 'birthdate', 'age', 'codingBackground', 'parentName', 'parentEmail', 'parentContactNum', 'gradeLevel', 'relationship',
             'completeAddress', 'findjack', 'allowPhotograph', 'courseSelected' );
         $studentDetail = new \App\Models\JackStudentDetail;
         $studentDetail->firstname = $input['studGivenName'];
@@ -126,6 +130,8 @@ class HomeController extends Controller
         $studentDetail->school = $input['school'];
         $studentDetail->birthdate = $input['birthdate'];
         $studentDetail->age = $input['age'];
+        $studentDetail->gradeLevel = $input['gradeLevel'];
+        $studentDetail->relationship = $input['relationship'];
         $studentDetail->codingBackground = $input['codingBackground'];
         $studentDetail->parentName = $input['parentName'];
         $studentDetail->parentContactNum = $input['parentContactNum'];

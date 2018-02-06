@@ -46,8 +46,8 @@ body, ul, table, form{
 	font-size: 38px;
 	font-weight: lighter;
 	margin: 20px 0;
-	color: #333;
-	-webkit-text-fill-color: #333;
+	/*color: #333;*/
+	/*-webkit-text-fill-color: #333;*/
 	-webkit-text-stroke-color: white;
 	-webkit-text-stroke-width: 0.005em;
 }
