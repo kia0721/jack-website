@@ -304,7 +304,7 @@
                                 <img src="{{ asset('images/world_vr.png') }}"  width="100%" />
                             </div>
                             <div class="col-xs-8 col-sm-8 text-xs-center">
-                                <H4 class="date-title">MAY 1-4<br>Tue to Fri</H4>
+                                <H4 class="date-title">MAY 7-11<br>Tue to Fri</H4>
                                 <p class="course-title">Minecraft II: World and VR (Day 2 to 4)</p>
                             </div>
                         </div>
@@ -317,7 +317,7 @@
                                 <img src="{{ asset('images/minecraft3.png') }}"  width="100%" />
                             </div>
                             <div class="col-xs-8 col-sm-8 text-xs-center">
-                                <H4 class="date-title">MAY 7-11<BR>Mon-Fri</H4>
+                                <H4 class="date-title">MAY 14-18<BR>Mon-Fri</H4>
                                 <p class="course-title">Minecraft III: Advanced World and VR (Day 1 to 5)</p>
                             </div>
                         </div>
@@ -343,7 +343,7 @@
                                 <img src="{{ asset('images/coding_robotics.png') }}"  width="100%" />
                             </div>
                             <div class="col-xs-8 col-sm-8 text-xs-center">
-                                <H4 class="date-title">MAY 14-18<BR>Mon-Fri</H4>
+                                <H4 class="date-title">MAY 21-25<BR>Mon-Fri</H4>
                                 <p class="course-title">Robotics I (Day 1 to 5)</p>
                             </div>
                         </div>

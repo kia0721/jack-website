@@ -72,7 +72,7 @@
 
                         <p><i>Note: Course fees must be paid for at the same time.</i></p>
 
-                        <p>For any inquiries and concerns, you may reach us at 0977-8410482 or by replying to this email.
+                        <p>Please note that the course must meet the required minimum number of students to proceed as scheduled. For any inquiries and concerns, you may reach us at 0977-8410482 or by replying to this email.
                         <br><br>
                         Thank you very much!
                         <br>

@@ -161,8 +161,9 @@
 
             <div class="col-xs-12 col-sm-12">
                 <p class="date detail">
-                <B>Date:</B><br>&nbsp; &nbsp; &nbsp; April 23 to 27
-                </p>
+                <B>Date:</B><br>&nbsp; &nbsp; &nbsp; Batch 1: April 23 to 27
+                <br>&nbsp; &nbsp; &nbsp; Batch 2: June 25 to 29
+                <br>&nbsp; &nbsp; &nbsp; Batch 3: July 9 to 13</p>
                 <p class="time detail">
                 <B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN
                 </p>
@@ -192,7 +193,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-12">
-                <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; April 30 to May 4</p>
+                <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; May 7 to 11</p>
                 <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                 <p class="fee detail">
                 <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,800 per module</span></p>
@@ -219,7 +220,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-12">
-                <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; May 7 to 11</p>
+                <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; May 14 to 18</p>
                 <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                 <p class="fee detail">
                 <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 11,000 per module</span></p>
@@ -271,7 +272,7 @@
                 <img src="{{ asset('images/coding_robotics.png') }}"  width="100%" />
             </div>
             <div class="col-xs-9 col-sm-9 text-xs-center">
-                <H4 class="title">Robotics 1</H4>
+                <H4 class="title">Coding and Robotics</H4>
             </div>
             <div class="col-xs-12 col-sm-12 ">
             <br>
@@ -279,9 +280,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-12">
-                <p class="date detail"><B>Date:</B> <br>&nbsp; &nbsp; &nbsp; Batch 1: May 14 to 18
-                <br>&nbsp; &nbsp; &nbsp; Batch 2: June 25 to 29
-                <br>&nbsp; &nbsp; &nbsp; Batch 3: July 9 to 13</p>
+                <p class="date detail"><B>Date:</B> <br>&nbsp; &nbsp; &nbsp; Batch 1: May 21 to 25</p>
                 <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                 <p class="fee detail">
                 <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 10,000 per module</span></p>
@@ -318,31 +317,5 @@
             </div>
         </div>
     </div>
-    <br>
-    <div class="col-md-8 col-md-offset-2 course-event">
-        <div class="row">
-            <!-- <div class="col-xs-12 col-sm-12 "> -->
-            <br>
-            <div class="col-xs-3 col-sm-3 text-xs-center">
-                <img src="{{ asset('images/coding_robotics.png') }}"  width="100%" />
-            </div>
-            <div class="col-xs-9 col-sm-9 text-xs-center">
-                <H4 class="title">A Slice of Raspberry Pi</H4>
-            </div>
-            <div class="col-xs-12 col-sm-12 ">
-            <br>
-                <p >This course teaches students to build their very own computer, as they learn about its parts. Students learn about interface actuators such as LEDs and Speakers, and detect inputs from sensors such as Push Buttons and Touch Sensors. Not only this, they’ll also learn how how to code a simple feedback control system. The class also includes a discussion on Linux and shell scripting.</p>
-            </div>
 
-            <div class="col-xs-12 col-sm-12">
-                <p class="date detail"><B>Date:</B> <br>&nbsp; &nbsp; &nbsp; May 28, 29, 30, 31 and June 1.</p>
-                <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
-                <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 13,500 per module</span></p>
-                <center>
-                <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
-                </center>
-            </div>
-        </div>
-    </div>
 </div>

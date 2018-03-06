@@ -67,7 +67,7 @@
 
                 
                 <div class="col-md-4">
-                    <a href="{{ asset('images/calendar/month_5.jpg') }}" data-lightbox="image-1" data-title="May 2018"><img  width="100%" src="{{ asset('images/calendar/month_5.jpg') }}" ></a>
+                    <a href="{{ asset('images/calendar/month_5.jpg') }}" data-lightbox="image-1" data-title="May 2018"><img  width="100%" src="{{ asset('images/calendar/month_5.jpg') }}?v=123" ></a>
                 </div>
                 <div class="col-md-4">
                     <a href="{{ asset('images/calendar/month_6.jpg') }}" data-lightbox="image-1" data-title="June 2018"><img  width="100%" src="{{ asset('images/calendar/month_6.jpg') }}" ></a>

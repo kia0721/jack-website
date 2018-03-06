@@ -184,8 +184,8 @@
                 
                 <p><b>CONTACTS<br></b></p>
                 <p>Email: learncoding@jack.com.ph <br>
-                Phone: +63977 841 0482<br>
-                Landline: (02) 636 74 99 loc. 887<br>
+                Phone: (63) 977 841 0482<br>
+                Landline: (02) 636 7499 loc. 887<br>
                 <a href="http://www.facebook.com/JackSchoolPH" target="_blank">facebook.com/JackSchoolPH</a> </p><br>
             </div>
         </div>
