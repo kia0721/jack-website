@@ -230,34 +230,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <div class="col-md-8 col-md-offset-2 course-event">
-        <div class="row">
-            <!-- <div class="col-xs-12 col-sm-12 "> -->
-            <br>
-            <div class="col-xs-3 col-sm-3 text-xs-center">
-                <img src="{{ asset('images/game_salad.png') }}"  width="100%" />
-            </div>
-            <div class="col-xs-9 col-sm-9 text-xs-center">
-                <H4 class="title">A Taste of Game Salad</H4>
-            </div>
-            <div class="col-xs-12 col-sm-12 ">
-            <br>
-                <p >This course teaches the fundamentals of computer science by allowing students to design and execute their games. After developing a game, students can publish their program on the App Store and Playstore and let other people experience it.</p>
-            </div>
-
-            <div class="col-xs-12 col-sm-12">
-                <p class="date detail"><B>Date:</B> <br>&nbsp; &nbsp; &nbsp; Batch 1: June 25 to 29
-                <br>&nbsp; &nbsp; &nbsp; Batch 2: July 9 to 13</p>
-                <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
-                <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,000 per module</span></p>
-                <center>
-                <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
-                </center>
-            </div>
-        </div>
-    </div>
+   
 </div>
 <br><br>
 <div class="col-xs-12 col-sm-12">
@@ -272,7 +245,7 @@
                 <img src="{{ asset('images/coding_robotics.png') }}"  width="100%" />
             </div>
             <div class="col-xs-9 col-sm-9 text-xs-center">
-                <H4 class="title">Coding and Robotics</H4>
+                <H4 class="title">The Engineer: Coding and Robotics</H4>
             </div>
             <div class="col-xs-12 col-sm-12 ">
             <br>
@@ -290,32 +263,5 @@
             </div>
         </div>
     </div>
-    <br>
-    <div class="col-md-8 col-md-offset-2 course-event">
-        <div class="row">
-            <!-- <div class="col-xs-12 col-sm-12 "> -->
-            <br>
-            <div class="col-xs-3 col-sm-3 text-xs-center">
-                <img src="{{ asset('images/advanced_coding_robotics.png') }}"  width="100%" />
-            </div>
-            <div class="col-xs-9 col-sm-9 text-xs-center">
-                <H4 class="title">Robotics 2</H4>
-            </div>
-            <div class="col-xs-12 col-sm-12 ">
-            <br>
-                <p >This course teaches how to make a simple robot from scratch using a Remote-Control Car. It discusses the fundamentals of designing and building a Wheeled Robot. It also includes discussions on the capabilities of the robot, given its built and make, to perform certain locomotion limited to its characteristics. Simple AI is also implemented using an Arduino microcontroller, and a sensor as Feedback.</p>
-            </div>
-
-            <div class="col-xs-12 col-sm-12">
-                <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; May 21 to 25</p>
-                <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
-                <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 12,000 per module</span></p>
-                <center>
-                <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
-                </center>
-            </div>
-        </div>
-    </div>
-
+    
 </div>

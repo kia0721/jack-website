@@ -234,28 +234,7 @@
             </div>
 
 
-            <div class="col-md-12"><br> </div>
-            <div class="col-md-12 section-course">
-                <div class="col-md-3 ">
-                    <img src="{{ asset('/images/game_salad.png')}}" style="margin:auto;">
-                </div>
-
-                
-                <div class="col-md-6">
-                    <h4 class="ccourse-title2"><b>A Taste of Game Salad</b></h4>
-                    <p class="course-detail">This course teaches the fundamentals of computer science by allowing students to design and execute their games. After developing a game, students can publish their program on the App Store and Playstore and let other people experience it.</p>
-
-                </div>
-                <div class="col-md-3">
-                    <p class="date detail"><B>Date:</B> <br>&nbsp; &nbsp; &nbsp; Batch 1: June 25 to 29
-                    <br>&nbsp; &nbsp; &nbsp; Batch 2: July 9 to 13</p>
-                    <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
-                    <p class="fee detail">
-                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,000 per module</span></p>
-                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
-                </div>
-
-            </div>
+           
 
             <div class="col-md-12"><br><hr> </div>
             <div class="entry-content">
@@ -268,7 +247,7 @@
 
                 
                 <div class="col-md-6">
-                    <h4 class="ccourse-title2"><b>Coding and Robotics</b></h4>
+                    <h4 class="ccourse-title2"><b>The Engineer: Coding and Robotics</b></h4>
                     <p class="course-detail">This course provides a solid foundation of Robotics by building a robot platform from LEGO Mindstorms that can be used to program and simulate basic Artificial Intelligence (AI). Basic Robotic Behaviors and Heuristics are also discussed in order to achieve an intelligent decisive behaviour.</p>
 
                 </div>
@@ -282,26 +261,7 @@
 
             </div>
             <div class="col-md-12"><br> </div>
-            <div class="col-md-12 section-course">
-                <div class="col-md-3 ">
-                    <img src="{{ asset('/images/advanced_coding_robotics.png')}}" style="margin:auto;">
-                </div>
-
-                
-                <div class="col-md-6">
-                    <h4 class="ccourse-title2"><b>Robotics 2</b></h4>
-                    <p class="course-detail">This course teaches how to make a simple robot from scratch using a Remote-Control Car. It discusses the fundamentals of designing and building a Wheeled Robot. It also includes discussions on the capabilities of the robot, given its built and make, to perform certain locomotion limited to its characteristics. Simple AI is also implemented using an Arduino microcontroller, and a sensor as Feedback.</p>
-
-                </div>
-                <div class="col-md-3">
-                    <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; May 21 to 25</p>
-                    <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
-                    <p class="fee detail">
-                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:19px; ">Php 12,000 per module</span></p>
-                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a><br><br>
-                </div>
-
-            </div>
+           
           </div>
         </section>
     </div>
