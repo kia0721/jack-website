@@ -203,65 +203,65 @@
             </div>
         </div>
     </div>
+    
+   
+</div>
+<br><br>
+<div class="col-xs-12 col-sm-12">
+    <h3 class="division-title" >MULTIMEDIA</h3>
+</div>
+<div class="col-xs-12 col-sm-12">
+    <div class="col-md-8 col-md-offset-2 course-event">
+        <div class="row">
+            <!-- <div class="col-xs-12 col-sm-12 "> -->
+            <br>
+            <div class="col-xs-3 col-sm-3 text-xs-center">
+                <img src="{{ asset('images/digital_animation.png') }}"  width="100%" />
+            </div>
+            <div class="col-xs-9 col-sm-9 text-xs-center">
+                <H4 class="title">Bring your Ideas to Life through Digital Animation</H4>
+            </div>
+            <div class="col-xs-12 col-sm-12 ">
+            <br>
+                <p >This course aims to equip students with the necessary knowledge and skills to produce their own vector-based graphics and eventually create their own animated short films. Aside from this, students will also learn the foundations of professional animation. In this class, Flash will be used as the main platform in creating animations. Students will learn how to use the software, be familiarized with its interface, toolbar and overall working area.</p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12">
+                <p class="date detail"><B>Date:</B> <br>&nbsp; &nbsp; &nbsp; May 7 to 11</p>
+                <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
+                <p class="fee detail">
+                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,800 per module</span></p>
+                <center>
+                <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
+                </center>
+            </div>
+        </div>
+    </div>
     <br>
     <div class="col-md-8 col-md-offset-2 course-event">
         <div class="row">
             <!-- <div class="col-xs-12 col-sm-12 "> -->
             <br>
             <div class="col-xs-3 col-sm-3 text-xs-center">
-                <img src="{{ asset('images/minecraft3.png') }}"  width="100%" />
+                <img src="{{ asset('images/stop_motion.png') }}"  width="100%" />
             </div>
             <div class="col-xs-9 col-sm-9 text-xs-center">
-                <H4 class="title">Minecraft 3: Advanced World and VR</H4>
+                <H4 class="title">Explore the World of Stop-Motion Animation</H4>
             </div>
             <div class="col-xs-12 col-sm-12 ">
             <br>
-                <p >This course teaches the basics of 3D virtual interaction with Unity’s Physics Engine (Gravity, Friction, Elasticity, Material-type, Kinematics, etc.). It uses Minecraft Assets  (basic blocks, items, mobs, etc.) with its actual reality-like characteristics, which students can interact with using HTC Vive.</p>
+                <p >This course develops a fundamental understanding of stop-motion animation, while exploring an exciting variety of animation techniques. Students will use clay, paper, lego, toys, found objects and more to bring their imaginations to life. Through short screenings and demos, the class will draw inspiration from winning animation stop-motion works. Taught by an award-winning animation director, students will learn the full creative process from start to finish, including camera set up and shooting, character and story creation, set building and more.</p>
             </div>
 
             <div class="col-xs-12 col-sm-12">
-                <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; May 14 to 18</p>
+                <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; May 28 to June 1</p>
                 <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                 <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 11,000 per module</span></p>
+                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,800 per module</span></p>
                 <center>
                 <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
                 </center>
             </div>
         </div>
     </div>
-   
-</div>
-<br><br>
-<div class="col-xs-12 col-sm-12">
-    <h3 class="division-title" >ENGINEERING</h3>
-</div>
-<div class="col-xs-12 col-sm-12">
-    <div class="col-md-8 col-md-offset-2 course-event">
-        <div class="row">
-            <!-- <div class="col-xs-12 col-sm-12 "> -->
-            <br>
-            <div class="col-xs-3 col-sm-3 text-xs-center">
-                <img src="{{ asset('images/coding_robotics.png') }}"  width="100%" />
-            </div>
-            <div class="col-xs-9 col-sm-9 text-xs-center">
-                <H4 class="title">The Engineer: Coding and Robotics</H4>
-            </div>
-            <div class="col-xs-12 col-sm-12 ">
-            <br>
-                <p >This course provides a solid foundation of Robotics by building a robot platform from LEGO Mindstorms that can be used to program and simulate basic Artificial Intelligence (AI). Basic Robotic Behaviors and Heuristics are also discussed in order to achieve an intelligent decisive behaviour.</p>
-            </div>
-
-            <div class="col-xs-12 col-sm-12">
-                <p class="date detail"><B>Date:</B> <br>&nbsp; &nbsp; &nbsp; Batch 1: May 21 to 25</p>
-                <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
-                <p class="fee detail">
-                <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 10,000 per module</span></p>
-                <center>
-                <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> <br><br>
-                </center>
-            </div>
-        </div>
-    </div>
-    
 </div>
