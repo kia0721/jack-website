@@ -252,7 +252,7 @@
 
                 </div>
                 <div class="col-md-3">
-                    <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; May 28 to June 1</p>
+                    <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; May 14 to 18</p>
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:20px; ">Php 9,800 per module</span></p>
