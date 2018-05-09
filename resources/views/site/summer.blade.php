@@ -231,7 +231,7 @@
                 </div>
                 <div class="col-md-3">
                     <p class="date detail"><B>Date:</B> <br>&nbsp; &nbsp; &nbsp; May 21 to 25</p>
-                    <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8AM to 12NN</p>
+                    <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 1PM to 5PM</p>
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:19px; ">Php 9,800 per module</span></p>
                     <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
