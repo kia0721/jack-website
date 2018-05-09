@@ -123,7 +123,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 ">
             <br>
-                <p >This course is designed to deepen the students’ understanding of Swift towards App Development by using the integrated development environment used for iOS App Development (Playground Books and Xcode 9).</p>
+                <p >This course is designed to deepen the students’ understanding of Swift towards App Development by using the integrated development environment used for iOS App Development.</p>
             </div>
 
             <div class="col-xs-12 col-sm-12">

@@ -144,7 +144,7 @@
                 
                 <div class="col-md-6">
                     <h4 class="ccourse-title2"><b>Swift Playgrounds 2: Deep Dive on Swift </b></h4>
-                    <p class="course-detail">This course is designed to deepen the students’ understanding of Swift towards App Development by using the integrated development environment used for iOS App Development (Playground Books and Xcode 9).</p>
+                    <p class="course-detail">This course is designed to deepen the students’ understanding of Swift towards App Development by using the integrated development environment used for iOS App Development.</p>
 
                 </div>
                 <div class="col-md-3">

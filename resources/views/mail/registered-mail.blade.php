@@ -49,31 +49,28 @@
                         <p>To complete the registration process and secure your slot/s, proceed by paying for the corresponding course fee* through any of the payment procedures below:</p>
 
                         <p><b>1. BANK DEPOSIT</b><br><br>
-                        <b>Bank: UCPB Tektite Branch</b><br>
-                        Account Name: Junior Academy for Coding Knowledge, Inc.<br>
-                        Account Number: 2019-6001-4377
-                        </p>
-                        <p><b>Bank: BDO</b><br>
+                        
+                        <b>Bank: BDO</b><br>
                         Account Name: Junior Academy for Coding Knowledge, Inc.<br>
                         Account Number: 0034-3028-4923
                         </p>
 
                         <p><b>2. ON-SITE PAYMENT</b><br><br>
-                        JACK is located at Penthouse, East Tower, Philippine Stock Exchange Center, Exchange Road, Ortigas Center, Pasig City. 
+                        You may pay thru cash or credit card (additional charges may apply) directly at the JACK office, located at Penthouse, East Tower, Philippine Stock Exchange Center, Exchange Road, Ortigas Center, Pasig City. 
+
                         </p>
 
                         <p>If payment has been made through bank deposit, kindly send a copy of the deposit slip at <b><u>learncoding@jack.com.ph</u></b>. Please use the following <b>subject format</b>: <i>Payment: Student Name.</i> Ex. <i>Payment: Juan dela Cruz.</i>
                         </p>
 
                         <p><B>*DISCOUNTS</B></p>
-                        <p>Enroll in 2 to 3 courses and get 5% off on your total registration fee.<br>
-                        Enroll in 4 or more courses and get 10% on your total registration fee.<br>
-                        Enroll with a buddy/sibling and get 5% on your total registration fee.</p>
+                        <p>Enroll in 2 or 3 courses and get 5% off on your total registration fee.<br>
+                        Enroll in 4 or more courses and get 10% off on your total registration fee.<br>
+                        Enroll with a buddy/sibling and get 5% off on your total registration fee.</p>
 
                         <p><i>Note: Course fees must be paid for at the same time.</i></p>
 
-                        <p>Please note that the course must meet the required minimum number of students to proceed as scheduled. For any inquiries and concerns, you may reach us at 0977-8410482 or by replying to this email.
-                        <br><br>
+                        <p>Please also note that the course must meet the required minimum number of students to proceed as scheduled. For any inquiries and concerns, you may reach us at 0977-8410482 or just reply to this email. <br><br>
                         Thank you very much!
                         <br>
                         JACK Team</p>
