@@ -18,9 +18,9 @@ class HomeController extends Controller
         $this->helperUtil = new HelperUtil;
     }
 
-    public function index(Request $require)
+    public function index(Request $request)
     {
-        if($this->helperUtil->isMobileDevice($require, false)){
+        if($this->helperUtil->isMobileDevice($request, false)){
             return view('mobile.home')
         ->with('titlePage', '- Home');
         }
@@ -28,9 +28,9 @@ class HomeController extends Controller
         ->with('titlePage', '- Home');
     }
 
-    public function courses(Request $require)
+    public function courses(Request $request)
     {
-        if($this->helperUtil->isMobileDevice($require, false)){
+        if($this->helperUtil->isMobileDevice($request, false)){
             return view('mobile.courses_home')
             ->with('titlePage', '- Courses');
         }
@@ -54,39 +54,39 @@ class HomeController extends Controller
             ->with('titlePage', '- Master');
     }
 
-    public function calendar(Request $require)
+    public function calendar(Request $request)
     {
-        if($this->helperUtil->isMobileDevice($require, false)){
+        if($this->helperUtil->isMobileDevice($request, false)){
             return view('mobile.calendar')
             ->with('titlePage', '- Calendar');
         }
         return view('site.calendar')
             ->with('titlePage', '- Calendar');
     }
-    public function eMagazine(Request $require)
+    public function eMagazine(Request $request)
     {
-        if($this->helperUtil->isMobileDevice($require, false)){
+        if($this->helperUtil->isMobileDevice($request, false)){
             return view('mobile.emagazine')
             ->with('titlePage', '- Emagazine');
         }
         return view('site.emagazine')
             ->with('titlePage', '- Emagazine');
     }
-    public function faqs(Request $require)
+    public function faqs(Request $request)
     {
-        if($this->helperUtil->isMobileDevice($require, false)){
+        if($this->helperUtil->isMobileDevice($request, false)){
             return view('mobile.faqs')
                 ->with('titlePage', '- FAQs');
         }
         return view('site.faqs')
             ->with('titlePage', '- FAQs');
     }
-    public function gallery(Request $require)
+    public function gallery(Request $request)
     {
         $images = DB::table('gallery_image as gi')
             ->orderBy('gi.id', 'desc')
             ->get();
-        if($this->helperUtil->isMobileDevice($require, false)){
+        if($this->helperUtil->isMobileDevice($request, false)){
             return view('mobile.gallery')
                 ->with('images', $images)
                 ->with('titlePage', '- Gallery');
@@ -95,21 +95,22 @@ class HomeController extends Controller
                 ->with('images', $images)
                 ->with('titlePage', '- Gallery');
     }
-    public function register(Request $require)
+    public function register(Request $request)
     {
         $courses = DB::table('jack_course as jc')
             ->leftJoin('jack_courseSchedule as jcs', 'jcs.course', '=', 'jc.id')
             ->leftJoin('jack_courseLevel as jcl', 'jcs.level', '=', 'jcl.id')
             ->leftJoin('jack_class as jclass', 'jc.courseType', '=', 'jclass.id')
-            ->where('jc.status', '=', false)
-            ->where('jcs.status', '=', false)
-            ->orderBy('jc.courseType', 'asc')
+            ->where('jc.status', '=', '0')
+            ->where('jcs.status', '=', '0')
+            ->orderBy('jclass.num', 'asc')
+            // ->orderBy('jc.courseType', 'asc')
             ->orderBy('jcs.course', 'asc')
             ->orderBy('jcs.level', 'asc')
             ->get(['jc.id', 'jc.courseTitle', 'jc.courseType', 'jclass.class', 'jc.mobileDev', 'jcs.id as courseScheduleId', 'jcs.startDate', 'jcs.endDate', 'jcs.coderDate', 'jcs.strDate', 'jcl.id as levelId', 'jcl.courseLevel']);
 
             Log::info($courses);
-        if($this->helperUtil->isMobileDevice($require, false)){
+        if($this->helperUtil->isMobileDevice($request, false)){
             return view('mobile.register')
                 ->with('courses', $courses)
                 ->with('titlePage', '- Register');
@@ -184,6 +185,8 @@ class HomeController extends Controller
 
         });
         if(count(Mail::failures()) > 0){
+            $studentDetail->delete();
+            $jackStudentCourse->delete();
             return $helperUtil->resultToJSON("Error", Config::get('constants.SC_UXP_ERR'), 0, false);  
         }
         
