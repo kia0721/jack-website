@@ -62,10 +62,11 @@
                     <br>&nbsp; &nbsp; &nbsp; Batch 4: October 6  
 
                     </p>
-                    <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 1:30 AM to 5:30 PM</p>
+                    <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 1:30 PM to 5:30 PM</p>
                     <p class="fee detail">
-                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 2,200 per module</span></p>
-                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
+                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 2,200 per module</span><br>
+                     &nbsp;(4 hours per course)</p>
+                    
                 </div>
 
             </div> 

@@ -48,7 +48,7 @@
             </div>
             <div class="col-md-12 section-course">
                 <div class="col-md-3">
-                    <img  src="{{ asset('/images/python_jr.png')}}" style="margin:auto;">
+                    <img  src="{{ asset('/images/scratch.png')}}" style="margin:auto;">
                 </div>
 
                 
@@ -62,12 +62,14 @@
                     <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; Batch 1: July 7, 14, 21, 28<br>
                     <B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8:30AM to 12:30PM</p>
                     <p class="time detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; Batch 2: August 11, 18, 25 and September 1<br>
-                    <B>Time:</B><br>&nbsp; &nbsp; &nbsp; 1:30AM to 5:30PM</p>
+                    <B>Time:</B><br>&nbsp; &nbsp; &nbsp; 1:30PM to 5:30PM</p>
                     <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; Batch 3: September 15, 22, 29 and October 6<br>
                     <B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8:30AM to 12:30PM</p>
                     <p class="fee detail">
-                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 8,800 per module</span></p>
+                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 8,000 per module</span><br>
+                     &nbsp;(16 hours per course)</p>
                     <!-- <a href="{{ url('/register') }}"  class="btn btn-orange">RESCHEDULED</a>  -->
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div> 
@@ -90,7 +92,8 @@
                     <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; July 7, 14, 21, and 28</p>
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8:30AM to 12:30PM</p>
                     <p class="fee detail">
-                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 8,400 per module</span></p>
+                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 8,400 per module</span><br>
+                     &nbsp;(16 hours per course)</p>
                     <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
@@ -112,8 +115,9 @@
                     <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; August 11, 18, 25, and<br>&nbsp; &nbsp; &nbsp; September 1</p>
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8:30AM to 12:30PM</p>
                     <p class="fee detail">
-                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 8,800 per module</span></p>
-                    <!-- <a href="{{ url('/register') }}"  class="btn btn-orange">RESCHEDULED</a>  -->
+                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 8,800 per module</span><br>
+                     &nbsp;(16 hours per course)</p>
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div> 
@@ -132,7 +136,8 @@
                     <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; September 15, 22, 29,<br>&nbsp; &nbsp; &nbsp; October 6</p>
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8:30AM to 12:30PM</p>
                     <p class="fee detail">
-                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 10,200 per module</span></p>
+                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 10,200 per module</span><br>
+                     &nbsp;(16 hours per course)</p>
                     <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
@@ -155,8 +160,9 @@
                     <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; November 10, 17, 24, December 1</p>
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8:30AM to 12:30PM</p>
                     <p class="fee detail">
-                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 10,500 per module</span></p>
-                    <!-- <a href="{{ url('/register') }}"  class="btn btn-orange">RESCHEDULED</a>  -->
+                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 10,500 per module</span><br>
+                     &nbsp;(16 hours per course)</p>
+                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
             </div> 
