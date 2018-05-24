@@ -6,7 +6,7 @@
         background-color: #e3e3e8;
     }
     .bg1 {
-        background-image: url("{{ asset('images/courses_home_bg.png') }}");
+        background-image: url("{{ asset('images/courses_home_bg.jpg') }}");
         background-color: #e3e3e8;
     }
 
@@ -49,7 +49,7 @@
     .yellow.ball {
         animation: MoveUpDown 4s linear infinite;
         position: absolute;
-        left: 186px;
+        left: 68px;
         bottom: 400px;
     }
 
@@ -65,11 +65,30 @@
       }
     }
 
+    .novice.ball {
+        animation: MoveUpDown_novice 4s linear infinite;
+        position: absolute;
+        left: 335px;
+        bottom: 400px;
+    }
+
+    @keyframes MoveUpDown_novice {
+        0% {
+        bottom: 390px;
+      }
+      50% {
+        bottom: 520px;
+      }
+      100% {
+        bottom: 390px;
+      }
+    }
+
    
     .blue.ball {
         animation: MoveUpDown_blue 3.5s cubic-bezier(0, 0, 0.24, 0.43) infinite;
         position: absolute;
-        left: 443px;
+        left: 557px;
         bottom: 420px;
     }
 
@@ -88,7 +107,7 @@
     .red.ball {
         animation: MoveUpDown_red 3.8s cubic-bezier(0, 0, 0.24, 0.43) infinite;
         position: absolute;
-        left: 678px;
+        left: 789px;
         bottom: 380px;
     }
 
@@ -168,13 +187,18 @@
                                 <img src="{{ asset('images/black_char.png') }}" />
                             </div>
                             <div class="default bubble" style="background-color: #ffb15e; color: black; ">
-                                Jack  offers 3 different main courses. Feel free to choose!
+                                Jack  offers 4 different main courses. Feel free to choose!
                             </div>
 
                             <div class="yellow bubble" >
                                 <b>LEARN TO CODE. PLAY AND HAVE FUN!</b><br>
                                 JACK’s summer courses are open for students ages 7 to 16. Here, kids can discover, learn, and enjoy the world of coding.
                             </div>
+                            <div class="novice bubble" >
+                            <b>EXPLORE THE WORLD OF CODING!</b><br>
+                                The Novice Coder classes are beginner courses that allow kids as young as 6 to 8 years old to start their coding adventures.
+                            </div>
+
                             <div class="blue bubble" >
                                 <b>START THEM YOUNG!</b><br>
                                 The Junior Coder classes are specifically crafted for ages 8 to 11. Have a  head start in coding and learn more advanced classes like Python Programming and Mobile App Development.
@@ -192,6 +216,9 @@
                             </div>
                             <div class="blue ball">
                                 <a href="{{ url('/courses/junior') }}" ><img src="{{ asset('images/junior_ball.png') }}" /></a>
+                            </div>
+                            <div class="novice ball">
+                                <a href="{{ url('/courses/novice') }}" ><img src="{{ asset('images/novice_ball.png') }}" /></a>
                             </div>
 
                             <div class="red ball" >

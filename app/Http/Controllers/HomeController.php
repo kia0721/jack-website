@@ -42,6 +42,11 @@ class HomeController extends Controller
         return view('site.summer')
             ->with('titlePage', '- Summer');
     }
+    public function novice()
+    {
+        return view('site.novice')
+            ->with('titlePage', '- Novice');
+    }
     public function junior()
     {
         return view('site.junior')

@@ -52,6 +52,7 @@ Route::prefix('courses')->group(function () {
 	Route::get('/summer', 'HomeController@summer');
 	Route::get('/junior', 'HomeController@junior');
 	Route::get('/master', 'HomeController@master');
+	Route::get('/novice', 'HomeController@novice');
 });
 
 Route::get('/calendar', 'HomeController@calendar');

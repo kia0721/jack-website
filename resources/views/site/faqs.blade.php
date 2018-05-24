@@ -94,7 +94,7 @@
                                 <br>
 
                                 <h4>WHO ARE THE TEACHERS?</h4>
-                                <P>JACK teachers are graduates of the University of the Philippines, who are also current IT industry practitioners. Armed with industry knowledge, skills, as well as experience in teaching kids, JACK teachers have the mind and heart to help unlock your kid’s full potential.</P>
+                                <P>JACK teachers are subject matter experts with a passion for teaching kids. They have the mind and heart to help unlock your kid’s full potential.</P>
                                 <br>
                                 
                                 <h4>WHAT IS THE CLASS SIZE OF EACH COURSE?</h4>

@@ -196,7 +196,8 @@
                                     <td colspan="2" style="text-align: center; font-weight: bold;">{{ $courses[0]->class }}</td>
                                     </tr>
                                     @for ($i = 1; $i <= count($courses); $i++)
-                                        <?php $course = $courses[$i-1]; 
+                                        <?php 
+                                            $course = $courses[$i-1];
                                             $currCourseType = $course->class;
 
                                             $courseTypeCtr = $i;
@@ -205,7 +206,9 @@
                                                 $courseTypeCtr = $i-1;
                                             }
                                             $fuCourseType = $courses[$courseTypeCtr]->class;
+                                            
                                         ?>
+                                        
                                         <tr class="checkbox">
                                             <td  width="60%" style=" width: 70%;">
 
@@ -214,27 +217,52 @@
                                             </td>
                                             <td  width="40%" style="width: 30%;">
                                                 @if($course->courseType == 3)
+                                                
+                                                <?php 
+                                                   
+                                                    $isSameCourse = true;
 
-                                                <select class="form-control courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" id="level_{{ $course->id }}" style="display: none;">
-                                                    <option selected="" disabled="">--Select Level--</option>
-                                                    <?php 
-                                                        $optionLength = $i+3-1;
-                                                        if($i+3 >= count($courses))
-                                                            $optionLength =  count($courses);
-                                                    ?>
-                                                    @for ($a = $i-1; $a < $optionLength; $a++)
-                                                        <?php $course = $courses[$a]; ?>
-                                                        <option value="{{ $course->levelId }}_{{ $course->courseScheduleId }}"> {{ $course->courseLevel }}</option>
-                                                    @endfor
+                                                    $optionsLevel = "";
+                                                    $optionsSchedule = "";
+                                                    for($a = $i-1; $isSameCourse == true; $a++){
+                                                        $course = $courses[$a]; 
 
-                                                    <?php 
+                                                  
+                                                        if($i >= count($courses)){
+                                                            $isSameCourse = false;
+                                                            $i = count($courses) - 1;
+                                                        }
+
+                                                        $optionsSchedule .= '<option value="'.$course->levelId.'_'.$course->courseScheduleId.'">'.$course->strDate.'</option>';
+                                                        if($course->id !=  $courses[$i]->id){
+                                                            $isSameCourse = false;
+                                                         
+                                                            $optionsLevel .= '<option value="'.$course->id.'_level_'.$course->levelId.'">'.$course->courseLevel.'</option>';
+                                                            $currCourseType = $course->class;
+                                                            $fuCourseType = $courses[$i]->class;
+                                                        } else {
+                                                            if($course->levelId !=  $courses[$i]->levelId){
+                                                                $optionsLevel .= '<option value="'.$course->levelId.'_'.$course->courseScheduleId.'">'.$course->courseLevel.'</option>';
+                                                            }
+                                                          
+                                                            $i++;
+                                                        }
                                                         
-                                                        if($i+2-1 >= count($courses))
-                                                            $i = count($courses);
-                                                        else
-                                                            $i = $i+3-1;
-                                                    ?>
+                                                    }
+
+                                                ?>
+                                                <select class="form-control courseLevelBox" id="courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" style="display: none;">
+                                                    <option selected="" disabled="">--Select Level--</option>
+                                                    <?php echo $optionsLevel; ?>
                                                 </select>
+
+                                                  <select class="form-control {{ $course->id }}_level_{{ $course->levelId }} courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" id="level_{{ $course->id }}" style="display: none;">
+                                                    <option selected="" disabled="">--Select Schedule--</option>
+                                                    
+                                                    <?php echo $optionsSchedule; ?>
+                                                   
+                                                </select>
+                                                
                                                 @elseif($course->mobileDev == 1)
 
                                                     <select class="form-control selectedmobileDev courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" id="selectedmobileDev_{{ $course->id }}" style="display: none;">
@@ -251,7 +279,7 @@
                                                             $course = $courses[$a]; ?>
 
                                                             @if($tempCourse->id == $course->id)
-                                                                <option value="{{ $course->levelId }}_{{ $course->courseScheduleId }}"> {{ $course->startDate }} to {{ $course->endDate }}</option>
+                                                                <option value="{{ $course->levelId }}_{{ $course->courseScheduleId }}"> {{ $course->strDate }}</option>
                                                             @else
                                                                 <?php $i = $a;
                                                                 $a = count($courses);
@@ -260,14 +288,53 @@
                                                         @endfor
 
                                                     </select>
+                                                @else
+                                                <?php 
+                                                   
+                                                   $isSameCourse = true;
+
+                                                   $optionsSchedule = "";
+                                                   for($a = $i-1; $isSameCourse == true; $a++){
+                                                       $course = $courses[$a]; 
+
+                                                 
+                                                       if($i >= count($courses)){
+                                                           $isSameCourse = false;
+                                                           $i = count($courses) - 1;
+                                                       }
+
+                                                       $optionsSchedule .= '<option value="'.$course->levelId.'_'.$course->courseScheduleId.'">'.$course->strDate.'</option>';
+                                                       if($course->id !=  $courses[$i]->id){
+                                                           $isSameCourse = false;
+                                                        
+                                                           $currCourseType = $course->class;
+                                                           $fuCourseType = $courses[$i]->class;
+                                                       } else {
+                                                           $i++;
+                                                       }
+                                                       
+                                                   }
+
+                                               ?>
+
+                                                 <select class="form-control {{ $course->id }}_level_{{ $course->levelId }} courseSelectBox_{{ $course->id }}_{{ $course->courseType }}" id="junior_{{ $course->id }}" style="display: none;">
+                                                   <option selected="" disabled="">--Select Schedule--</option>
+                                                   
+                                                   <?php echo $optionsSchedule; ?>
+                                                  
+                                               </select>
                                                 @endif
                                             </td>
+
                                         </tr>
+
+                                        
                                         @if($currCourseType != $fuCourseType)
                                         <tr style="background-color: #0075ff;">
                                             <td colspan="2" style="text-align: center; font-weight: bold;">{{ $fuCourseType }} </td>
                                         </tr>
                                         @endif
+
                                     @endfor
                                     </tbody>
                                 </table>

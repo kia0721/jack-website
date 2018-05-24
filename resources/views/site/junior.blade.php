@@ -28,8 +28,8 @@
               <div class="course-descr-d" style="width:60%;">
                 <div>
                     <h1 class="course-title">JUNIOR CODER</h1>
-                    <H2>START THEM YOUNG!</H2>
-                    <h4>The Junior Coder classes are specifically crafted for ages <b>8 to 11</b>. Have a  head start in coding and learn more advanced classes like Python Programming and Mobile App Development. Here, kids are introduced to text based programming. </h4>
+                    <H2>HAVE A HEAD START IN CODING!</H2>
+                    <h4>The Junior Coder classes are specifically crafted for students aged 9 to 11. Here, kids get an advantage in today's digital world by learning more advanced classes like Python Programming and Mobile App Development.</h4>
                     <br>
                     <a href="{{ url('/courses') }}" class="btn btn-orange">GO BACK TO COURSES</a> 
                     <br> <br>
@@ -42,40 +42,8 @@
 
         <section>
           <div class="wrapper">
-          <div class="entry-content">
-                <h2 class="division-title" > NOVICE CODER</h2>
-                
-            </div>
-            <div class="col-md-12 section-course">
-                <div class="col-md-3">
-                    <img  src="{{ asset('/images/scratch.png')}}" style="margin:auto;">
-                </div>
-
-                
-                <div class="col-md-6">
-                   
-                    <h4 class="ccourse-title2"><b>Scratch: Welcome to the World of Coding</b></h4>
-                    <p class="course-detail">This is an introductory course on coding that uses the Scratch programming platform. In this class, students use block-based programming to create their own stories, animations, mini games, and more.</p>
-
-                </div>
-                <div class="col-md-3">
-                    <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; Batch 1: July 7, 14, 21, 28<br>
-                    <B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8:30AM to 12:30PM</p>
-                    <p class="time detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; Batch 2: August 11, 18, 25 and September 1<br>
-                    <B>Time:</B><br>&nbsp; &nbsp; &nbsp; 1:30PM to 5:30PM</p>
-                    <p class="date detail"><B>Date:</B><br>&nbsp; &nbsp; &nbsp; Batch 3: September 15, 22, 29 and October 6<br>
-                    <B>Time:</B><br>&nbsp; &nbsp; &nbsp; 8:30AM to 12:30PM</p>
-                    <p class="fee detail">
-                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 8,000 per module</span><br>
-                     &nbsp;(16 hours per course)</p>
-                    <!-- <a href="{{ url('/register') }}"  class="btn btn-orange">RESCHEDULED</a>  -->
-                    <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
-                </div>
-
-            </div> 
-            <div class="col-md-12"><br></div>
             <div class="entry-content">
-                <h2 class="division-title" > JUNIOR CODER</h2>
+                <h3> </h3>
                 
             </div>
             <div class="col-md-12 course-sec section-course" >

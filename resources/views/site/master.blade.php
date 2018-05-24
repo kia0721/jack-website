@@ -26,7 +26,7 @@
                 <div>
                     <h1 class="course-title" style="margin: 0;">MASTER CODER</h1>
                     <H2>UPGRADE YOUR PROGRAMMING SKILLS!</H2>
-                    <h4>The Master Coder classes allow students ages 12 to 17 to specialize in a programming language. Choose  from three tracks (App Development, Game Development, and Electronics Engineering) and be a master coder in Java, Python, or C Programming.</h4>
+                    <h4>The Master Coder classes allow students aged 12 to 17 to further strengthen their programming knowledge and skills. In this program, they are trained to use technology to create meaningful projects and relevant solutions to real-world problems.</h4>
                   
                     <a href="{{ url('/courses') }}" class="btn btn-orange">GO BACK TO COURSES</a> 
                     <br> <br>
@@ -40,7 +40,7 @@
         <section>
           <div class="wrapper">
             <div class="entry-content">
-                <h3 style="text-align: center;"> <br></h3>
+                <h3> </h3>
                 
             </div>
             <div class="col-md-12 course-sec section-course" >
@@ -66,6 +66,7 @@
                     <p class="fee detail">
                     <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 2,200 per module</span><br>
                      &nbsp;(4 hours per course)</p>
+                     <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                     
                 </div>
 
@@ -78,7 +79,7 @@
 
                 
                 <div class="col-md-6">
-                    <h4 class="ccourse-title2"><b>Java Engineer 1</b></h4>
+                    <h4 class="ccourse-title2"><b>Java Engineer 1: Foundations of Java</b></h4>
                     <p class="course-detail">This course provides a solid foundation on how to develop an application using the Java programming language. At the end of this course, students should be able to become well-versed in the Java programming language, understand the theory and engineering behind object-oriented development, platform independence and the Java ecosystem, and apply their knowledge in developing their own game.</p>
 
                 </div>
@@ -103,7 +104,7 @@
 
                 
                 <div class="col-md-6">
-                    <h4 class="ccourse-title2"><b>Java Engineer 2</b></h4>
+                    <h4 class="ccourse-title2"><b>Java Engineer 2: Advanced Java Programming</b></h4>
                     <p class="course-detail">This course is designed to deepen the knowledge of the students in developing systems with the use of Java programming language. This includes the concepts and ideas behind the use of Standard Query Language (SQL) for the database to produce a working Management Information System (MIS) by the end of the course. </p>
 
                 </div>
@@ -128,7 +129,7 @@
 
                 
                 <div class="col-md-6">
-                    <h4 class="ccourse-title2"><b>Mobile App Development 1</b></h4>
+                    <h4 class="ccourse-title2"><b>Android Studio 1: Intro to Mobile App Dev</b></h4>
                     <p class="course-detail">This course teaches the students on how to create an android application using Java as the programming language. The basic concepts on how to use the gradle and deploy an apk to an android device with an operating system not lower than Lollipop will also be taught in this class.</p>
 
                 </div>
@@ -153,7 +154,7 @@
 
                 
                 <div class="col-md-6">
-                    <h4 class="ccourse-title2"><b>Mobile App Development  2</b></h4>
+                    <h4 class="ccourse-title2"><b>Android Studio 2: Advanced Mobile App Dev</b></h4>
                     <p class="course-detail">This course aims to deepen the learning of the students when it comes to mobile application development. This course will include the basic concepts of SQLite for data storage and how to implement a simple management system in an android application.</p>
 
                 </div>

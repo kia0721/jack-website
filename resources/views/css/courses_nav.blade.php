@@ -1,6 +1,6 @@
 <style type="text/css">
     .navigation:before {
-        background: url(../../images/courses-nav.png) no-repeat 0 0px;
+        background: url(../../images/courses-nav.png?v2) no-repeat 0 0px;
         bottom: 100%;
         content: '';
         display: block;
@@ -15,10 +15,17 @@
     .navigation .Summer {
         background-position: 0 -85px;
         height: 57px !important;
-        /*width: 84px;*/
     }
     .icon.Summer .label{
         color: #eca220 !important;
+    }
+
+    .navigation .Novice {
+        background-position: 0 -277px;
+        height: 63px !important;
+    }
+    .icon.Novice .label{
+        color: #264d1d !important;
     }
 
     .navigation .Junior {
@@ -49,7 +56,7 @@
 
     .navigation .icon {
         display: block;
-        background-image: url("{{ asset('/images/courses-nav.png') }}");
+        background-image: url("{{ asset('/images/courses-nav.png?v2') }}");
         cursor: pointer;
         height: 88px;
         width: 88px;
@@ -93,7 +100,7 @@
     
 
     .navigation{
-        margin-top: -107px;
+        margin-top: -207px;
         position: fixed;
         left: -38px;
         top: 83%;

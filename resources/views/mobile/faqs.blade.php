@@ -206,7 +206,7 @@
                 <div class="row">
                     <div class="col-xs-10 col-sm-10 answer">
                         <div class="bubble" >
-                             <p class="answer">JACK teachers are graduates of the University of the Philippines, who are also current IT industry practitioners. Armed with industry knowledge, skills, as well as experience in teaching kids, JACK teachers have the mind and heart to help unlock your kid’s full potential.</p>
+                             <p class="answer">JACK teachers are subject matter experts with a passion for teaching kids. They have the mind and heart to help unlock your kid’s full potential.</p>
                         </div>
                     </div>
                     <div class="col-xs-2 col-sm-2">

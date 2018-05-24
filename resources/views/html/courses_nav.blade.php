@@ -22,6 +22,15 @@
         color: #eca220 !important;
     }
 
+    .navigation .Novice {
+        background-position: 0 -85px;
+        height: 57px !important;
+        /*width: 84px;*/
+    }
+    .icon.Novice .label{
+        color: #eca220 !important;
+    }
+
     .navigation .Junior {
         background-position: 0 -143px;
         height: 53px !important;
@@ -94,7 +103,7 @@
     
 
     .navigation{
-        margin-top: -107px;
+        margin-top: -207px;
         position: fixed;
         left: -38px;
         top: 83%;
@@ -183,6 +192,9 @@
             
         <li >
             <a href="{{ url('/courses/summer') }}"><p class="icon Summer"><span class="label">Summer</span></p></a>
+        </li>
+        <li >
+            <a href="{{ url('/courses/novice') }}"><p class="icon Novice"><span class="label">Novice</span></p></a>
         </li>
         <li >
             <a href="{{ url('/courses/junior') }}"><p class="icon Junior"><span class="label">Junior</span></p></a>
