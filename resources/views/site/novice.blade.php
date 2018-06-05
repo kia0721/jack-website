@@ -72,7 +72,8 @@
                     </p>
                     <p class="time detail"><B>Time:</B><br>&nbsp; &nbsp; &nbsp; 1:30 PM to 5:30 PM</p>
                     <p class="fee detail">
-                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 8,000 per module</span></p>
+                    <b>Course fee:</b><br><br>&nbsp;<span style="font-size:18px; ">Php 8,000 per module</span><br>
+                    &nbsp;(16 hours per course)</p>
                     <a href="{{ url('/register') }}" class="btn btn-orange">ENROLL NOW</a> 
                 </div>
 
