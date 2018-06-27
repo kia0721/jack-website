@@ -75,7 +75,7 @@
                     <br><br><hr>
                     
                 </div>
-                <form class=""  method="POST" action="{{ url('addRegister1') }}">
+                <form class=""  method="POST" action="{{ url('addRegister2') }}">
                 <!-- <div class="col-md-12"> -->
                 <div class="col-md-12 register-div">
                     <div class="row">
@@ -120,26 +120,48 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-12">
-                            <div class="form-group">
-                                <label class="form-control-label" for="age">Please describe the student’s background on coding/programming:<span class="form-asterisk">*</span></label>
-                                
-                                <div class="col-sm-12 radio">
-                                  <label><input type="radio" name="codingBg" class="optradio codingBg" value="Not yet" required />None yet</label>
+                            <div class="col-xs-6 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="age">Please  describe the student’s background on coding/programming:<span class="form-asterisk">*</span></label>
+                                    
+                                    <div class="col-sm-12 radio">
+                                      <label><input type="radio" name="codingBg" class="optradio codingBg" value="Not yet" required />None yet</label>
+                                    </div>
+                                    <div class="col-sm-12 radio">
+                                      <label><input type="radio" name="codingBg" class="optradio codingBg" value="Self-taugth"/>Self-taught</label>
+                                    </div>
+                                    <div class="col-sm-12 radio">
+                                      <label><input type="radio" name="codingBg" class="optradio codingBg" value="Previously enrolled with JACK"/>Previously enrolled with JACK</label>
+                                    </div>
+                                    <div class="col-sm-12 radio">
+                                        <label><input type="radio" name="codingBg" class="optradio codingBg" value="Previously enrolled with other school"/>Previously enrolled with other school</label>
+                                    </div>
+                                    <div class="col-sm-12 radio">
+                                      <label><input type="radio" name="codingBg" class="optradio codingBg" value="0"/>Other </label>
+                                    </div>
+                                    <div class="col-sm-12 radio studentBackground" >
+                                        <input type="text" class="form-control" name="studentBackground" id="studentBackground" value="" placeholder="Please specify" />
+                                    </div>
                                 </div>
-                                <div class="col-sm-12 radio">
-                                  <label><input type="radio" name="codingBg" class="optradio codingBg" value="Self-taugth"/>Self-taught</label>
-                                </div>
-                                <div class="col-sm-12 radio">
-                                  <label><input type="radio" name="codingBg" class="optradio codingBg" value="Previously enrolled with JACK"/>Previously enrolled with JACK</label>
-                                </div>
-                                <div class="col-sm-12 radio">
-                                    <label><input type="radio" name="codingBg" class="optradio codingBg" value="Previously enrolled with other school"/>Previously enrolled with other school</label>
-                                </div>
-                                <div class="col-sm-12 radio">
-                                  <label><input type="radio" name="codingBg" class="optradio codingBg" value="0"/>Other </label>
-                                </div>
-                                <div class="col-sm-12 radio studentBackground" >
-                                    <input type="text" class="form-control" name="studentBackground" id="studentBackground" value="" placeholder="Please specify" />
+                            </div>
+                            <div class="col-xs-6 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="modeOfCom">Mode of Communication
+                                        <span class="form-asterisk">*</span></label>
+                                    
+                                    <div class="col-sm-12 radio">
+                                      <label><input type="radio" name="communicationBg" class="optradio communicationBg" value="SMS" required />SMS</label>
+                                    </div>
+                                    <div class="col-sm-12 radio">
+                                      <label><input type="radio" name="communicationBg" class="optradio communicationBg" value="Self-taugth"/>E-mail</label>
+                                    </div>
+                                    <div class="col-sm-12 radio">
+                                      <label><input type="radio" name="communicationBg" class="optradio communicationBg" value="Phone Call"/>Phone Call</label>
+                                    </div>
+                                    <div class="col-sm-12 radio">
+                                        <label><input type="radio" name="communicationBg" class="optradio communicationBg" value="All"/>All of the above</label>
+                                    </div>
+                                   <br/>
                                 </div>
                             </div>
                         </div>
@@ -559,6 +581,7 @@
                         'birthdate' : $('#birthdate').val(),
                         'age' : $('#age').val(),
                         'codingBackground' : $('#studentBackground').val(),
+                        'modeOfCommunication' : $('input[name=communicationBg]:checked').val(),
                         'parentName' : $('#contactPerson').val(),
                         'relationship' : $('#relationship').val(),
                         'parentEmail' : $('#email').val(),

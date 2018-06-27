@@ -128,7 +128,7 @@ class HomeController extends Controller
 
     public function registerStudent(Request $request){
 
-        $input = $request->only('studGivenName', 'studLastName', 'school', 'birthdate', 'age', 'codingBackground', 'parentName', 'parentEmail', 'parentContactNum', 'gradeLevel', 'relationship', 'promo_code',
+        $input = $request->only('studGivenName', 'studLastName', 'school', 'birthdate', 'age', 'codingBackground','modeOfCommunication', 'parentName', 'parentEmail', 'parentContactNum', 'gradeLevel', 'relationship', 'promo_code',
             'completeAddress', 'findjack', 'allowPhotograph', 'courseSelected' );
         Log::info($input['promo_code']);
         $studentDetail = new \App\Models\JackStudentDetail;
@@ -140,6 +140,7 @@ class HomeController extends Controller
         $studentDetail->gradeLevel = $input['gradeLevel'];
         $studentDetail->relationship = $input['relationship'];
         $studentDetail->codingBackground = $input['codingBackground'];
+        $studentDetail->modeOfCommunication = $input['modeOfCommunication'];
         $studentDetail->parentName = $input['parentName'];
         $studentDetail->parentContactNum = $input['parentContactNum'];
         $studentDetail->completeAddress = $input['completeAddress'];
