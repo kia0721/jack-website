@@ -201,7 +201,7 @@
 
                             <div class="blue bubble" >
                                 <b>START THEM YOUNG!</b><br>
-                                The Junior Coder classes are specifically crafted for ages 8 to 11. Have a  head start in coding and learn more advanced classes like Python Programming and Mobile App Development.
+                                The Junior Coder classes are specifically crafted for ages 9 to 11. Have a  head start in coding and learn more advanced classes like Python Programming and Mobile App Development.
                             </div>
 
                             <div class="red bubble" >

@@ -68,7 +68,7 @@
                         Enroll in 4 or more courses and get 10% off on your total registration fee.<br>
                         Enroll with a buddy/sibling and get 5% off on your total registration fee.</p>
 
-                        <p><i>Note: Course fees must be paid for at the same time.</i></p>
+                        <p><i>Note: Course fees must be paid for at the same time. In case you qualify for multiple discounts, only the higher discount rate shall apply.</i></p>
 
                         <p>Please also note that the course must meet the required minimum number of students to proceed as scheduled. For any inquiries and concerns, you may reach us at 0977-8410482 or just reply to this email. <br><br>
                         Thank you very much!
