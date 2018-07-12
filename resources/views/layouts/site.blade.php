@@ -74,9 +74,11 @@
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
+        @if(Request::segment(1) !== "register")
         <div class="outer" onclick="location.href='{{ url('/register') }}';">
             <img src="{{ asset('/images/register_here.png') }}"/>
         </div>
+        @endif
         @yield('content')
         
     </div>

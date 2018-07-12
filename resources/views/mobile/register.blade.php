@@ -139,6 +139,26 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-xs-12 col-md-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="modeOfCom">Preferred Mode of Communication
+                                        <span class="form-asterisk">*</span></label>
+                                    
+                                    <div class="col-sm-12 radio">
+                                      <label><input type="radio" name="communicationBg" class="optradio communicationBg" value="SMS" required />SMS</label>
+                                    </div>
+                                    <div class="col-sm-12 radio">
+                                      <label><input type="radio" name="communicationBg" class="optradio communicationBg" value="Self-taugth"/>E-mail</label>
+                                    </div>
+                                    <div class="col-sm-12 radio">
+                                      <label><input type="radio" name="communicationBg" class="optradio communicationBg" value="Phone Call"/>Phone Call</label>
+                                    </div>
+                                    <div class="col-sm-12 radio">
+                                        <label><input type="radio" name="communicationBg" class="optradio communicationBg" value="All"/>All of the above</label>
+                                    </div>
+                                   <br/>
+                                </div>
+                            </div>
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
                             <label class="form-control-label" for="contactPerson">Contact Person<span class="form-asterisk">*</span></label>
@@ -564,6 +584,7 @@
                         'birthdate' : $('#birthdate').val(),
                         'age' : $('#age').val(),
                         'codingBackground' : $('#studentBackground').val(),
+                        'modeOfCommunication' : $('input[name=communicationBg]:checked').val(),
                         'parentName' : $('#contactPerson').val(),
                         'relationship' : $('#relationship').val(),
                         'parentEmail' : $('#email').val(),

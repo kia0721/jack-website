@@ -84,10 +84,11 @@
         
     </div>
 
-    
+        @if(Request::segment(1) !== "register")
         <div class="outer"  onclick="location.href='{{ url('/register') }}';">
             <center><button class="btn" style="border-radius: 5px; border-color: white; background-color: transparent;">REGISTER HERE!</button></center>
         </div>
+        @endif
    <!--  <footer class="footer" >
     
         <div class="container">

@@ -146,7 +146,7 @@
                             </div>
                             <div class="col-xs-6 col-md-6">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="modeOfCom">Mode of Communication
+                                    <label class="form-control-label" for="modeOfCom">Preferred Mode of Communication
                                         <span class="form-asterisk">*</span></label>
                                     
                                     <div class="col-sm-12 radio">
