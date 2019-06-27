@@ -58,17 +58,17 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="text-align: left;">
-                                                        <b>Email:</b> {!!$contactEmail!!}
+                                                        <b>Email:</b> {!!$email!!}
                                                     </td>
                                                 </tr>
-                                               <!--  <tr>
-                                                    <td style="text-align: left;">
-                                                        <b>Phone:</b> $contactNum
-                                                    </td>
-                                                </tr> -->
                                                 <tr>
                                                     <td style="text-align: left;">
-                                                        <b>Message:</b> {!!$messageDetail!!}
+                                                        <b>Phone:</b> {!!$contactNum!!}
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left;">
+                                                        <b>Message:</b> {!!$message_detail!!}
                                                     </td>
                                                 </tr>
                                             </table>

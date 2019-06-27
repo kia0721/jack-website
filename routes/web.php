@@ -11,40 +11,52 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('home');
-});
 
 Auth::routes();
 
+Route::get('/', function () {
+    return redirect('/home');
+});
+
+Route::get('/m.home', function () {
+    return redirect('/m.home');
+});
+Route::get('/m.home', 'HomeController@mobiIndex');
+
+Route::get('/accounts', 'AccountController@index');
+Route::get('/accounts/{userType}', 'AccountController@getUsers');
+Route::get('/account/{userId}', 'AccountController@userDetailDisplay');
+Route::post('/resetPassword', 'AccountController@resetPassword');
+
+
+Route::prefix('admin')->group(function () {
+	Route::get('/dashboard', 'DashboardController@index');
+	Route::get('/courses', 'CoursesController@index');
+	Route::get('/courses/detail/{id}', 'CoursesController@detailView');
+	Route::post('/addSchedule', 'CoursesController@addSchedule');
+
+
+	Route::get('/students', 'StudentController@index');
+	Route::get('/gallery', 'GalleryController@index');
+	Route::get('/events', 'EventController@index');
+	Route::get('/promo-code', 'PromoCodeController@index');
+});
+
 Route::get('/home', 'HomeController@index');
-Route::get('/home2', 'HomeController@index')->name('home');
-Route::get('/about', 'HomeController@about');
-Route::get('/program', 'HomeController@program');
-Route::get('/emagazine', 'HomeController@emagazine');
 Route::get('/register', 'HomeController@register');
-Route::get('/error', 'HomeController@error');
-Route::get('/faqs', 'HomeController@faqs');
-Route::get('/policies', 'HomeController@policies');
-Route::get('/cart', 'HomeController@cart');
-
-
 Route::post('/contactUs', 'HomeController@contactUs');
+Route::post('/registerStudent', 'HomeController@registerStudent');
 
-Route::get('/saveToCart', 'SessionController@saveToCart');
-Route::get('/getSavedCart', 'SessionController@getSavedCart');
-Route::get('/removeSaveCourse', 'SessionController@removeSaveCourse');
-Route::post('/saveSchedule', 'SessionController@saveSchedule');
+Route::prefix('courses')->group(function () {
+	Route::get('/', 'HomeController@courses');
+	Route::get('/summer', 'HomeController@summer');
+	Route::get('/junior', 'HomeController@junior');
+	Route::get('/master', 'HomeController@master');
+	Route::get('/novice', 'HomeController@novice');
+});
 
-Route::post('/saveStudentInfo', 'SessionController@saveStudentInfo');
-Route::get('/getStudentInfo', 'SessionController@getStudentInfo');
-
-
-Route::get('/getCourseSchedule', 'CartController@getCourseSchedule');
-
-
-Route::post('/forgotStudentId', 'RegisterController@forgotStudentId');
-Route::post('/registerStudent', 'RegisterController@registerStudent');
-
-
-
+Route::get('/calendar', 'HomeController@calendar');
+Route::get('/e-magazine', 'HomeController@emagazine');
+Route::get('/faqs', 'HomeController@faqs');
+Route::get('/gallery', 'HomeController@gallery');
+Route::get('/downloadCalendar', 'HomeController@downloadCalendar');

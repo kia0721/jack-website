@@ -1,167 +1,135 @@
-@extends('layouts.site_3')
+@extends('layouts.site')
+
+@section('css_link_2')
+<style type="text/css">
+    body{
+        background-color: #d3cac1;
+    }
+    .bg1 {
+        background-image: url("{{ asset('images/faqs_bg.png') }}");
+        background-color: #d3cac1;
+    }
+
+    .layer-holder {
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100%;
+        min-height: 100%;
+        overflow: hidden;
+    }
+
+
+    .sub-con{
+        height: 768px;
+        margin-top: -396px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        margin-left: -15px;
+        
+    }
+    .sub-con > div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 202px;
+    }
+
+    .top-img{
+        z-index: 12;
+    }
+
+    .container{
+        height: 100%;
+        margin: 0 auto;
+        max-width: 1024px;
+        position: relative;
+    }
+
+    .faqs_div::-webkit-scrollbar {
+      width: 10px;
+      background-color: #e1e2e8;
+    }
+
+    .top-description > div{
+        position: absolute;
+    }
+
+</style>
+@endsection
 
 @section('content')
 
- <div class="py-5 bg-white w-100"></div>   
 
-<section class="cid-r9UXp7hHt6 mbr-fullscreen-faqs mbr-parallax-background" id="header2-12">
-    <div class="container align-center">
-        <div class="row justify-content-md-center">
-            <div class="mbr-white col-md-10">    
-            </div>
-        </div>
-    </div>
-    
-</section>
+   
+    <div class="main-wrapper">
 
-<section class="toggle1 cid-r4K0Nhdrjl" id="toggle1-z">    
-        <div class="container">
-            <div class="media-container-row">
-                <div class="col-12">
-                    <div class="section-head text-center space30">
-                       
-                    </div>
-                    <div class="clearfix"></div>
-                    <div id="bootstrap-toggle" class="toggle-panel accordionStyles tab-content">
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingOne">
-                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-parent="#accordion" data-core="" href="#collapse1_2" aria-expanded="false" aria-controls="collapse1">
-                                    <h4 class="mbr-fonts-style display-5">
-                                        WHAT ARE THE CLASS SCHEDULES?
-                                        <span class="float-right active">+</span>
-                                    </h4>
-                                </a>
-                            </div>
-                            <div id="collapse1_2" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne">
-                                <div class="panel-body p-4">
-                                    <p class="mbr-fonts-style panel-text display-4 mbr-text">
-                                        <strong><u> Summer Program:</u></strong></br>
-                                        April and May (whole month)</br>
-                                        June (Week 3 and 4)</br>
-                                        July (Week 1 and 2)</br>
-                                        </br>
-                                        Monday to Friday</br>
-                                        8AM to 12NN</br>
-                                        1PM to 5PM</br>
-                                        </br>
-                                        <strong><u>Weekend Program:</u></strong></br>
-                                        July (Week 3) to December (Week 1)</br>
-                                        </br>
-                                        Saturdays</br>
-                                        8:30AM to 12:30PM</br>
-                                        1:30PM to 1:30PM</br>
-                                        </br>
-                                        See the detailed list of the class schedules <a href="{{ url('program') }}#noviceTab">here</a>.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingTwo">
-                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-parent="#accordion" data-core="" href="#collapse2_2" aria-expanded="false" aria-controls="collapse2">
-                                    <h4 class="mbr-fonts-style display-5">
-                                        WHERE WILL THE CLASSES BE HELD?
-                                        <span class="float-right active">+</span>
-                                    </h4>
-                                </a>
+        <section data-name="Faqs" class="layer pos1" >
+            <div class="layer-holder layer-bg bg1"  id="Welcome">
+                <div class="container">
+                    <div class="sub-con" >
+                        <div class="top-description" >
+                            <div class="faqs_div" style="padding-right: 15px; color:#f8f9ff; left: 250px; max-width: 550px; max-height: 350px;     overflow-y: overlay;" >
+                                
+                                <h1>What is JACK?</h1>
+                                <p>Junior Academy for Coding Knowledge, Inc. (JACK) is a learning center that aims to equip kids with fundamental coding knowledge and develop their skills to create using the latest hardware trends and innovations. JACK’s mission is to provide them the highest quality learning experience by celebrating and encouraging their creativity through dynamic and project-based learning - all in a fun and engaging environment.
+                                </p>
+                                <br>
+                                <h2>Frequently Asked Questions</h2>
+                                <br>
 
-                            </div>
-                            <div id="collapse2_2" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                <div class="panel-body p-4">
-                                    <p class="mbr-fonts-style panel-text display-4 mbr-text">
-                                       JACK is located at Penthouse East Tower Philippine Stock Exchange Center, Exchange Road, Ortigas Center, Pasig City 1605 Metro Manila Philippines.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingThree">
-                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-parent="#accordion" data-core="" href="#collapse3_2" aria-expanded="false" aria-controls="collapse3">
-                                    <h4 class="mbr-fonts-style display-5">
-                                        WHO MAY ENROLL?
-                                        <span class="float-right active">+</span>
-                                    </h4>
-                                </a>
-                            </div>
-                            <div id="collapse3_2" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree">
-                                <div class="panel-body p-4">
-                                    <p class="mbr-fonts-style panel-text display-4 mbr-text">
-                                       Novice Coder: 6 to 8 years old </br>
-                                       Junior Coder: 9 to 11 years old </br>
-                                   	   Master Coder: 12 to 17 years old</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingThree">
-                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-parent="#accordion" data-core="" href="#collapse4_2" aria-expanded="false" aria-controls="collapse4">
-                                    <h4 class="mbr-fonts-style display-5">
-                                        CAN MY CHILD ENROLL IF HE OR SHE HAS NO BACKGROUND KNOWLEDGE IN CODING?
-                                        <span class="float-right active">+</span>
-                                    </h4>
-                                </a>
-                            </div>
-                            <div id="collapse4_2" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree">
-                                <div class="panel-body p-4">
-                                    <p class="mbr-fonts-style panel-text display-4 mbr-text">
-                                       Of course, JACK’s beginner courses are designed to introduce your child to the world of coding. If you’re unsure about the best course for your child, you may schedule a <a href="https://calendly.com/learncoding"> consultation </a> with us.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingThree">
-                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-parent="#accordion" data-core="" href="#collapse5_2" aria-expanded="false" aria-controls="collapse5">
-                                    <h4 class="mbr-fonts-style display-5">
-                                        DOES MY CHILD NEED TO BRING A LAPTOP OR TABLET?
-                                        <span class="float-right active">+</span>
-                                    </h4>
-                                </a>
-                            </div>
-                            <div id="collapse5_2" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree">
-                                <div class="panel-body p-4">
-                                    <p class="mbr-fonts-style panel-text display-4 mbr-text">
-                                       For Novice and Junior Coder classes, JACK provides the necessary equipment for the class.
-                                       However, for Master Coder classes, we highly encourage students to bring their own.
-                                   </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingThree">
-                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-parent="#accordion" data-core="" href="#collapse6_2" aria-expanded="false" aria-controls="collapse6">
-                                    <h4 class="mbr-fonts-style display-5">
-                                        WHO ARE THE TEACHERS?
-                                        <span class="float-right active">+</span>
-                                    </h4>
-                                </a>
-                            </div>
-                            <div id="collapse6_2" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree">
-                                <div class="panel-body p-4">
-                                    <p class="mbr-fonts-style panel-text display-4 mbr-text">
-                                       JACK teachers are subject matter experts with a passion for teaching kids. They have the mind and heart to help unlock your child’s full potential and to inspire the next generation of innovators.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="headingThree">
-                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-parent="#accordion" data-core="" href="#collapse7_2" aria-expanded="false" aria-controls="collapse6">
-                                    <h4 class="mbr-fonts-style display-5">
-                                        WHAT IS THE CLASS SIZE OF EACH COURSE?
-                                        <span class="float-right active">+</span>
-                                    </h4>
-                                </a>
-                            </div>
-                            <div id="collapse7_2" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree">
-                                <div class="panel-body p-4">
-                                    <p class="mbr-fonts-style panel-text display-4 mbr-text">
-                                       Depending on the course, the class size may range from 5 to 20 students. The average class size is 10.</p>
-                                </div>
+                                <h4>WHAT ARE THE CLASS SCHEDULES?</h4>
+                                <p>Summer classes are held during weekdays from 8am to 12pm. Our Junior Coder and Master Coder classes are held during weekends, from 8:30am to 12:30pm or 1:30pm to 5:30pm. The Junior Coder classes are usually in the morning, while the Master Coder class may have an afternoon schedule. All classes have a 30-minute break. To know the specific schedule of a course, kindly check our Courses (link) page.</p>
+
+                                <br>
+                                <h4>WHERE WILL IT BE HELD?</h4>
+                                <p>JACK is located at Penthouse, East Tower, Philippine Stock Exchange Center, Exchange Road, Ortigas Center, Pasig City.</p>
+                                <br>
+                                <h4>WHO MAY ENROLL?</h4>
+                                <p>Summer classes are open for ages 7 to 16. The Junior Coder classes are open to students ages 8 to 11, while the Master Coder classes are for ages 12 to 17 years old.</p>
+                                <br>
+
+                                <h4>CAN MY CHILD ENROLL IF HE OR SHE HAS NO KNOWLEDGE IN CODING?</h4>
+                                <p>Of course, JACK’s Foundations of Coding program is designed to introduce your child to the world of coding. If your child wants to enroll in the other courses, we highly recommend that he or she undergo this program first.</p>
+                                <br>
+
+                                <h4>WHO ARE THE TEACHERS?</h4>
+                                <P>JACK teachers are subject matter experts with a passion for teaching kids. They have the mind and heart to help unlock your kid’s full potential.</P>
+                                <br>
+                                
+                                <h4>WHAT IS THE CLASS SIZE OF EACH COURSE?</h4>
+                                <p>Each class is composed of 10 to 20 students.</p>
+                                <br>
+                                <br>
+
+                                <h2>Registration and Payment</h2>
+                                <br>
+                                <h4>HOW TO REGISTER ?</h4>
+                                <p>To register, please go to jack.com.ph/register and follow the instructions that will be sent in your email.</p>
+                                <br>
+
+                                <h4>HOW DO WE AVAIL COURSE FEE DISCOUNTS?</h4>
+                                <p>JACK offers a buddy/sibling discount. Enroll with a buddy and get 5% off on the total amount due for the two enrollees.</p>
+                                <br>
+
+                                <h4>HOW DO WE PAY?</h4>
+                                <p>Payments can be made through bank deposit or directly at JACK's office. We will advise you on the details once you have completed your registration.</p>
+                                <br>
+
+                                <h4>WHAT ARE THE INCLUSIONS OF THE COURSE FEE?</h4>
+                                <p>Course fees are inclusive of the admission to the course, a hands-on training, as well as the necessary equipment for the class, unless otherwise stated. A certificate of completion is also given at the end of the course.</p>
+                                <br>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-</section>
+        </section>
+    </div>
 
-    
+
+@endsection
+@section('script_link')
 
 @endsection

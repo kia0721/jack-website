@@ -9,11 +9,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Jack {{ $titlePage }}</title>
-    <script type="text/javascript">
-    if(window.location.href.indexOf("https") == -1){
-        window.location = window.location.href.replace("http", "https");
-    }
-    </script>
     <link rel="shortcut icon" href="{{ asset('images/jack_icon.png') }}">
     @yield('css_link')
     <!-- Styles -->
@@ -79,9 +74,11 @@
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
+        @if(Request::segment(1) !== "register")
         <div class="outer" onclick="location.href='{{ url('/register') }}';">
             <img src="{{ asset('/images/register_here.png') }}"/>
         </div>
+        @endif
         @yield('content')
         
     </div>
@@ -94,7 +91,6 @@
     <script src="{{ asset('/js/ba-debug.js') }}" ></script>
     <script src="{{ asset('/js/jquery.ba-throttle-debounce.js') }}"></script>
     <script type="text/javascript">
-  
         resizeLayerBg();
         function resizeLayerBg(){
             var height = $( window ).height();
