@@ -1,0 +1,230 @@
+body{
+	width: 100vh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.header {
+    font-family: 'Arvo', Georgia, Times, serif;
+       font-size: 59px;
+       line-height: 70px;
+     margin-left:30px;
+     color:#484848;
+   }
+    
+   .text {
+   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+       font-size: 18px;
+       line-height: 25px;
+   }
+
+.table{
+width:1200px;
+height:auto;
+background-color:white;
+
+}
+
+.table_header{
+  font-family:  'Arvo', Georgia, Times, serif;
+  font-size:18px;
+  color:black;
+
+}
+
+
+td{
+border-bottom:2px solid grey
+
+}
+
+
+    
+.row {
+    font-family: 'Arvo', Georgia, Times, serif;
+    color:black;
+
+}
+
+th, td {
+    padding: 15px;
+    color:black;
+}
+
+.deletebutton{
+  width:100px;
+    height:auto;
+    padding:10px 10px 10px 10px;
+    background-color:#e50000;
+    border:3px solid white;
+    font-size:20px;
+    transition-duration:0.2s;
+    color:white;
+    cursor:pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    }
+    
+    .deletebutton:hover{
+    font-size:16px;
+    background-color:white;
+    color:#e50000;
+    cursor: pointer;
+    }
+
+.editbutton{
+        width:100px;
+    height:auto;
+    padding:10px 10px 10px 10px;
+    background-color:#32CD32;
+    border:3px solid white;
+    font-size:20px;
+    transition-duration:0.2s;
+    color:white;
+    cursor:pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+.editbutton:hover{
+     font-size:16px;
+    background-color:white;
+    color:#32CD32;
+    cursor: pointer;
+        }
+
+
+  .addbutton{
+    width:100px;
+    height:auto;
+    padding:10px 10px 10px 10px;
+    background-color:#0EBFE9;
+    border:3px solid white;
+    font-size:20px;
+    transition-duration:0.2s;
+    color:white;
+    cursor:pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        
+    
+    }
+    
+    .addbutton:hover{
+       font-size:16px;
+      background-color:white;
+       color:#0EBFE9;
+      cursor: pointer;
+          }
+
+.viewbutton{
+    width:100px;
+    height:auto;
+    padding:10px 10px 10px 10px;
+    background-color:#FF8C00;
+    border:3px solid white;
+    font-size:20px;
+    transition-duration:0.2s;
+    color:white;
+    cursor:pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+.viewbutton:hover{
+  font-size:16px;
+  background-color:white;
+  color:#FF8C00;
+  cursor: pointer;
+
+}
+
+.searchbutton {
+  width:100px;
+  height:auto;
+  padding:10px 10px 10px 10px;
+  background-color:#0EBFE9;
+  border:3px solid white;
+  font-size:20px;
+  transition-duration:0.2s;
+  color:white;
+  cursor:pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.searchbutton:hover {
+  font-size:16px;
+  background-color:white;
+   color:#0EBFE9;
+  cursor: pointer;
+
+
+}
+    
+
+.center {
+  display: table;
+  margin: auto;
+  }
+.v-align {
+  padding: 10px;
+  display: table-cell;
+  text-align: auto;
+  vertical-align: middle;
+}
+.box {
+  width: 50px;
+  height: 50px;
+  color: black;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.logout{
+  margin-left:1350px;
+  margin-top:15px;
+  background-color:transparent; 
+  border:3px solid white; 
+  color:white;
+
+}

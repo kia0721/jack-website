@@ -1,0 +1,1195 @@
+@font-face {
+    font-family: GothamRnd-bold;
+    src: url("../../fonts/GothamRnd-Bold.otf");
+}
+
+@font-face {
+    font-family: Karla-Bold;
+    src: url("../../fonts/Karla-Bold.ttf");
+}
+
+@font-face {
+    font-family: Regular;
+    src: url("../../fonts/Karla-Regular.ttf");
+}
+
+html, body{
+    font-family: Regular !important;
+    
+}
+
+.display-7{
+    font-family: Regular !important;
+}
+
+.display-Kbold{
+    font-family: Karla-Bold !important;
+    font-size: 4rem;
+}
+
+.display-Kbold2{
+    font-family: Karla-Bold !important;
+    font-size: 3rem;
+}
+
+.display-Kbold3{
+    font-family: Karla-Bold !important;
+    font-size: 2.5rem;
+}
+
+.display-Gbold{
+    font-family: GothamRnd-bold !important;
+}
+
+.display-CourseBG{
+    background-image: url("../../../assets/images/homepage/courses.jpg") !important;
+    background-size: 100% 100%;
+
+}
+
+.text-color{
+    color:#5d5d5d;
+}
+
+.buttonCalendar{
+    position: absolute !important;
+    bottom: 35px !important;
+    right: -75px !important;
+}
+
+.borderWeb{
+    max-width: 1520px;
+    margin: auto;
+}
+
+.border-mascot{
+    position:fixed;
+     bottom:2%;
+     right:0;
+}
+
+.mascot-size{
+    width: 140px !important;
+}
+
+.border-sides {
+    background: #ffff;
+    position: fixed !important;
+}
+.side-padding{
+    padding: 0 9rem !important;
+}
+.mbr-fullscreen_home{
+    align-items: normal !important;
+     -webkit-align-items: normal !important; 
+}
+
+/* Bouncing Icons for Hmoepage */
+.course-icon{
+    width:150px !important;
+    
+}
+.icons > div{
+    margin-top:300px;
+    position: relative;
+}
+.novice.ball{
+    animation: MoveUpDown 4s linear infinite;
+    position: absolute;
+    left: 8%;
+    bottom: 400px;
+}
+.junior.ball{
+    animation: MoveUpDown_junior 4s linear infinite;
+    position: absolute;
+    left: 31%;
+    bottom: 400px;
+}
+.master.ball{
+    animation: MoveUpDown_master 3.5s cubic-bezier(0, 0, 0.24, 0.43) infinite;
+    position: absolute;
+    left: 54%;
+    bottom: 400px;
+}
+.mentoring.ball{
+    animation: MoveUpDown_mentoring 3.8s cubic-bezier(0, 0, 0.24, 0.43) infinite;
+    position: absolute;
+    left: 78%;
+    bottom: 400px;
+}
+
+@keyframes MoveUpDown {
+  0% {
+    bottom: 400px;
+  }
+  50% {
+    bottom: 470px;
+  }
+  100% {
+    bottom: 400px;
+  }
+}
+
+@keyframes MoveUpDown_junior {
+    0% {
+    bottom: 390px;
+  }
+  50% {
+    bottom: 500px;
+  }
+  100% {
+    bottom: 390px;
+  }
+}
+
+@keyframes MoveUpDown_master {
+  0% {
+    bottom: 420px;
+  }
+  50% {
+    bottom: 490px;
+  }
+  100% {
+    bottom: 420px;
+  }
+}
+
+@keyframes MoveUpDown_mentoring {
+  0% {
+    bottom: 390px;
+  }
+  50% {
+    bottom: 470px;
+  }
+  100% {
+    bottom: 390px;
+  }
+}
+
+/* Style the tab */
+.tab {
+    padding-top: 20px;
+    overflow: hidden !important; 
+    background-color: #ffffff !important; 
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab a {
+    background-color: inherit !important; 
+    float: left !important; 
+    border: 1px solid #ccc !important; 
+    outline: none !important; 
+    cursor: pointer !important; 
+    padding: 14px 16px !important; 
+    transition: 0.3s !important; 
+}
+
+/* Change background color of buttons on hover */
+.tab a:hover {
+    background-color: #ddd !important; 
+}
+
+/* Create an active/current tablink class */
+.tab a.active {
+    background-color: #ff9c37 !important; 
+    color:#fff;
+}
+
+/* Mentoring Banner */
+#mentoring_banner {
+  padding-top: 20px;
+  background-image: url("../../../assets/images/programs/banner_mentoring.png") !important;
+}
+
+.program_banner {
+  padding-top: 20px;
+  background-image: url("../../../assets/images/programs/Roadmap.png") !important;
+}
+.error_banner {
+  padding-top: 20px;
+  background-image: url("../../../assets/images/error page.jpg") !important;;
+}
+
+.staytuned-banner {
+  padding-top: 20px;
+  background-image: url("../../../assets/images/stay_tuned/website 1280-31.png") !important;
+}
+
+.courseBackground{
+    background-color: #f1f1f1;
+    min-height: 300px;
+    max-width: 730px;
+    margin-left: 35%;
+}
+
+.courseSchedule{
+    margin-right:50px;
+    max-width: 770px;
+    min-width: 750px;
+    min-height: 130px;
+    margin-left: 3%;
+}
+
+.courseBadge{
+    position:absolute;
+    top: -44px;
+    right: -53px;
+    background-repeat: no-repeat;
+}
+
+/* Style the side tab for CREATIVE COMPUTING NOVICE */
+.tab-side-novice {
+    float: left;
+    background-color: #f1f1f1;
+    width: 35%;
+}
+
+/* Style the side buttons that are used to open the tab content */
+.tab-side-novice button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side-novice button:hover {
+    background-color: #f9ca1a;
+    border: 2px solid #f9ca1a;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side-novice button.active {
+    background-color: #ffffff;
+    border: 2px solid #f9ca1a;
+}
+.tab-side-novice button.active > span {
+    padding: 18px 10px;
+    background: #f9ca1a;
+}
+
+/* Style the tab content */
+.tabcontent-side-novice {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    
+}
+
+.container-cc-novice {
+    background-color: #f1f1f1;
+    min-height: 665px;
+    text-align: left;
+}
+
+/* Style the side tab for CREATIVE COMPUTING JUNIOR */
+.tab-side-junior {
+    float: left;
+    background-color: #f1f1f1;
+    width: 35%;
+}
+
+/* Style the side buttons that are used to open the tab content */
+.tab-side-junior button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side-junior button:hover {
+    background-color: #f9ca1a;
+    border: 2px solid #f9ca1a;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side-junior button.active {
+    background-color: #ffffff;
+    border: 2px solid #f9ca1a;
+}
+.tab-side-junior button.active > span {
+    padding: 18px 10px;
+    background: #f9ca1a;
+}
+
+/* Style the tab content */
+.tabcontent-side-junior {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+.container-cc-junior {
+    background-color: #f1f1f1;
+    min-height: 655px;
+    text-align: left;
+}
+
+/* Style the side tab for CREATIVE COMPUTING MASTER */
+.tab-side-master {
+    float: left;
+    background-color: #f1f1f1;
+    width: 35%;
+}
+
+/* Style the side buttons that are used to open the tab content */
+.tab-side-master button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side-master button:hover {
+    background-color: #f9ca1a;
+    border: 2px solid #f9ca1a;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side-master button.active {
+    background-color: #ffffff;
+    border: 2px solid #f9ca1a;
+}
+.tab-side-master button.active > span {
+    padding: 18px 10px;
+    background: #f9ca1a;
+}
+
+/* Style the tab content */
+.tabcontent-side-master {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+.container-cc-master {
+    background-color: #f1f1f1;
+    min-height: 670px;
+    text-align: left;
+}
+
+
+/* Style the side tab for THINKERING NOVICE */
+.tab-side2-novice {
+    float: left;
+    background-color: #f1f1f1;
+    width: 35%;
+}
+.tab-side2-novice button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side2-novice button:hover {
+    background-color: #3f9149;
+    border: 2px solid #3f9149;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side2-novice button.active {
+    background-color: #ffffff;
+    border: 2px solid #3f9149;
+}
+.tab-side2-novice button.active > span {
+    padding: 18px 10px;
+    background: #3f9149;
+}
+/* Style the tab content */
+.tabcontent-side2-novice {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+}
+
+.container-think-novice {
+    background-color: #f1f1f1;
+    min-height: 665px;
+    text-align: left;
+}
+
+/* Style the side tab for THINKERING JUNIOR */
+.tab-side2-junior {
+    float: left;
+    background-color: #f1f1f1;
+    width: 35%;
+}
+.tab-side2-junior button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side2-junior button:hover {
+    background-color: #3f9149;
+    border: 2px solid #3f9149;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side2-junior button.active {
+    background-color: #ffffff;
+    border: 2px solid #3f9149;
+}
+.tab-side2-junior button.active > span {
+    padding: 18px 10px;
+    background: #3f9149;
+}
+/* Style the tab content */
+.tabcontent-side2-junior {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+.container-think-junior {
+    background-color: #f1f1f1;
+    min-height: 495px;
+    text-align: left;
+}
+
+/* Style the side tab for THINKERING MASTER */
+.tab-side2-master {
+    float: left;
+    background-color: #f1f1f1;
+    width: 35%;
+}
+.tab-side2-master button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side2-master button:hover {
+    background-color: #3f9149;
+    border: 2px solid #3f9149;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side2-master button.active {
+    background-color: #ffffff;
+    border: 2px solid #3f9149;
+}
+.tab-side2-master button.active > span {
+    padding: 18px 10px;
+    background: #3f9149;
+}
+/* Style the tab content */
+.tabcontent-side2-master {
+    float: left;
+    padding: 0px 12px;
+    /*border: 1px solid #ccc;*/
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+.container-think-master {
+    background-color: #f1f1f1;
+    min-height: 515px;
+    text-align: left;
+}
+
+/* Style the side tab for APPLICATION DEVELOPMENT NOVICE */
+.tab-side3-novice {
+    float: left;
+    background-color: #f1f1f1;
+    width: 35%;
+}
+.tab-side3-novice button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side3-novice button:hover {
+    background-color: #3990c6;
+    border: 2px solid #3990c6;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side3-novice button.active {
+    background-color: #ffffff;
+    border: 2px solid #3990c6;
+}
+.tab-side3-novice button.active > span {
+    padding: 18px 10px;
+    background: #3990c6;
+}
+/* Style the tab content */
+.tabcontent-side3-novice {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+/* Style the side tab for APPLICATION DEVELOPMENT JUNIOR */
+.tab-side3-junior {
+    float: left;
+    background-color: #f1f1f1;
+    width: 35%;
+    /*height: 300px;*/
+}
+.tab-side3-junior button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side3-junior button:hover {
+    background-color: #3990c6;
+    border: 2px solid #3990c6;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side3-junior button.active {
+    background-color: #ffffff;
+    border: 2px solid #3990c6;
+}
+.tab-side3-junior button.active > span {
+    padding: 18px 10px;
+    background: #3990c6;
+}
+/* Style the tab content */
+.tabcontent-side3-junior {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+.container-agd-junior {
+    background-color: #f1f1f1;
+    min-height: 630px;
+    text-align: left;
+}
+
+/* Style the side tab for APPLICATION DEVELOPMENT MASTER */
+.tab-side3-master {
+    float: left;
+    background-color: #f1f1f1;
+    width: 35%;
+}
+.tab-side3-master button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side3-master button:hover {
+    background-color: #3990c6;
+    border: 2px solid #3990c6;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side3-master button.active {
+    background-color: #ffffff;
+    border: 2px solid #3990c6;
+}
+.tab-side3-master button.active > span {
+    padding: 18px 10px;
+    background: #3990c6;
+}
+/* Style the tab content */
+.tabcontent-side3-master {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+.container-agd-master {
+    background-color: #f1f1f1;
+    min-height: 610px;
+    text-align: left;
+}
+
+/* Style the side tab for ELECTIVES NOVICE */
+.tab-side4-novice {
+    float: left;
+    background-color: #f1f1f1;
+    width: 35%;
+}
+.tab-side4-novice button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side4-novice button:hover {
+    background-color: #e45a58;
+    border: 2px solid #e45a58;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side4-novice button.active {
+    background-color: #ffffff;
+    border: 2px solid #e45a58;
+}
+.tab-side4-novice button.active > span {
+    padding: 18px 10px;
+    background: #e45a58;
+}
+/* Style the tab content */
+.tabcontent-side4-novice {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+/* Style the side tab for ELECTIVES JUNIOR */
+.tab-side4-junior {
+    float: left;
+    background-color: #f1f1f1;
+    width: 35%;
+}
+.tab-side4-junior button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side4-junior button:hover {
+    background-color: #e45a58;
+    border: 2px solid #e45a58;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side4-junior button.active {
+    background-color: #ffffff;
+    border: 2px solid #e45a58;
+}
+.tab-side4-junior button.active > span {
+    padding: 18px 10px;
+    background: #e45a58;
+}
+/* Style the tab content */
+.tabcontent-side4-junior {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+.container-mm-junior {
+    background-color: #f1f1f1;
+    min-height: 580px;
+}
+
+/* Style the side tab for ELECTIVES MASTER */
+.tab-side4-master {
+    float: left;
+    background-color: #f1f1f1;
+    width: 35%;
+}
+.tab-side4-master button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side4-master button:hover {
+    background-color: #e45a58;
+    border: 2px solid #e45a58;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side4-master button.active {
+    background-color: #ffffff;
+    border: 2px solid #e45a58;
+}
+.tab-side4-master button.active > span {
+    padding: 18px 10px;
+    background: #e45a58;
+}
+/* Style the tab content */
+.tabcontent-side4-master {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+.container-mm-master {
+    background-color: #f1f1f1;
+    min-height: 590px;
+}
+
+/* Style the side tab for POLICIES */
+.tab-side5 {
+    float: left;
+    border: 1px solid #ccc;
+    width: 25%;
+}
+.tab-side5 button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    vertical-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab-side5 button:hover {
+    background-color: #00bdf4;
+    border: 2px solid #00bdf4;
+}
+
+/* Create an active/current "tab button" class */
+.tab-side5 button.active {
+    background-color: #ffffff;
+    border: 2px solid #00bdf4;
+}
+.tab-side5 button.active > span {
+    padding: 18px 10px;
+    background: #00bdf4;
+}
+/* Style the tab content */
+.tabcontent-side5 {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+.policyBackground {
+    background-color: #ffff;
+    min-height: 485px;
+    max-width: 900px;
+    margin-left: 25%;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.courseBorder{
+    padding-left: 30px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.containerPrograms {
+   position: inherit;
+   word-wrap: break-word;
+   background-position: cover;
+}
+
+.logo-shadow{
+    /* Equal width and height create a perfect square */
+    width: 150px;
+    height: 150px;
+    /* Adding a border-radius of 1/2 width or height (same value) */
+    /* turns that square into a circle */
+    border-radius: 150px;
+    /* Apply your box-shadow styles, which inherit the round .wrapper shape */
+    -webkit-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.30);
+}
+
+/*Full-screen */
+.mbr-fullscreen-programs
+.mbr-overlay-programs{
+    min-height:100vh
+}
+.mbr-fullscreen-programs{
+    display:flex;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+    display:-o-flex;
+    align-items:center;
+    -webkit-align-items:center;
+    min-height:80vh;
+    padding-top:3rem;
+    padding-bottom:3rem;
+
+}
+
+.mbr-fullscreen-about
+.mbr-overlay-about{
+    min-height:80vh
+}
+.mbr-fullscreen-about{
+    display:flex;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+    display:-o-flex;
+    align-items:center;
+    -webkit-align-items:center;
+    min-height:65vh;
+    padding-top:3rem;
+    padding-bottom:3rem;
+
+}
+
+.mbr-fullscreen-error
+.mbr-overlay-error{
+    min-height:40vh
+}
+.mbr-fullscreen-error{
+    display:flex;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+    display:-o-flex;
+    align-items:center;
+    -webkit-align-items:center;
+    min-height:44.8vh;
+    padding-top:3rem;
+    padding-bottom:3rem;
+
+}
+
+.mbr-fullscreen-faqs
+.mbr-overlay-faqs{
+    min-height:100vh
+}
+.mbr-fullscreen-faqs{
+    display:flex;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+    display:-o-flex;
+    align-items:center;
+    -webkit-align-items:center;
+    min-height:55vh;
+    padding-top:3rem;
+    padding-bottom:3rem;
+
+}
+
+#logoHome {
+    width: 50%;
+}
+@media only screen and (max-width: 1600px) {
+    #logoHome {
+        width: 40%;
+    }
+}
+
+.sched-column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 250px; /* Should be removed. Only for demonstration */
+}
+
+.sched-column-single {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 20px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.sched-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.alert-wish {
+  color: #ffffff;
+  border-radius: 0;
+  border: 0;
+  font-size: .875rem;
+  line-height: 1.5;
+  margin-bottom: 1.875rem;
+  padding: 1.25rem;
+  position: absolute;
+  min-width: 50%;
+}
+.alert-wish.alert-wish-form::after {
+  background-color: inherit;
+  bottom: -7px;
+  content: "";
+  display: block;
+  height: 14px;
+  left: 50%;
+  margin-left: -7px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 14px;
+  -webkit-transform: rotate(45deg);
+}
+.courseSchedule-single {
+    margin-right: 50px;
+    max-width: 770px;
+    min-width: 750px;
+    margin-left: 4.3%;
+    height: 100px
+}
+
+.course_track_cc {
+    max-width: 100%;
+    max-height: 770px;
+}
+
+.course_track_cc_title {
+    max-width: 100%;
+    text-align: center;
+    background: #f9ca1a;
+}
+
+.course_track_cc_title> hr {
+    width: 89%;
+    height: 1px;
+    background: #f9ca1a;
+    margin-left: 10px;
+}
+
+.course_track_t {
+    max-width: 100%;
+    max-height: 615px;
+}
+
+.course_track_t_novice {
+    max-width: 100%;
+    max-height: 790px;
+}
+
+.course_track_t_title {
+    max-width: 100%;
+    text-align: center;
+    background: #3f9149;
+}
+
+.course_track_t_title> hr {
+    width: 89%;
+    height: 1px;
+    background: #3f9149;
+    margin-left: 10px;
+}
+
+.course_track_agd {
+    max-width: 100%;
+    max-height: 770px;
+}
+
+.course_track_agd_title {
+    max-width: 100%;
+    text-align: center;
+    background: #3990c6;
+}
+
+.course_track_agd_title> hr {
+    width: 89%;
+    height: 1px;
+    background: #3990c6;
+    margin-left: 10px;
+}
+
+.course_track_mm {
+    max-width: 100%;
+    max-height: 770px;
+}
+
+.course_track_mm_title {
+    max-width: 100%;
+    text-align: center;
+    background: #e45a58;
+}
+
+.course_track_mm_title > hr {
+    width: 89%;
+    height: 1px;
+    background: #e45a58;
+    margin-left: 10px;
+    }
+
+.course_track_policies_title {
+    padding: 0px 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.course_track_policies_title > hr {
+    width: 96%;
+    height: 1px;
+    background: #3990c6;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.course_cart_title {
+    padding: 0px 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.course_cart_title > hr {
+    width: 40%  ;
+    height: 1px;
+    background: #f9ca1a;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.space-title {
+  line-height: .75;
+}
+
+.space-button-cart{
+    padding-bottom: 5%;
+}
+
+.float-my-children > * {
+    float:left;
+    margin-right:15px;
+    /**/
+}
+
+.clearfix {
+    *zoom:1 /* for IE */
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
